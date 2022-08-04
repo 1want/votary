@@ -1,0 +1,11 @@
+button {
+  color: #3f45ff;
+  border-width: thin;
+  border: 0.5px solid #3f45ff;
+  background: #fff;
+  border-radius: 2px;
+  width: 100px;
+  height: 44px;
+  line-height: 44px;
+  font-family: cursive;
+}
