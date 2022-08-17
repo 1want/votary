@@ -22,7 +22,7 @@ export default defineConfig({
     lib: {
       entry: './packages/index.ts',
       name: 'vue3-slider',
-      fileName: 'hello'
+      fileName: 'mobile-ui'
     }
   }
 })

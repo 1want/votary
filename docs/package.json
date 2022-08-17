@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "vitepress dev .",
+    "serve": "vitepress dev . --open",
     "build": "vitepress build ."
   },
   "keywords": [],
