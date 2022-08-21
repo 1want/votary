@@ -1,2 +1,27 @@
 .my-form {
 }
+
+.form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  &:after {
+    content: attr(data-message);
+    position: absolute;
+    bottom: -20px;
+    left: 80px;
+    font-size: 14px;
+    color: #ff0712;
+  }
+  .label {
+    margin-right: 10px;
+    width: 70px;
+  }
+  .rules {
+    &:before {
+      content: '*';
+      color: red;
+    }
+  }
+}

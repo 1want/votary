@@ -3,17 +3,38 @@
 // import { Button, Message, Input } from '../dist/hello.js'
 import Button from '@/components/button'
 import Input from '@/components/input'
-import { Form, FormItem } from '@/components/form'
+import Form from '@/components/form'
 
 import '../dist/style.css'
 
+const onFinish = e => {
+  console.log(e)
+}
 function App() {
   return (
     <div className='App'>
-      <Button type='success'></Button>
-      <Form>
-        <FormItem></FormItem>
-        {/* <Form-item></Form-item> */}
+      <Form onFinish={onFinish}>
+        <Form.Item
+          label='用户名'
+          name='username'
+          rules={[
+            { required: true, message: 'hello' },
+            { max: 6, message: '最多输入六位' }
+          ]}>
+          {/* <Input /> */}
+          <input type='text' />
+        </Form.Item>
+        <Form.Item
+          label='密码'
+          name='password'
+          rules={[
+            { required: true, message: 'hello' },
+            { max: 6, message: '最多输入六位' }
+          ]}>
+          <input type='text' />
+          {/* <Input /> */}
+        </Form.Item>
+        <Button type='success'></Button>
       </Form>
     </div>
   )

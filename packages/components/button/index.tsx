@@ -5,7 +5,7 @@ type Props = {
   size?: string
   thin?: string
   plain?: boolean
-  click?: () => void
+  onClick?: () => {}
 }
 
 const btnClass = (arr: Array<string | undefined>) =>
@@ -14,7 +14,7 @@ const btnClass = (arr: Array<string | undefined>) =>
 const Button = (props: Props) => {
   return (
     <button
-      onClick={props.click}
+      onClick={props.onClick}
       className={btnClass([props.type, props.size, props.thin])}>
       按钮
     </button>
