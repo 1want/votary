@@ -21,18 +21,10 @@ function App() {
             { required: true, message: 'hello' },
             { max: 6, message: '最多输入六位' }
           ]}>
-          {/* <Input /> */}
-          <input type='text' />
+          <Input />
         </Form.Item>
-        <Form.Item
-          label='密码'
-          name='password'
-          rules={[
-            { required: true, message: 'hello' },
-            { max: 6, message: '最多输入六位' }
-          ]}>
-          <input type='text' />
-          {/* <Input /> */}
+        <Form.Item label='密码' name='password'>
+          <Input />
         </Form.Item>
         <Button type='success'></Button>
       </Form>

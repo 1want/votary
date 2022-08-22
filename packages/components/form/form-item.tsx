@@ -1,5 +1,6 @@
 import React, { cloneElement, useContext } from 'react'
 import { Context } from './formContext'
+import './index.css'
 
 type MyProps = {
   label?: string
@@ -9,7 +10,7 @@ type MyProps = {
 }
 
 const FormItem = (props: MyProps) => {
-  const { children, name, rules } = props
+  const { children, name, rules, label } = props
   const { setValue, setRules } = useContext(Context)
   // 初始化表单，收集表单里面包含的formItem的名称
   setValue(name, '')
@@ -19,14 +20,19 @@ const FormItem = (props: MyProps) => {
   const setProperty = children => {
     return {
       ...children,
-      onChange: e => {
+      onChange: (e: HTMLInputElement) => {
         setValue(name, e.target.value)
       }
     }
   }
 
   const newElement = cloneElement(children, setProperty(children.props))
-  return newElement
+  return (
+    <div className='form-item'>
+      <span className={`label ${rules && 'rules'}`}>{label}:</span>
+      {newElement}
+    </div>
+  )
 }
 
 export default FormItem
