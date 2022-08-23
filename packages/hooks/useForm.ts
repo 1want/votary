@@ -16,17 +16,24 @@ function useForm() {
   }
 
   const ValidateRules = () => {
-    for (var i of formRules) {
-      for (var r of i.rules) {
-        if (r.required) {
-          !state[i.name] && errorInfo.push(r.message)
-        }
-        if (r.max) {
-          state[i.name].length > r.max && errorInfo.push(r.message)
+    errorInfo = []
+    return new Promise((resolve, reject) => {
+      for (var i of formRules) {
+        for (var r of i.rules) {
+          if (r.required) {
+            !state[i.name] && errorInfo.push(r.message)
+          }
+          if (r.max) {
+            state[i.name].length > r.max && errorInfo.push(r.message)
+          }
         }
       }
-      state[i.name]
-    }
+      if (errorInfo.length) {
+        reject(errorInfo)
+      } else {
+        resolve(state)
+      }
+    })
   }
 
   const setRules = (name, rules) => {
@@ -35,8 +42,9 @@ function useForm() {
 
   const submit = callback => {
     ValidateRules()
-    console.log(errorInfo)
-    callback(state)
+    if (!errorInfo.length) {
+      callback(state)
+    }
   }
 
   return {
@@ -44,8 +52,8 @@ function useForm() {
     getValue,
     setValue,
     setValues,
-    submit,
-    setRules
+    setRules,
+    submit
   }
 }
 

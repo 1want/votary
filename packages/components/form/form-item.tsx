@@ -15,12 +15,13 @@ const FormItem = (props: MyProps) => {
   // 初始化表单，收集表单里面包含的formItem的名称
   setValue(name, '')
   // 添加表单校验规则
-  setRules(name, rules)
-
+  if (rules) {
+    setRules(name, rules)
+  }
   const setProperty = children => {
     return {
       ...children,
-      onChange: (e: HTMLInputElement) => {
+      onChange: e => {
         setValue(name, e.target.value)
       }
     }
