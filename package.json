@@ -1,16 +1,14 @@
 {
   "name": "my-vue-app",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "preset-dumi dev",
+    "dev": "dumi dev",
     "serve": "vite --open",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "docz": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vitepress": "1.0.0-alpha.9"
@@ -18,9 +16,12 @@
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@umijs/preset-dumi": "^1.1.47",
     "@vitejs/plugin-react": "^2.0.0",
     "typescript": "^4.6.4",
-    "vite": "^3.0.0"
+    "vite": "^3.0.0",
+    "@umijs/fabric": "^2.8.1",
+    "dumi": "^1.1.0",
+    "father": "^4.0.0-rc.2",
+    "gh-pages": "^3.0.0"
   }
 }
