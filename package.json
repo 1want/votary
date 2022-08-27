@@ -6,6 +6,7 @@
     "dev": "dumi dev",
     "serve": "vite --open",
     "build": "tsc && vite build",
+    "build:docs": "dumi build",
     "preview": "vite preview"
   },
   "dependencies": {

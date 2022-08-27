@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../packages/components/button'
+import { Button } from 'react-ui'
 import './index.css'
 
 export default () => (

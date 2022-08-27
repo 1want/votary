@@ -1,11 +1,11 @@
 ---
-order: 1
+order: 2
 group:
   path: /
-  title: 布局组件
-  order: 1
+  title: 组件
+  order: 2
 ---
 
 # Button 按钮
 
-<code src="./demo.tsx" />
+<code hideActions='["CSB","EXTERNAL"]' src="./demo.tsx" />
