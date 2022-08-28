@@ -11,19 +11,30 @@ button {
   cursor: pointer;
 }
 
+.default {
+  background: #fff;
+  border: 1px solid rgb(220, 219, 219);
+  color: #000;
+}
+
 .primary {
   background: #3f45ff;
   border: 1px solid #3f45ff;
 }
 
 .success {
-  background: #e82b2b;
-  border: 1px solid #e82b2b;
+  background: #2bdc63;
+  border: 1px solid #2bdc63;
+}
+
+.warning {
+  background: #e89b17;
+  border: 1px solid #e89b17;
 }
 
 .danger {
-  background: #2bdc63;
-  border: 1px solid #2bdc63;
+  background: #e82b2b;
+  border: 1px solid #e82b2b;
 }
 
 .mini {

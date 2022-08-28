@@ -8,7 +8,7 @@ import Form from '@/components/form'
 import '../dist/style.css'
 
 const onFinish = e => {
-  console.log(e)
+  console.log(e, 'ok')
 }
 function App() {
   return (
@@ -24,6 +24,22 @@ function App() {
           <Input />
         </Form.Item>
         <Form.Item label='密码' name='password'>
+          <Input />
+        </Form.Item>
+        <Button type='success'></Button>
+      </Form>
+
+      <Form onFinish={onFinish}>
+        <Form.Item
+          label='水果'
+          name='username'
+          rules={[
+            { required: true, message: 'hello wor' },
+            { max: 6, message: '最多输入六位' }
+          ]}>
+          <Input />
+        </Form.Item>
+        <Form.Item label='价格' name='password'>
           <Input />
         </Form.Item>
         <Button type='success'></Button>
