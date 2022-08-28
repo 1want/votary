@@ -26,7 +26,7 @@ function App() {
         <Form.Item label='密码' name='password'>
           <Input />
         </Form.Item>
-        <Button type='success'></Button>
+        <Button type='success' plain hairline></Button>
       </Form>
 
       <Form onFinish={onFinish}>
