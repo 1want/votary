@@ -23,7 +23,11 @@ export default defineConfig({
     '/components': [
       {
         title: '基础组件',
-        children: ['components/button', 'components/layout']
+        children: [
+          'components/button',
+          'components/layout',
+          'components/divider'
+        ]
       },
       {
         title: '表单组件',
@@ -32,8 +36,7 @@ export default defineConfig({
           'components/input',
           'components/select',
           'components/radio',
-          'components/upload',
-          'components/search'
+          'components/upload'
         ]
       },
       {
@@ -50,7 +53,8 @@ export default defineConfig({
           'components/list',
           'components/navbar',
           'components/swiper',
-          'components/pagination'
+          'components/pagination',
+          'components/menu'
         ]
       }
     ]

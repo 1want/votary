@@ -13,10 +13,15 @@ const btnClass = (arr: Array<string | undefined>) =>
   arr.filter(item => item).join(' ')
 
 const Button = (props: Props) => {
-  console.log(props)
-  const { type, size, hairline, plain, children } = props
+  const { onClick, type, size, hairline, plain, children } = props
+  const className = btnClass([
+    type,
+    size,
+    hairline ? 'hairline' : '',
+    plain ? `plain ${type}-plain` : ''
+  ])
   return (
-    <button onClick={props.onClick} className={btnClass([type, size])}>
+    <button onClick={onClick} className={className}>
       {children}
     </button>
   )

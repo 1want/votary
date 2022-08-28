@@ -1,0 +1,36 @@
+.line {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  white-space: nowrap;
+  &::before {
+    width: 50%;
+    content: '';
+    display: block;
+    border: 0;
+    border-top: 0.5px solid #d0d0d5;
+  }
+  &::after {
+    width: 50%;
+    content: '';
+    display: block;
+    border: 0;
+    border-top: 0.5px solid #d0d0d5;
+  }
+}
+
+.line-content {
+  &::before {
+    margin-right: 10px;
+  }
+  &::after {
+    margin-left: 10px;
+  }
+}
+
+.dashed {
+  width: 98%;
+  padding-top: 0.5px;
+  margin: 10px 0;
+  background: linear-gradient(to right, transparent, #d0d0d5, transparent);
+}
