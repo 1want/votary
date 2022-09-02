@@ -1,34 +1,14 @@
-import React from 'react'
-
+import useMessage from '../../hooks/useMessage'
 import './index.css'
 
-type Props = {
+export type Props = {
   title: string
-  // type: 'success'
+  type?: string
+  duration?: number
 }
 
-const body = document.getElementsByTagName('body')[0]
-const span = document.createElement('span')
-
-const show = (title: string) => {
-  span.className = 'box'
-  span.innerText = title
-  body.appendChild(span)
-  span.style.animation = 'myOpen .3s ease-in forwards'
-  hidden()
-}
-
-const hidden = () => {
-  setTimeout(() => {
-    span.style.animation = 'myClose .5s ease-out forwards'
-  }, 1500)
-  setTimeout(() => {
-    body.removeChild(span)
-  }, 2000)
-}
-
-const Message = (props: any) => {
-  show(props)
+const Message = (props: Props) => {
+  new useMessage(props)
 }
 
 export default Message

@@ -1,7 +1,7 @@
 function useForm() {
   let state: any = {}
-  let formRules = []
-  let errorInfo = []
+  let formRules: any = []
+  let errorInfo: any = []
 
   const getValue = (name: string) => {
     return state[name]

@@ -6,7 +6,7 @@ type Props = {
   hairline?: boolean
   plain?: boolean
   children?: any
-  onClick?: () => {}
+  onClick?: () => any
 }
 
 const btnClass = (arr: Array<string | undefined>) =>
