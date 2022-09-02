@@ -22,7 +22,7 @@ function useMessage(props: Props) {
   const box = document.createElement('div')
 
   show(box, props)
-  // hidden(box, props)
+  hidden(box, props)
 }
 
 export default useMessage

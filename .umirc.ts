@@ -50,8 +50,6 @@ export default defineConfig({
       {
         title: '导航组件',
         children: [
-          'components/list',
-          'components/navbar',
           'components/swiper',
           'components/pagination',
           'components/menu'
