@@ -2,15 +2,18 @@ import './index.css'
 
 type Props = {
   show: boolean
-  onClose?: () => void
 }
 const Dialog = (props: Props) => {
-  const { show, onClose } = props
+  const { show } = props
   return (
     <>
       {show && (
-        <div className='loading-wrapper'>
-          <div className='loading'>o</div>
+        <div
+          className='loading-wrapper'
+          onClick={e => {
+            e.stopPropagation()
+          }}>
+          <div className='loading'>Loading...</div>
         </div>
       )}
     </>

@@ -1,0 +1,18 @@
+.upload-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #afafaf;
+}
+.upload {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 10px;
+  opacity: 0;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 10px;
+}

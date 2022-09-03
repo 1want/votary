@@ -1,12 +1,11 @@
 import Dialog from '../../../packages/components/dialog'
 import { useState } from 'react'
 
-// const dialogVisible = false
 export default () => {
   const [dialogVisible, setDialogVisible] = useState(false)
   return (
     <div>
-      <p onClick={() => setDialogVisible(true)}>点击打开Dialog</p>
+      <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
         title='shaksha'
         visible={dialogVisible}

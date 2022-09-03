@@ -20,14 +20,18 @@ const Dialog = (props: Props) => {
             }}>
             <div className='header'>
               <div className='title'>{title}</div>
-              <div className='close' onClick={() => onClose}>
+              <div className='close' onClick={onClose}>
                 x
               </div>
             </div>
             <div className='content'>{children}</div>
             <div className='footer'>
-              <Button type='primary'>确认</Button>
-              <Button type='default'>取消</Button>
+              <Button type='primary' onClick={onClose}>
+                确认
+              </Button>
+              <Button type='default' onClick={onClose}>
+                取消
+              </Button>
             </div>
           </div>
         </div>

@@ -4,11 +4,10 @@ import './index.css'
 
 export default () => (
   <div className='button-demo'>
-    <Button type='default'>默认</Button>
-    <Button type='primary'>花</Button>
-    <Button type='success'>里</Button>
-    <Button type='warning'>胡</Button>
-    <Button type='danger'>哨</Button>
-    <Button type='colorful'>色彩斑斓白</Button>
+    <Button type='default'>按钮</Button>
+    <Button type='primary'>按钮</Button>
+    <Button type='success'>按钮</Button>
+    <Button type='warning'>按钮</Button>
+    <Button type='danger'>按钮</Button>
   </div>
 )

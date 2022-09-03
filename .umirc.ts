@@ -14,10 +14,6 @@ export default defineConfig({
       {
         title: '安装',
         path: '/guide/install'
-      },
-      {
-        title: '引用',
-        path: '/guide/quote'
       }
     ],
     '/components': [

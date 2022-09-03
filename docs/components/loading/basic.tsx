@@ -1,12 +1,14 @@
 import Loading from '../../../packages/components/loading'
 import { useState } from 'react'
 
-// const dialogVisible = false
 export default () => {
   const [show, setShow] = useState(false)
+  setTimeout(() => {
+    setShow(false)
+  }, 3000)
   return (
     <div>
-      <p onClick={() => setShow(true)}>点击打开Loading</p>
+      <span onClick={() => setShow(true)}>点击打开Loading</span>
       <Loading show={show}></Loading>
     </div>
   )

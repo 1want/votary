@@ -1,0 +1,36 @@
+.select {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  position: relative;
+}
+.select:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 4px;
+  left: 10px;
+}
+.select .option-box {
+  margin-top: 36px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 1px #9a9a9a;
+  border-radius: 2px;
+}
+.select .option-box .option {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.select .option-box .option:last-child {
+  margin-bottom: 0;
+}
+.select .hidden {
+  visibility: hidden;
+}
+.select .show {
+  visibility: none;
+}
+.is-focus {
+  border-color: #7f96ff;
+}
