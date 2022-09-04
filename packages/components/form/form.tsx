@@ -1,6 +1,6 @@
 import React from 'react'
 import { Context } from './formContext'
-import useForm from '@/hooks/useForm'
+import useForm from '../../hooks/useForm'
 
 import './index.css'
 

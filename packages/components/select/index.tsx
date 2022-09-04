@@ -1,4 +1,5 @@
 import { useState, useContext, createContext } from 'react'
+import '../../icon/assets/iconfont.css'
 import './index.css'
 
 const context = createContext()
@@ -17,6 +18,10 @@ const Select = props => {
         <div className={`option-box ${show ? 'show' : 'hidden'}`}>
           {children}
         </div>
+        <span
+          className={`iconfont ${
+            show ? 'icon-arrow-up' : 'icon-arrow-down'
+          }`}></span>
       </div>
     </context.Provider>
   )

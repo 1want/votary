@@ -1,3 +1,5 @@
+import '../../icon/assets/iconfont.css'
+
 import './index.css'
 
 type Props = {
@@ -6,21 +8,24 @@ type Props = {
   rightIcon?: string
   placeholder?: string
   click?: () => void
-  onChange?: () => {}
+  value?: any
+  onChange?: (text: string) => void
 }
 
 const Input = (props: Props) => {
   const { leftIcon, rightIcon, placeholder, onChange } = props
   return (
     <div className='my-input'>
-      {leftIcon && <div className='left-icon icon'>{leftIcon}</div>}
+      {leftIcon && <span className={`iconfont icon-${leftIcon}`}></span>}
       <input
-        className='input'
-        onChange={onChange}
+        className={`input ${!leftIcon && 'textIndent'}`}
+        onChange={e => {
+          onChange?.(e.target.value)
+        }}
         type='text'
         placeholder={placeholder}
       />
-      {rightIcon && <div className='right-icon icon'>{rightIcon}</div>}
+      {rightIcon && <span className={`iconfont icon-${rightIcon}`}></span>}
     </div>
   )
 }

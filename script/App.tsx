@@ -10,15 +10,25 @@ import Loading from '@/components/loading'
 import Radio from '@/components/radio'
 import Select from '@/components/select'
 import Upload from '@/components/upload'
+import '../packages/icon/assets/iconfont.css'
+import { useState } from 'react'
 
 // import '../dist/style.css'
 
 const { Option } = Select
 
 function App() {
+  const [username, setUsername] = useState('')
   return (
     <div>
-      <Upload></Upload>
+      <Input value={username} onChange={text => setUsername(text)}></Input>
+      <Button
+        type='primary'
+        onClick={() => {
+          console.log(username)
+        }}>
+        btn
+      </Button>
     </div>
   )
 }

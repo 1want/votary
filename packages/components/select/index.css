@@ -25,6 +25,12 @@
 .select .option-box .option:last-child {
   margin-bottom: 0;
 }
+.select .iconfont {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  color: #afafaf;
+}
 .select .hidden {
   visibility: hidden;
 }
