@@ -1,10 +1,13 @@
 import { defineConfig } from 'dumi'
 
+const repo = 'votary'
+
 export default defineConfig({
   title: 'votary',
   mode: 'site',
   outputPath: 'docs-dist',
-  publicPath: './',
+  // publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : './',
   favicon: './logo.png',
   logo: './logo.png',
   menus: {
