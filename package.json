@@ -12,6 +12,7 @@
       "require": "./dist/votary.umd.cjs"
     }
   },
+  "homepage": "https://1want.github.io/votary/",
   "scripts": {
     "dev": "dumi dev",
     "serve": "vite --open",
