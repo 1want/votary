@@ -2,7 +2,7 @@ import { useState, useContext, createContext } from 'react'
 import '../../icon/assets/iconfont.css'
 import './index.css'
 
-const context = createContext()
+const context: any = createContext()
 
 const Select = props => {
   const [show, setShow] = useState(false)
@@ -28,17 +28,17 @@ const Select = props => {
 }
 
 const Option = props => {
-  const { onChange, setShow, setValue } = useContext(context)
+  const { onChange, setShow } = useContext(context)
   const { value, children } = props
   return (
     <div
       className='option'
       data-value={value}
-      onClick={e => {
+      onClick={(e: any) => {
         e.stopPropagation()
         onChange(e.target.dataset.value)
         setShow(false)
-        setValue(e.target.dataset.value)
+        // setValue(e.target.dataset.value)
       }}>
       {children}
     </div>

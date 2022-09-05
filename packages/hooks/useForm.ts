@@ -36,11 +36,11 @@ function useForm() {
     })
   }
 
-  const setRules = (name, rules) => {
+  const setRules = (name: any, rules: any) => {
     formRules.push({ name, rules })
   }
 
-  const submit = callback => {
+  const submit = (callback: any) => {
     ValidateRules()
     if (!errorInfo.length) {
       callback(state)

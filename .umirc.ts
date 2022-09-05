@@ -4,7 +4,9 @@ export default defineConfig({
   title: 'votary',
   mode: 'site',
   outputPath: 'docs-dist',
-  logo: 'https://cdn-icons-png.flaticon.com/512/6931/6931333.png',
+  publicPath: './',
+  favicon: './logo.png',
+  logo: './logo.png',
   menus: {
     '/guide': [
       {
@@ -65,7 +67,7 @@ export default defineConfig({
     },
     {
       title: 'GitHub',
-      path: 'https://github.com/umijs/dumi'
+      path: 'https://github.com/1want/react-ui'
     }
   ]
 })

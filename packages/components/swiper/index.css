@@ -1,0 +1,10 @@
+.swiper {
+  width: 300px;
+}
+.swiper .swiper-wrapper {
+  display: flex;
+  white-space: nowrap;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  width: 1000px !important;
+}

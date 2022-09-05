@@ -1,18 +1,30 @@
 {
-  "name": "react-ui",
-  "version": "0.0.0",
+  "name": "votarys",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/votary.js",
+  "exports": {
+    ".": {
+      "import": "./dist/votary.js",
+      "require": "./dist/votary.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "dumi dev",
     "serve": "vite --open",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "build:docs": "dumi build",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vitepress": "1.0.0-alpha.9"
+    "swiper": "^8.3.2",
+    "vitepress": "1.0.0-alpha.9",
+    "votary": "0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
