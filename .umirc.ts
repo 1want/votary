@@ -6,8 +6,8 @@ export default defineConfig({
   title: 'votary',
   mode: 'site',
   outputPath: 'docs-dist',
-  // publicPath: './',
-  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : './',
+  publicPath: './',
+  // publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : './',
   favicon: './logo.png',
   logo: './logo.png',
   menus: {
