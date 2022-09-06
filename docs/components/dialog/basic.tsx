@@ -1,4 +1,5 @@
 import Dialog from '../../../packages/components/dialog'
+import Button from '../../../packages/components/button'
 import { useState } from 'react'
 
 export default () => {
@@ -7,10 +8,11 @@ export default () => {
     <div>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
-        title='shaksha'
+        title='我是title'
+        showButton
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>
-        gahkjgha
+        落叶
       </Dialog>
     </div>
   )

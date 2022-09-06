@@ -12,7 +12,7 @@ interface ButtonProps {
   plain?: boolean
   children?: any
   className?: string
-  onClick?: () => void
+  onClick?: () => any
 }
 
 const Button = (props: ButtonProps) => {

@@ -10,8 +10,8 @@
 
 ### API
 
-| 参数        | 说明             | 类型     | 默认值  |
-| ----------- | ---------------- | -------- | ------- |
-| title       | 标题             | string   | default |
-| show-button | 是否显示底部按钮 | boolean  | true    |
-| onClose     | 关闭 Dialog      | function |         |
+| 参数       | 说明             | 类型     | 默认值  |
+| ---------- | ---------------- | -------- | ------- |
+| title      | 标题             | string   | default |
+| showButton | 是否显示底部按钮 | boolean  | true    |
+| onClose    | 关闭 Dialog 回调 | function |         |

@@ -1,11 +1,11 @@
 @keyframes myClose {
   from {
     opacity: 1;
-    margin-top: 20px;
   }
 
   to {
     opacity: 0;
+    margin-top: -60px;
   }
 }
 
@@ -20,14 +20,15 @@
   }
 }
 
-.box {
+.v-message {
   font-family: cursive;
   position: absolute;
   z-index: 999999;
   left: 50%;
   top: 0;
-  transform: translate(-50%, 0);
-  min-width: 380px;
+  transform: translateX(-50%);
+  min-width: 340px;
+  padding: 0 20px;
   text-align: center;
   font-weight: 300;
   line-height: 44px;
@@ -35,22 +36,23 @@
   background: #e5e5e5;
   color: #5b5858;
   box-shadow: 0 0 7px rgba(235, 233, 233, 0.653);
-}
+  display: flex;
 
-.message--success {
-  background: #ebfff5;
-  color: #1cb94ed4;
-  border: 1px solid #ddffe2;
-}
+  &--success {
+    background: #ebfff5;
+    color: #1cb94ed4;
+    border: 1px solid #ddffe2;
+  }
 
-.message--warning {
-  background: #fff5df;
-  color: #b0841b;
-  border: 1px solid #fef2d8;
-}
+  &--warning {
+    background: #fff5df;
+    color: #b0841b;
+    border: 1px solid #fef2d8;
+  }
 
-.message--danger {
-  background: #ffe1e1;
-  color: #ff3e3ee3;
-  border: 1px solid #ffdcdc;
+  &--danger {
+    background: #ffe1e1;
+    color: #ff3e3ee3;
+    border: 1px solid #ffdcdc;
+  }
 }

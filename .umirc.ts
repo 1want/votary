@@ -1,17 +1,18 @@
 import { defineConfig } from 'dumi'
 
 export default defineConfig({
-  title: 'votary',
+  title: 'Votary',
   mode: 'site',
   outputPath: 'docs-dist',
-  // publicPath: './',
+  base: '/votary',
+  sitemap: { hostname: 'https://1want.github.io/votary' },
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   favicon: './logo.png',
   logo: './logo.png',
   menus: {
     '*': [
       {
-        title: '你想干什么？？',
+        title: '你想干什么',
         path: '/'
       }
     ],

@@ -1,7 +1,7 @@
 import useMessage from '../../hooks/useMessage'
 import './index.css'
 
-export type Props = {
+export interface Props {
   title: string
   type?: string
   duration?: number
