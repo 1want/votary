@@ -1,27 +1,38 @@
+import { ButtonType, ButtonSize } from './types'
+import classnames from 'classnames'
+import { createNamespace } from '../../utils/createNamespace'
 import './index.css'
 
-type Props = {
-  type?: string
-  size?: string
+const bem = createNamespace('button')
+
+interface ButtonProps {
+  type?: ButtonType
+  size?: ButtonSize
   hairline?: boolean
   plain?: boolean
   children?: any
-  onClick?: () => any
+  className?: string
+  onClick?: () => void
 }
 
-const btnClass = (arr: Array<string | undefined>) =>
-  arr.filter(item => item).join(' ')
+const Button = (props: ButtonProps) => {
+  const {
+    type = 'default',
+    size = 'normal',
+    hairline,
+    plain,
+    children,
+    className,
+    onClick
+  } = props
 
-const Button = (props: Props) => {
-  const { onClick, type, size, hairline, plain, children } = props
-  const className = btnClass([
-    type,
-    size,
-    hairline ? 'hairline' : '',
-    plain ? `plain ${type}-plain` : ''
-  ])
+  const classes = bem(
+    classnames([type, size, hairline && 'hairline', plain && 'plain']),
+    className
+  )
+
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={classes}>
       {children}
     </button>
   )

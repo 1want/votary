@@ -1,65 +1,68 @@
-button {
-  border-width: thin;
-  background: #fff;
+.v-button {
+  box-sizing: border-box;
   border-radius: 2px;
+  padding: 0;
+  margin: 0;
   width: 100px;
   height: 44px;
   line-height: 44px;
   font-family: cursive;
-  color: #fff;
   border: none;
   cursor: pointer;
   font-size: 16px;
 }
-.default {
+.v-button--default {
   background: #fff;
-  border: 1px solid #dcdbdb;
+  border: 1px solid #cfcfcf;
   color: #000;
 }
-.primary {
+.v-button--primary {
   background: #3f45ff;
   border: 1px solid #3f45ff;
+  color: #fff;
 }
-.success {
+.v-button--success {
   background: #2bdc63;
   border: 1px solid #2bdc63;
+  color: #fff;
 }
-.warning {
+.v-button--warning {
   background: #e89b17;
+  border: 1px solid #e89b17;
+  color: #fff;
 }
-.danger {
+.v-button--danger {
   background: #e82b2b;
+  border: 1px solid #e82b2b;
+  color: #fff;
 }
-.mini {
+.v-button--plain {
+  background: #fff;
+}
+.v-button--plain.v-button--primary {
+  color: #3f45ff;
+}
+.v-button--plain.v-button--success {
+  color: #2bdc63;
+}
+.v-button--plain.v-button--danger {
+  color: #e82b2b;
+}
+.v-button--plain.v-button--warning {
+  color: #e89b17;
+}
+.v-button--small {
   width: 60px;
   height: 30px;
   line-height: 30px;
   font-size: 12px;
 }
-.large {
+.v-button--large {
   width: 250px;
   height: 50px;
   line-height: 50px;
   font-size: 24px;
 }
-.hairline {
+.v-button--hairline {
   border-width: 0.5px;
-}
-.plain {
-  background: #fff;
-}
-.default-plain {
-  color: #000;
-}
-.primary-plain {
-  color: #3f45ff;
-}
-.success-plain {
-  color: #2bdc63;
-}
-.warning-plain {
-  color: #e89b17;
-}
-.danger-plain {
-  color: #e82b2b;
 }

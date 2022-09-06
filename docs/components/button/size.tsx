@@ -4,7 +4,7 @@ import './index.css'
 
 export default () => (
   <div className='button-demo'>
-    <Button size='mini' type='default'>
+    <Button size='small' type='default'>
       中杯
     </Button>
     <Button type='default'>大杯</Button>

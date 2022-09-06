@@ -1,9 +1,9 @@
-import '../packages/icon/assets/iconfont.css'
+// import '../packages/icon/assets/iconfont.css'
 import { useState } from 'react'
 // import Button from '@/components/button/button'
-// import Message from '@/components/message'
+import Message from '@/components/message'
 // import { Button, Message, Input } from '../dist/hello.js'
-// import Button from '@/components/button'
+import Button from '@/components/button'
 // import Input from '@/components/input'
 // import Form from '@/components/form'
 // import Divider from '@/components/divider'
@@ -14,26 +14,29 @@ import { useState } from 'react'
 // import Upload from '@/components/upload'
 // import Swiper from '@/components/swiper'
 // import Menu, { MenuItem, SubMenu } from '@/components/menu'
-import '../dist/style.css'
+// import '../dist/style.css'
 
-// import { Button, Message } from '../dist/votary.js'
-import { Button, Message } from 'votary'
+// import { Button, Message } from 'votary'
 
 function App() {
-  const [username, setUsername] = useState('')
   return (
     <div>
-      <Button type='primary' onClick={() => Message({ title: 'sahjksa' })}>
+      <Button>btn</Button>
+      <Button type='primary'>btn</Button>
+
+      <Button plain type='primary'>
         btn
       </Button>
-      {/* <Menu>
-        <MenuItem>菜单一</MenuItem>
-        <MenuItem>菜单二</MenuItem>
-        <SubMenu>
-          <MenuItem>菜单一</MenuItem>
-          <MenuItem>菜单二</MenuItem>
-        </SubMenu>
-      </Menu> */}
+      <Button hairline type='success'>
+        btn
+      </Button>
+
+      <Button plain type='danger'>
+        镂空
+      </Button>
+      <Button hairline plain type='danger'>
+        细边框
+      </Button>
     </div>
   )
 }

@@ -1,16 +1,20 @@
 import { defineConfig } from 'dumi'
 
-const repo = 'votary'
-
 export default defineConfig({
   title: 'votary',
   mode: 'site',
   outputPath: 'docs-dist',
-  publicPath: './',
-  // publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : './',
+  // publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   favicon: './logo.png',
   logo: './logo.png',
   menus: {
+    '*': [
+      {
+        title: '你想干什么？？',
+        path: '/'
+      }
+    ],
     '/guide': [
       {
         title: '简介',
@@ -70,7 +74,7 @@ export default defineConfig({
     },
     {
       title: 'GitHub',
-      path: 'https://github.com/1want/react-ui'
+      path: 'https://github.com/1want/votary'
     }
   ]
 })
