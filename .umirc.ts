@@ -12,7 +12,7 @@ export default defineConfig({
   menus: {
     '*': [
       {
-        title: '你想干什么',
+        title: '别乱跑噢',
         path: '/'
       }
     ],

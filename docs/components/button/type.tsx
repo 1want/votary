@@ -1,6 +1,4 @@
-import Button from '../../../packages/components/button'
-// import '../../../packages/components/button/index.css'
-import './index.css'
+import { Button } from 'votary'
 
 export default () => (
   <div className='button-demo'>

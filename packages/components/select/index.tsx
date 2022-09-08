@@ -2,12 +2,12 @@ import { useState, useContext, createContext } from 'react'
 import '../../icon/assets/iconfont.css'
 import './index.css'
 
-const context: any = createContext()
+const context = createContext()
 
 const Select = props => {
   const [show, setShow] = useState(false)
   const [showValue, setValue] = useState()
-  const { children, onChange } = props
+  const { children, onChange, placeholder } = props
 
   return (
     <context.Provider value={{ onChange, setShow, setValue }}>
@@ -18,6 +18,7 @@ const Select = props => {
         <div className={`option-box ${show ? 'show' : 'hidden'}`}>
           {children}
         </div>
+        <div className='placeholder'>{placeholder}</div>
         <span
           className={`iconfont ${
             show ? 'icon-arrow-up' : 'icon-arrow-down'
@@ -38,7 +39,6 @@ const Option = props => {
         e.stopPropagation()
         onChange(e.target.dataset.value)
         setShow(false)
-        // setValue(e.target.dataset.value)
       }}>
       {children}
     </div>

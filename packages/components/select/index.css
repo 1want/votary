@@ -2,14 +2,22 @@
   width: 200px;
   height: 30px;
   border: 1px solid #afafaf;
-  border-radius: 4px;
+  border-radius: 2px;
   position: relative;
+  cursor: pointer;
 }
 .select:after {
   content: attr(data-text);
   position: absolute;
   top: 4px;
   left: 10px;
+}
+.select .placeholder {
+  position: absolute;
+  top: 4px;
+  font-size: 14px;
+  color: #a7a5a5;
+  text-indent: 10px;
 }
 .select .option-box {
   margin-top: 36px;

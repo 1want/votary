@@ -7,10 +7,19 @@ export default () => {
     <div>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
-        title='剑神-卓凌昭'
+        onConfirm={() => {
+          alert('确认')
+        }}
+        onCancel={() => {
+          alert('取消')
+        }}
+        showButton
+        title='稻香'
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>
-        昆仑剑出血汪洋，千里直驱黄河黄。
+        <p>对这个世界如果你有太多的抱怨</p>
+        <p>跌倒了就不敢继续往前走</p>
+        <p>为什么人要这么的脆弱堕落</p>
       </Dialog>
     </div>
   )

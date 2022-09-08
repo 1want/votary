@@ -6,6 +6,7 @@ export default () => {
   return (
     <>
       <Select
+        placeholder='请选择'
         onChange={e => {
           console.log(e)
         }}>

@@ -2,9 +2,7 @@
 
 ---
 
-### 按钮类型
-
-类型支持 default、primary、success、warning、danger 五种类型，默认为 default
+### 基础用法
 
 <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
 
