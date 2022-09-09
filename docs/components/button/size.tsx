@@ -1,4 +1,4 @@
-import Button from '../../../packages/components/button'
+import { Button } from '../../../packages/components/button'
 import '../../../packages/components/button/index.css'
 import './index.css'
 

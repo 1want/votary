@@ -1,5 +1,5 @@
 import Message from '../../../packages/components/message'
-import Button from '../../../packages/components/button'
+import { Button } from '../../../packages/components/button'
 import './index.css'
 
 const msg1 = () => {

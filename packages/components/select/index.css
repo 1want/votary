@@ -1,50 +1,80 @@
+@keyframes myClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes myOpen {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .select {
-  width: 200px;
-  height: 30px;
+  width: 220px;
+  height: 32px;
+  line-height: 32px;
   border: 1px solid #afafaf;
   border-radius: 2px;
   position: relative;
   cursor: pointer;
 }
-.select:after {
-  content: attr(data-text);
+.select .placeholder,
+.select .value {
   position: absolute;
-  top: 4px;
-  left: 10px;
-}
-.select .placeholder {
-  position: absolute;
-  top: 4px;
+  top: 0;
   font-size: 14px;
   color: #a7a5a5;
   text-indent: 10px;
 }
+.select .value {
+  color: #000;
+}
 .select .option-box {
-  margin-top: 36px;
+  margin-top: 42px;
   background: #fff;
-  padding: 10px;
   box-shadow: 0 0 1px #9a9a9a;
   border-radius: 2px;
+  overflow: hidden;
+  padding: 10px 0;
 }
 .select .option-box .option {
-  margin-bottom: 8px;
+  padding: 2px 10px;
+  font-size: 14px;
   cursor: pointer;
 }
-.select .option-box .option:last-child {
-  margin-bottom: 0;
+.select .option-box .option:hover {
+  background: #c1cffb1a;
+}
+.select .option-box .is-select {
+  color: #5d5cdc;
 }
 .select .iconfont {
   position: absolute;
-  top: 6px;
+  top: 0;
   right: 10px;
   color: #afafaf;
+}
+.select .icon-arrow-down {
+  transform: rotate(0);
+  transition: transform 0.4s;
 }
 .select .hidden {
   visibility: hidden;
 }
 .select .show {
-  visibility: none;
+  animation: myOpen 0.3s;
 }
 .is-focus {
   border-color: #7f96ff;
+}
+.is-focus .icon-arrow-down {
+  transform: rotate(180deg);
+  transition: transform 0.4s;
 }

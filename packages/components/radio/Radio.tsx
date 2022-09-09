@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 
 import { useContext } from 'react'
-import RadioContext from './RadioContext'
+import RadioContext from './radio-context'
 
 interface RadioProps {
   value?: string

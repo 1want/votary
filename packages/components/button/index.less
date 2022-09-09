@@ -1,11 +1,7 @@
 @button-default: #fff;
 @button-default-color: #000;
-@button-primary: #3f45ff;
+@button-primary: #4b50d5;
 @button-primary-color: #fff;
-@button-success: #2bdc63;
-@button-success-color: #fff;
-@button-warning: #e89b17;
-@button-warning-color: #fff;
 @button-danger: #e82b2b;
 @button-danger-color: #fff;
 
@@ -13,10 +9,9 @@
   box-sizing: border-box;
   border-radius: 2px;
   padding: 0;
-  margin: 0;
-  width: 100px;
-  height: 44px;
-  line-height: 44px;
+  min-width: 94px;
+  height: 40px;
+  line-height: 40px;
   font-family: cursive;
   border: none;
   cursor: pointer;
@@ -26,30 +21,27 @@
     background: @button-default;
     border: 1px solid #cfcfcf;
     color: @button-default-color;
+    &:hover {
+      background: rgb(252, 251, 251);
+    }
   }
 
   &--primary {
     background: @button-primary;
     border: 1px solid @button-primary;
     color: @button-primary-color;
-  }
-
-  &--success {
-    background: @button-success;
-    border: 1px solid @button-success;
-    color: @button-success-color;
-  }
-
-  &--warning {
-    background: @button-warning;
-    border: 1px solid @button-warning;
-    color: @button-warning-color;
+    &:hover {
+      background: #4247d6;
+    }
   }
 
   &--danger {
     background: @button-danger;
     border: 1px solid @button-danger;
     color: @button-danger-color;
+    &:hover {
+      background: #e21c1c;
+    }
   }
 
   &--plain {
@@ -59,16 +51,8 @@
       color: @button-primary;
     }
 
-    &.v-button--success {
-      color: @button-success;
-    }
-
     &.v-button--danger {
       color: @button-danger;
-    }
-
-    &.v-button--warning {
-      color: @button-warning;
     }
   }
 

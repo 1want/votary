@@ -2,10 +2,9 @@
   box-sizing: border-box;
   border-radius: 2px;
   padding: 0;
-  margin: 0;
-  width: 100px;
-  height: 44px;
-  line-height: 44px;
+  min-width: 94px;
+  height: 40px;
+  line-height: 40px;
   font-family: cursive;
   border: none;
   cursor: pointer;
@@ -16,40 +15,33 @@
   border: 1px solid #cfcfcf;
   color: #000;
 }
+.v-button--default:hover {
+  background: #fcfbfb;
+}
 .v-button--primary {
-  background: #3f45ff;
-  border: 1px solid #3f45ff;
+  background: #4b50d5;
+  border: 1px solid #4b50d5;
   color: #fff;
 }
-.v-button--success {
-  background: #2bdc63;
-  border: 1px solid #2bdc63;
-  color: #fff;
-}
-.v-button--warning {
-  background: #e89b17;
-  border: 1px solid #e89b17;
-  color: #fff;
+.v-button--primary:hover {
+  background: #4247d6;
 }
 .v-button--danger {
   background: #e82b2b;
   border: 1px solid #e82b2b;
   color: #fff;
 }
+.v-button--danger:hover {
+  background: #e21c1c;
+}
 .v-button--plain {
   background: #fff;
 }
 .v-button--plain.v-button--primary {
-  color: #3f45ff;
-}
-.v-button--plain.v-button--success {
-  color: #2bdc63;
+  color: #4b50d5;
 }
 .v-button--plain.v-button--danger {
   color: #e82b2b;
-}
-.v-button--plain.v-button--warning {
-  color: #e89b17;
 }
 .v-button--small {
   width: 60px;
