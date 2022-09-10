@@ -3,12 +3,9 @@ import './index.css'
 
 export default () => (
   <div className='button-demo'>
-    <Button size='small' type='default'>
+    <Button icon='search'>中杯</Button>
+    <Button type='primary' icon='replay'>
       中杯
-    </Button>
-    <Button type='default'>大杯</Button>
-    <Button size='large' type='default'>
-      超大杯
     </Button>
   </div>
 )

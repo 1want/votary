@@ -42,6 +42,7 @@ export default defineConfig({
           'components/input',
           'components/select',
           'components/radio',
+          'components/checkbox',
           'components/upload'
         ]
       },

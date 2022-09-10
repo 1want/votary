@@ -8,8 +8,14 @@
 
 <code hideActions='["CSB","EXTERNAL"]' src="./type.tsx" />
 
+<br/>
+
 ### API
 
-| 参数 | 说明                                       | 类型   | 默认值 |
-| ---- | ------------------------------------------ | ------ | ------ |
-| type | 类型，可选值为 info success warning danger | string | info   |
+#### Props
+
+| 参数     | 说明                                       | 类型   | 默认值 |
+| -------- | ------------------------------------------ | ------ | ------ |
+| title    | 提示语                                     | string |        |
+| type     | 类型，可选值为 info success warning danger | string | info   |
+| duration | 自动关闭时间 ，单位毫秒                    | number | 3000   |

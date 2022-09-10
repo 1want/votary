@@ -11,6 +11,7 @@ interface SelectProps {
 
 const Select = (props: SelectProps) => {
   const { defaultValue, placeholder = '请选择', onChange, children } = props
+
   const [show, setShow] = useState(false)
   const [value, setValue] = useState(defaultValue)
   const classes = classNames(['select', show && 'is-focus'])
@@ -36,10 +37,6 @@ const Select = (props: SelectProps) => {
           <div className='placeholder'>{placeholder}</div>
         )}
         <span className='iconfont icon-arrow-down'></span>
-        {/* <span
-          className={`iconfont ${
-            show ? 'icon-arrow-up' : 'icon-arrow-down'
-          }`}></span> */}
       </div>
     </SelectContext.Provider>
   )

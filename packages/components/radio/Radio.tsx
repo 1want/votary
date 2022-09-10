@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import RadioContext from './radio-context'
 
 interface RadioProps {
-  value?: string
+  defaultValue?: string
   checked?: boolean
   disabled?: boolean
   children: any
@@ -14,11 +14,11 @@ const Radio = (props: RadioProps) => {
   const { ...context } = useContext(RadioContext)
   const classes = classNames([props.disabled && 'is-disabled'])
   const checked = context.checked
-    ? context.checked === props.value
+    ? context.checked === props.defaultValue
     : props.checked || false
 
   const onChange = () => {
-    context.toggle?.(props.value || '')
+    context.toggle?.(props.defaultValue || '')
   }
 
   return (

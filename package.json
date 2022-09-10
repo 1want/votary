@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "dumi dev",
     "serve": "vite --open",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "build:docs": "dumi build",
     "preview": "vite preview"
   },

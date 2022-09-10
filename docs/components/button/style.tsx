@@ -1,5 +1,4 @@
 import { Button } from '../../../packages/components/button'
-import '../../../packages/components/button/index.css'
 import './index.css'
 
 export default () => (
@@ -8,12 +7,6 @@ export default () => (
       镂空
     </Button>
     <Button hairline plain type='primary'>
-      细边框
-    </Button>
-    <Button plain type='success'>
-      镂空
-    </Button>
-    <Button hairline plain type='success'>
       细边框
     </Button>
     <Button plain type='danger'>

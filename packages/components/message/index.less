@@ -22,21 +22,23 @@
 
 .v-message {
   font-family: cursive;
-  position: absolute;
+  position: fixed;
   z-index: 999999;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  min-width: 380px;
   padding: 0 20px;
-  text-align: center;
   font-weight: 300;
   line-height: 44px;
   border-radius: 5px;
-  background: #e5e5e5;
-  color: #5b5858;
   box-shadow: 0 0 7px rgba(235, 233, 233, 0.653);
   display: flex;
+
+  &--info {
+    background: #e5e5e5;
+    color: #5b5858;
+    border: 1px solid rgb(230, 229, 229);
+  }
 
   &--success {
     background: #ebfff5;
@@ -50,7 +52,7 @@
     border: 1px solid #fef2d8;
   }
 
-  &--danger {
+  &--error {
     background: #ffe1e1;
     color: #ff3e3ee3;
     border: 1px solid #ffdcdc;

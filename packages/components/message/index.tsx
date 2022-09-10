@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const Message = (props: Props) => {
-  new useMessage(props)
+  useMessage(props)
 }
 
-export default Message
+export { Message }

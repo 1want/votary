@@ -14,27 +14,16 @@ const show = (box: HTMLElement, { title, type }: Props) => {
   box.style.animation = 'myOpen .3s ease-in forwards'
   let top = seed * 65 + 'px'
   box.style.top = top
-  // instances.push({
-  //   dom: instance,
-  //   id: seed,
-  //   top: top
-  // })
 }
 
 const hidden = (box: HTMLElement, duration = 3000) => {
   setTimeout(() => {
-    // instances.forEach(item => {
     box.style.animation = 'myClose .3s ease-in forwards'
     seed--
 
     setTimeout(() => {
       body.removeChild(box)
     }, 200)
-    // })
-    // instance.style.animation = 'myClose .3s ease-in forwards'
-    // let id = --seed
-
-    // instance[id].dom.style.top = (seed - 1) * 65 + 'px'
   }, duration)
 }
 
