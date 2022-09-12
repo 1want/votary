@@ -25,7 +25,8 @@
     "serve": "vite --open",
     "build": "vite build",
     "build:docs": "dumi build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "tsc"
   },
   "dependencies": {
     "classnames": "^2.3.1",

@@ -8,17 +8,18 @@ interface RadioProps {
   checked?: boolean
   disabled?: boolean
   children: any
+  value?: string
 }
 
 const Radio = (props: RadioProps) => {
   const { ...context } = useContext(RadioContext)
   const classes = classNames([props.disabled && 'is-disabled'])
   const checked = context.checked
-    ? context.checked === props.defaultValue
+    ? context.checked === props.value
     : props.checked || false
 
   const onChange = () => {
-    context.toggle?.(props.defaultValue || '')
+    context.toggle?.(props.value || '')
   }
 
   return (
