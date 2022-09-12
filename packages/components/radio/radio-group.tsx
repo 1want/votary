@@ -3,7 +3,7 @@ import RadioContext from './radio-context'
 
 interface RadioProps {
   value?: string
-  onChange?: (e) => void
+  onChange?: (e: string) => void
   children?: any
 }
 
