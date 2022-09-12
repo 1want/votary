@@ -1,6 +1,6 @@
 # 安装
 
-<!-- ### npm 安装
+### npm 安装
 
 ```
 npm install votary -S
@@ -10,4 +10,15 @@ npm install votary -S
 
 ```javascript
 import 'votary/dist/style.css'
-``` -->
+```
+
+```jsx
+/**
+ * inline: true
+ */
+
+import 'votary/dist/style.css'
+import 'votary/dist/index.css'
+
+export default () => ''
+```
