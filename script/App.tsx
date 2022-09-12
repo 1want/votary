@@ -4,6 +4,8 @@ import { Message } from '@/components/message'
 
 import { Button } from '@/components/button'
 import { Dialog } from '@/components/dialog'
+
+import { Drawer } from '@/components/drawer'
 import './index.css'
 
 function App() {
@@ -15,10 +17,10 @@ function App() {
       </span>
 
       <Dialog
-        title='英雄志'
+        title='ghajkg'
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>
-        昆仑剑出血汪洋，千里直驱黄河黄。
+        321
       </Dialog>
     </>
   )

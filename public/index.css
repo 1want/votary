@@ -1,21 +1,3 @@
 .v-button {
   margin-right: 20px !important;
 }
-
-.v-dialog-enter {
-  opacity: 0;
-}
-
-.v-dialog-enter-active {
-  opacity: 1;
-  transition: all 300ms;
-}
-
-.v-dialog-exit {
-  opacity: 1;
-}
-
-.v-dialog-exit-active {
-  opacity: 0;
-  transition: all 300ms;
-}

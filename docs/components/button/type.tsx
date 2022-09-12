@@ -1,4 +1,5 @@
-import { Button } from '../../../packages/components/button'
+import { Button } from 'votary'
+
 export default () => (
   <>
     <Button type='default'>按钮</Button>

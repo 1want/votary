@@ -1,11 +1,7 @@
 import ReactDOM from 'react-dom'
 import { CSSTransition } from 'react-transition-group'
-import classNames from 'classnames'
 
 import { Button } from '../button'
-import { createNamespace } from '../../utils/createNamespace'
-
-const bem = createNamespace('dialog')
 
 interface Props {
   title?: string
@@ -39,8 +35,6 @@ const Dialog = (props: Props) => {
   } else {
     body.style.overflow = 'visible'
   }
-
-  const classes = bem(classNames([visible ? 'visible' : 'hidden']))
 
   const dialogDom = (
     <CSSTransition

@@ -1,4 +1,4 @@
-import { Layout } from '../../../packages/components/layout'
+import { Layout } from 'votary'
 
 const { Header, Aside, Main, Footer } = Layout
 

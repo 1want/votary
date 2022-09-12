@@ -21,7 +21,7 @@ export default defineConfig({
     },
     lib: {
       entry: './packages/index.ts',
-      name: 'r-ui',
+      name: 'votary',
       fileName: 'votary'
     }
   }

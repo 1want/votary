@@ -1,4 +1,4 @@
-import Divider from '../../../packages/components/divider'
+import { Divider } from 'votary'
 
 export default () => {
   return (

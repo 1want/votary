@@ -1,11 +1,13 @@
 {
   "name": "votarys",
-  "version": "0.0.1",
+  "version": "0.0.23",
   "type": "module",
   "author": "iwant",
   "keywords": [
-    "UI",
-    "React"
+    "ui",
+    "react-ui",
+    "react-component",
+    "votary"
   ],
   "files": [
     "dist"
@@ -21,7 +23,7 @@
   "scripts": {
     "dev": "dumi dev",
     "serve": "vite --open",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "build:docs": "dumi build",
     "preview": "vite preview"
   },
@@ -31,7 +33,7 @@
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
     "swiper": "^8.3.2",
-    "votary": "0.0.1"
+    "votary": "0.0.22"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

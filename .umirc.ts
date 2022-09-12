@@ -20,7 +20,7 @@ export default defineConfig({
     '/guide': [
       {
         title: '简介',
-        path: '/guide'
+        path: '/guide/introduction'
       },
       {
         title: '安装',
