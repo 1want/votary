@@ -1,6 +1,5 @@
-import Message from '../../../packages/components/message'
+import { Message } from '../../../packages/components/message'
 import { Button } from '../../../packages/components/button'
-import './index.css'
 
 const msg1 = () => {
   Message({
@@ -18,24 +17,22 @@ const msg2 = () => {
 const msg3 = () => {
   Message({
     title: '或许就是这样为了生存，而一点点忘记了最初的本意。',
-    type: 'warning',
-    duration: 2000
+    type: 'warning'
   })
 }
 
 const msg4 = () => {
   Message({
     title: '得到了不该得到的，就会失去不该失去的。',
-    type: 'error',
-    duration: 2000
+    type: 'error'
   })
 }
 
 export default () => (
-  <div className='button-demo'>
+  <>
     <Button onClick={msg1}>消息</Button>
     <Button onClick={msg2}>成功</Button>
     <Button onClick={msg3}>警告</Button>
     <Button onClick={msg4}>失败</Button>
-  </div>
+  </>
 )

@@ -1,15 +1,15 @@
-.v-dialog-wrapper {
+.v-dialog {
   background: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 101;
   top: 0;
   left: 0;
-  z-index: 101;
   right: 0;
   bottom: 0;
 }
-.dialog {
+.v-dialog-content {
   border: 1px solid #eee;
   background: #fff;
   position: absolute;
@@ -19,22 +19,22 @@
   padding: 20px;
   border-radius: 2px;
 }
-.dialog .header {
+.v-dialog-content .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.dialog .header .icon-cross {
+.v-dialog-content .header .icon-cross {
   cursor: pointer;
-  font-size: 20px;
-  color: #cfcfcf;
+  font-size: 18px;
+  color: #909399;
 }
-.dialog .content {
+.v-dialog-content .content {
   margin-top: 40px;
 }
-.dialog .footer {
-  margin-top: 20px;
+.v-dialog-content .footer {
+  margin-top: 30px;
 }
-.dialog .footer Button {
+.v-dialog-content .footer Button {
   margin-right: 20px;
 }

@@ -4,9 +4,13 @@
 
 ### 提示状态
 
-类型支持 info、success、warning、danger 四种类型，默认为 info
+状态类型 info、success、warning、danger 默认为 info
 
 <code hideActions='["CSB","EXTERNAL"]' src="./type.tsx" />
+
+### 自定义关闭时间
+
+<code hideActions='["CSB","EXTERNAL"]' src="./duration.tsx" />
 
 <br/>
 

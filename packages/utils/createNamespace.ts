@@ -3,7 +3,7 @@ export function createBEM(name: string) {
     let className = ''
     const classNames = arr.split(' ')
     for (var i of classNames) {
-      className += 'v-button--' + i + ' '
+      className += `${name}--` + i + ' '
     }
     className = className.slice(0, -1)
     if (originName) {

@@ -5,6 +5,7 @@ export default defineConfig({
   mode: 'site',
   outputPath: 'docs-dist',
   base: '/votary',
+  links: [{ rel: 'stylesheet', type: 'text/css', href: './index.css' }],
   sitemap: { hostname: 'https://1want.github.io/votary' },
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   favicon: './logo.png',
@@ -50,8 +51,12 @@ export default defineConfig({
         title: '提示组件',
         children: [
           'components/message',
+          'components/notification',
+          'components/pop-confirm',
+          'components/drawer',
           'components/dialog',
-          'components/loading'
+          'components/loading',
+          'components/progress'
         ]
       },
       {

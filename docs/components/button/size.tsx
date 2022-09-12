@@ -1,8 +1,7 @@
 import { Button } from '../../../packages/components/button'
-import './index.css'
 
 export default () => (
-  <div className='button-demo'>
+  <>
     <Button size='small' type='default'>
       中杯
     </Button>
@@ -10,5 +9,5 @@ export default () => (
     <Button size='large' type='default'>
       超大杯
     </Button>
-  </div>
+  </>
 )

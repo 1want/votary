@@ -1,4 +1,11 @@
+import ReactDOM from 'react-dom'
+import { CSSTransition } from 'react-transition-group'
+import classNames from 'classnames'
+
 import { Button } from '../button'
+import { createNamespace } from '../../utils/createNamespace'
+
+const bem = createNamespace('dialog')
 
 interface Props {
   title?: string
@@ -33,36 +40,42 @@ const Dialog = (props: Props) => {
     body.style.overflow = 'visible'
   }
 
-  return (
-    <>
-      {visible && (
-        <div className='v-dialog-wrapper' onClick={onClose}>
-          <div
-            className='dialog'
-            style={{ width: `${width}` }}
-            onClick={e => {
-              e.stopPropagation()
-            }}>
-            <div className='header'>
-              <div className='title'>{title}</div>
-              <span className='iconfont icon-cross' onClick={onClose}></span>
-            </div>
-            <div className='content'>{children}</div>
-            {showButton && (
-              <div className='footer'>
-                <Button type='primary' onClick={onConfirm}>
-                  确认
-                </Button>
-                <Button type='default' onClick={onCancel}>
-                  取消
-                </Button>
-              </div>
-            )}
+  const classes = bem(classNames([visible ? 'visible' : 'hidden']))
+
+  const dialogDom = (
+    <CSSTransition
+      classNames='v-dialog'
+      unmountOnExit
+      timeout={300}
+      in={visible}>
+      <div className='v-dialog' onClick={onClose}>
+        <div
+          className='v-dialog-content'
+          style={{ width: `${width}` }}
+          onClick={e => {
+            e.stopPropagation()
+          }}>
+          <div className='header'>
+            <div className='title'>{title}</div>
+            <span className='iconfont icon-cross' onClick={onClose}></span>
           </div>
+          <div className='content'>{children}</div>
+          {showButton && (
+            <div className='footer'>
+              <Button type='primary' onClick={onConfirm}>
+                确认
+              </Button>
+              <Button type='default' onClick={onCancel}>
+                取消
+              </Button>
+            </div>
+          )}
         </div>
-      )}
-    </>
+      </div>
+    </CSSTransition>
   )
+
+  return ReactDOM.createPortal(dialogDom, body)
 }
 
 export default Dialog

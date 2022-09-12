@@ -6,7 +6,8 @@
   height: 40px;
   line-height: 40px;
   font-family: cursive;
-  border: none;
+  background: #fff;
+  border: 1px solid #cfcfcf;
   cursor: pointer;
   font-size: 16px;
 }
