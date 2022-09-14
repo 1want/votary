@@ -18,7 +18,6 @@ const Drawer = (props: Props) => {
     direction = 'right',
     visible,
     title,
-    width = '30%',
     showClose = true,
     onClose,
     children
@@ -42,8 +41,7 @@ const Drawer = (props: Props) => {
         timeout={300}
         in={visible}>
         <div
-          className='v-drawer-content'
-          style={{ width }}
+          className={`v-drawer-content ${direction}`}
           onClick={e => {
             e.stopPropagation()
           }}>
