@@ -7,7 +7,7 @@ interface RadioProps {
   defaultValue?: string
   checked?: boolean
   disabled?: boolean
-  children: any
+  children?: any
   value?: string
 }
 
