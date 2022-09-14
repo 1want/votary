@@ -1,19 +1,25 @@
-.radio-item {
+.v-radio {
   display: flex;
   align-items: center;
-  .is-check {
-    background: #4045f5;
-    border-color: #4045f5;
-  }
-  .is-disabled {
-    background: #eee;
-    cursor: not-allowed;
-    &.radio-name {
-      color: red;
+
+  .radio-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    .is-check {
+      background: #4045f5;
+      border-color: #4045f5;
     }
-  }
-  .radio-name {
-    margin-left: 5px;
-    user-select: none;
+    .is-disabled {
+      background: #eee;
+      cursor: not-allowed;
+      &.radio-name {
+        color: red;
+      }
+    }
+    .radio-name {
+      margin-left: 5px;
+      user-select: none;
+    }
   }
 }

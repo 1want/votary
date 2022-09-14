@@ -1,20 +1,19 @@
 import { useState } from 'react'
-import { Drawer } from 'votary'
+import { Drawer } from '../../../packages/components/drawer'
+// import { Drawer } from 'votary'
 
 export default () => {
   const [drawerVisible, setDrawerVisible] = useState(false)
 
   return (
     <>
-      <span onClick={() => setDrawerVisible(!drawerVisible)}>
-        点击打开Drawer
-      </span>
+      <span onClick={() => setDrawerVisible(!drawerVisible)}>点击打开抽屉</span>
 
       <Drawer
-        title='抽屉'
+        title='您的外卖正在送达中！'
         visible={drawerVisible}
         onClose={() => setDrawerVisible(false)}>
-        321
+        点击查看详情
       </Drawer>
     </>
   )

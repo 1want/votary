@@ -7,25 +7,11 @@ import { Dialog } from '@/components/dialog'
 
 import { Drawer } from '@/components/drawer'
 import { Radio } from '@/components/radio'
+import { Progress } from '@/components/progress'
 import './index.css'
 
 function App() {
-  const [dialogVisible, setDialogVisible] = useState(true)
-  return (
-    <>
-      <span onClick={() => setDialogVisible(!dialogVisible)}>
-        点击打开Dialog
-      </span>
-
-      <Drawer
-        direction='right'
-        title='ghajkg'
-        visible={dialogVisible}
-        onClose={() => setDialogVisible(false)}>
-        321
-      </Drawer>
-    </>
-  )
+  return <Progress percentage={50} />
 }
 
 export default App

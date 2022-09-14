@@ -1,19 +1,73 @@
-.v-drawer-enter {
+.v-drawer-top-enter {
+  transform: translateY(-100%);
+}
+
+.v-drawer-top-enter-active {
+  transform: translate(0);
+  transition: transform 400ms ease-out;
+}
+
+.v-drawer-top-exit {
+  transform: translate(0);
+}
+
+.v-drawer-top-exit-active {
+  transform: translateY(-100%);
+  transition: all 400ms ease;
+}
+
+.v-drawer-right-enter {
   transform: translate(100%);
 }
 
-.v-drawer-enter-active {
+.v-drawer-right-enter-active {
   transform: translate(0);
-  transition: transform 300ms ease-out;
+  transition: transform 400ms ease-out;
 }
 
-.v-drawer-exit {
+.v-drawer-right-exit {
   transform: translate(0);
 }
 
-.v-drawer-exit-active {
+.v-drawer-right-exit-active {
   transform: translate(100%);
-  transition: all 300ms ease;
+  transition: all 400ms ease;
+}
+
+.v-drawer-bottom-enter {
+  transform: translateY(100%);
+}
+
+.v-drawer-bottom-enter-active {
+  transform: translate(0);
+  transition: transform 400ms ease-out;
+}
+
+.v-drawer-bottom-exit {
+  transform: translate(0);
+}
+
+.v-drawer-bottom-exit-active {
+  transform: translateY(100%);
+  transition: all 400ms ease;
+}
+
+.v-drawer-left-enter {
+  transform: translate(-100%);
+}
+
+.v-drawer-left-enter-active {
+  transform: translate(0);
+  transition: transform 400ms ease-out;
+}
+
+.v-drawer-left-exit {
+  transform: translate(0);
+}
+
+.v-drawer-left-exit-active {
+  transform: translate(-100%);
+  transition: all 400ms ease;
 }
 
 .v-drawer-mask {
@@ -43,7 +97,6 @@
   }
   .content {
     padding: 10px;
-    margin-top: 40px;
   }
 }
 
@@ -55,7 +108,7 @@
 }
 
 .right {
-  width: 30%;
+  width: 25%;
   height: 100%;
   right: 0;
   top: 0;
@@ -69,7 +122,7 @@
 }
 
 .left {
-  width: 30%;
+  width: 25%;
   height: 100%;
   left: 0;
   top: 0;

@@ -5,7 +5,6 @@ interface Props {
   direction?: string
   visible?: boolean
   title?: string
-  width?: string
   showClose?: boolean
   children?: any
   onClose?: () => void
@@ -36,9 +35,9 @@ const Drawer = (props: Props) => {
         style={{ display: visible ? 'block' : 'none' }}
         onClick={onClose}></div>
       <CSSTransition
-        classNames='v-drawer'
+        classNames={`v-drawer-${direction}`}
         unmountOnExit
-        timeout={300}
+        timeout={400}
         in={visible}>
         <div
           className={`v-drawer-content ${direction}`}

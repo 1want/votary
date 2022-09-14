@@ -22,7 +22,7 @@
   "homepage": "https://1want.github.io/votary/",
   "scripts": {
     "dev": "dumi dev",
-    "serve": "vite --open",
+    "serve": "vite --open --port=8083",
     "build": "vite build",
     "build:docs": "dumi build",
     "preview": "vite preview",
