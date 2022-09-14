@@ -5,6 +5,7 @@ export default defineConfig({
   mode: 'site',
   outputPath: 'docs-dist',
   base: '/votary',
+  hash: true,
   exportStatic: {},
   // links: [{ rel: 'stylesheet', type: 'text/css', href: './index.css' }],
   sitemap: { hostname: 'https://1want.github.io/votary' },
