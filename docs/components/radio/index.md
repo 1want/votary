@@ -8,7 +8,7 @@
 
 ### 默认选中
 
-<code hideActions='["CSB","EXTERNAL"]' src="./checked.tsx" />
+<!-- <code hideActions='["CSB","EXTERNAL"]' src="./checked.tsx" /> -->
 
 <br />
 
