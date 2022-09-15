@@ -24,7 +24,7 @@
     "dev": "dumi dev",
     "serve": "vite --open --port=8083",
     "build": "vite build",
-    "build:docs": "dumi build",
+    "build:docs": "tsc && dumi build",
     "preview": "vite preview",
     "test": "tsc"
   },

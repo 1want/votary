@@ -1,4 +1,6 @@
 import '@/icon/assets/iconfont.css'
+import './index.css'
+
 import { useState } from 'react'
 import { Message } from '@/components/message'
 
@@ -8,10 +10,17 @@ import { Dialog } from '@/components/dialog'
 import { Drawer } from '@/components/drawer'
 import { Radio } from '@/components/radio'
 import { Progress } from '@/components/progress'
-import './index.css'
+import Notification from '@/components/notification'
 
 function App() {
-  return <Progress percentage={50} />
+  const click = () => {
+    Notification()
+  }
+  return (
+    <div>
+      <Button onClick={click}>btn</Button>
+    </div>
+  )
 }
 
 export default App

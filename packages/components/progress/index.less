@@ -4,9 +4,50 @@
   border-radius: 10px;
   height: 8px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  .progress {
+    background: #4b50d5;
+    border-radius: 10px;
+    height: 8px;
+  }
+
+  .percentage {
+    position: absolute;
+    left: 380px;
+    font-size: 13px;
+  }
 }
-.progress {
-  background: #4b50d5;
-  border-radius: 10px;
-  height: 8px;
+
+.box {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 6px red;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 50px;
+  .left {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    height: 100px;
+    width: 56px;
+    background: #fff;
+    border-width: 6px;
+    border-color: orange transparent orange orange;
+    border-style: solid;
+    border-radius: 56px 10px 10px 56px;
+  }
+  // .right {
+  //   position: absolute;
+  //   top: -6px;
+  //   right: 0;
+  //   height: 100px;
+  //   width: 56px;
+  //   background: #fff;
+  //   border-width: 6px;
+  //   border-color: orange orange orange transparent;
+  //   border-style: solid;
+  //   border-radius: 0 56px 56px 0;
+  // }
 }
