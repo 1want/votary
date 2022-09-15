@@ -1,4 +1,4 @@
-import _Radio from './radio'
+import _Radio from './radios'
 import RadioGroup from './radio-group'
 import './index.css'
 
