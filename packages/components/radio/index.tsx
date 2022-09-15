@@ -1,8 +1,7 @@
-import _Radio from './radio'
-// import RadioGroup from './radio-group'
+import _Select from './radio'
+import Option from './radio-group'
 import './index.css'
 
-const RadioGroup = {}
+const Selects = Object.assign(_Select, { Option })
 
-const Radio = Object.assign(_Radio, { Group: RadioGroup })
-export { Radio }
+export { Selects }
