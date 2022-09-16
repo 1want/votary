@@ -54,7 +54,7 @@ export default defineConfig({
         children: [
           'components/message',
           'components/notification',
-          'components/pop-confirm',
+          'components/popconfirm',
           'components/drawer',
           'components/dialog',
           'components/loading',

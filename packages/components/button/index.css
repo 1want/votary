@@ -2,7 +2,6 @@
   box-sizing: border-box;
   border-radius: 2px;
   padding: 0;
-  min-width: 94px;
   height: 40px;
   line-height: 40px;
   font-family: cursive;
@@ -53,8 +52,8 @@
 }
 .v-button--small {
   width: 60px;
-  height: 30px;
-  line-height: 30px;
+  height: 28px;
+  line-height: 26px;
   font-size: 12px;
 }
 .v-button--large {

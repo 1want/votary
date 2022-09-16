@@ -1,21 +1,26 @@
-.wrapper {
-  background: #e0e0e0;
+.progress-wrapper {
   width: 360px;
-  border-radius: 10px;
-  height: 8px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  .progress {
-    background: #4b50d5;
+  position: relative;
+  .progress-line {
+    width: 360px;
     border-radius: 10px;
     height: 8px;
-  }
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
 
-  .percentage {
-    position: absolute;
-    left: 380px;
-    font-size: 13px;
+    .progress-bar {
+      background: #4b50d5;
+      border-radius: 10px;
+      height: 8px;
+    }
+
+    .percentage {
+      position: absolute;
+      left: 370px;
+      font-size: 13px;
+    }
   }
 }
 

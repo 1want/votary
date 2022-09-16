@@ -1,20 +1,24 @@
-.wrapper {
-  background: #e0e0e0;
+.progress-wrapper {
+  width: 360px;
+  position: relative;
+}
+.progress-wrapper .progress-line {
   width: 360px;
   border-radius: 10px;
   height: 8px;
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: #e0e0e0;
 }
-.wrapper .progress {
+.progress-wrapper .progress-line .progress-bar {
   background: #4b50d5;
   border-radius: 10px;
   height: 8px;
 }
-.wrapper .percentage {
+.progress-wrapper .progress-line .percentage {
   position: absolute;
-  left: 380px;
+  left: 370px;
   font-size: 13px;
 }
 .box {

@@ -1,0 +1,23 @@
+.popconfirm {
+  width: 160px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 0 2px #f9f9f9;
+}
+.popconfirm .icon-info {
+  color: #4c69bd;
+}
+.popconfirm .title {
+  margin-left: 10px;
+  font-size: 15px;
+}
+.popconfirm .btn {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.popconfirm .btn .v-button {
+  width: 45px;
+  margin-right: 10px;
+}
