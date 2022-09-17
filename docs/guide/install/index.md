@@ -17,9 +17,9 @@ import 'votary/dist/style.css'
  * inline: true
  */
 
-// import React from 'react'
-// import 'votary/dist/style.css'
+import React from 'react'
+import 'votary/dist/style.css'
 import 'votary/dist/index.css'
 
-// export default () => ''
+export default () => ''
 ```

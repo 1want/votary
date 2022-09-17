@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Drawer } from '../../../packages/components/drawer'
-// import { Drawer } from 'votary'
+import { Drawer } from 'votary'
 
 export default () => {
   const [drawerVisible, setDrawerVisible] = useState(false)

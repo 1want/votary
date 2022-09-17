@@ -1,6 +1,5 @@
 import { useState } from 'react'
-
-import Input from '../../../packages/components/input'
+import { Input } from 'votary'
 
 export default () => {
   const [username, setUsername] = useState('')

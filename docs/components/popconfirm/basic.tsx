@@ -1,4 +1,4 @@
-import { Popconfirm } from '../../../packages/components/popconfirm'
+import { Popconfirm } from 'votary'
 
 export default () => {
   const onCancel = () => {}

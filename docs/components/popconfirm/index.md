@@ -12,17 +12,15 @@
 
 #### Props
 
-| 参数     | 说明                                  | 类型    | 默认值  |
-| -------- | ------------------------------------- | ------- | ------- |
-| type     | 类型，可选值为 default primary danger | string  | default |
-| size     | 尺寸，可选值为 large small mini       | string  | normal  |
-| icon     | 添加按钮图标                          | string  |         |
-| plain    | 是否为朴素按钮                        | boolean | false   |
-| hairline | 是否使用细边框                        | boolean | false   |
-| disabled | 是否禁用按钮                          | boolean | false   |
+| 参数        | 说明         | 类型   | 默认值 |
+| ----------- | ------------ | ------ | ------ |
+| title       | 显示内容     | string |        |
+| confirmText | 确认按钮文本 | string |        |
+| cancelText  | 取消按钮文本 | string |        |
 
 #### Events
 
-| 参数    | 说明         | 类型     | 默认值 |
-| ------- | ------------ | -------- | ------ |
-| onClick | 点击事件回调 | function |        |
+| 参数      | 说明         | 类型     | 默认值 |
+| --------- | ------------ | -------- | ------ |
+| onCancel  | 点击关闭回调 | function |        |
+| onConfirm | 点击确认回调 | function |        |

@@ -3,4 +3,4 @@ import FormItem from './form-item'
 
 Form.Item = FormItem
 
-export default Form
+export { Form }

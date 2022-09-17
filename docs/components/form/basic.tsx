@@ -1,5 +1,4 @@
-import Form from '../../../packages/components/form/index'
-import Input from '../../../packages/components/input'
+import { Form, Input } from 'votary'
 
 export default () => (
   <Form>
