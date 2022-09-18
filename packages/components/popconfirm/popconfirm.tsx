@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import { Button } from '../button'
 
 interface PopconfirmProps {
@@ -6,6 +8,7 @@ interface PopconfirmProps {
   cancelText?: string
   onCancel?: () => void
   onConfirm?: () => void
+  children?: any
 }
 
 const Popconfirm = (props: PopconfirmProps) => {
@@ -14,19 +17,49 @@ const Popconfirm = (props: PopconfirmProps) => {
     confirmText = '确认',
     cancelText = '取消',
     onCancel,
-    onConfirm
+    onConfirm,
+    children
   } = props
+  const [visible, setVisible] = useState(false)
 
   return (
-    <div className='popconfirm'>
-      <span className='iconfont icon-info'></span>
-      <span className='title'>{title}</span>
-      <div className='btn'>
-        <Button size='small' type='primary'>
-          {confirmText}
-        </Button>
-        <Button size='small'>{cancelText}</Button>
-      </div>
+    <div
+      className='v-popconfirm-content'
+      tabIndex={1}
+      onBlur={() => setVisible(false)}>
+      <div onClick={() => setVisible(true)}>{children}</div>
+      <CSSTransition
+        classNames='v-popconfirm'
+        unmountOnExit
+        timeout={300}
+        in={visible}>
+        <div className='popconfirm'>
+          <div className='header'>
+            <span className='iconfont icon-info'></span>
+            <div className='title'>{title}</div>
+          </div>
+
+          <div className='btn'>
+            <Button
+              size='small'
+              type='primary'
+              onClick={() => {
+                onConfirm?.()
+                setVisible(false)
+              }}>
+              {confirmText}
+            </Button>
+            <Button
+              size='small'
+              onClick={() => {
+                onCancel?.()
+                setVisible(false)
+              }}>
+              {cancelText}
+            </Button>
+          </div>
+        </div>
+      </CSSTransition>
     </div>
   )
 }

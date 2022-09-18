@@ -34,6 +34,7 @@ export default defineConfig({
         title: '基础组件',
         children: [
           'components/button',
+          'components/icon',
           'components/layout',
           'components/divider'
         ]
