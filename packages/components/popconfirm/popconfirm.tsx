@@ -31,9 +31,10 @@ const Popconfirm = (props: PopconfirmProps) => {
       <CSSTransition
         classNames='v-popconfirm'
         unmountOnExit
-        timeout={300}
+        timeout={400}
         in={visible}>
         <div className='popconfirm'>
+          <div className='arrow'></div>
           <div className='header'>
             <span className='iconfont icon-info'></span>
             <div className='title'>{title}</div>
@@ -43,6 +44,7 @@ const Popconfirm = (props: PopconfirmProps) => {
             <Button
               size='small'
               type='primary'
+              plain
               onClick={() => {
                 onConfirm?.()
                 setVisible(false)

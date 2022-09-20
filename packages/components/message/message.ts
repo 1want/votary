@@ -22,7 +22,7 @@ function useMessage(props: MessageProps) {
     num++
     box.className = classes
     box.innerText = title
-    box.style.animation = 'showMsg .3s ease-in forwards'
+    box.style.animation = 'showMsg .4s forwards'
     box.style.top = (num - 1) * 65 + 'px'
     instances.push({
       box,
@@ -35,7 +35,7 @@ function useMessage(props: MessageProps) {
   const hidden = () => {
     setTimeout(() => {
       num--
-      box.style.animation = 'closeMsg .5s linear forwards'
+      box.style.animation = 'closeMsg .4s forwards'
 
       // 此处top与instances中的top一致
       let top = box.style.top.slice(0, -2)
@@ -46,15 +46,13 @@ function useMessage(props: MessageProps) {
       // 从instances中删除此元素
       instances.splice(i, 1)
 
-      setTimeout(() => {
-        // 这个元素之后的所以元素top都需要重新调整
-        instances.slice(i).forEach(item => {
-          // 改变DOM自身style
-          item.box.style.top = item.top - 65 + 'px'
-          item.box.style.transition = '.5s'
-          // 改变instances里面的top
-          item.top -= 65
-        })
+      // 这个元素之后的所以元素top都需要重新调整
+      instances.slice(i).forEach(item => {
+        // 改变DOM自身style
+        item.box.style.top = item.top - 65 + 'px'
+        item.box.style.transition = '.4s'
+        // 改变instances里面的top
+        item.top -= 65
       })
 
       setTimeout(() => {

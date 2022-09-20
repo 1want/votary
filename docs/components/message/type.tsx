@@ -1,4 +1,5 @@
-import { Button, Message } from 'votary'
+import { Button } from 'votary'
+import { Message } from '../../../packages/components/message'
 
 const msg1 = () => {
   Message({
@@ -15,7 +16,7 @@ const msg2 = () => {
 
 const msg3 = () => {
   Message({
-    title: '或许就是这样为了生存，而一点点忘记了最初的本意。',
+    title: '如果没有龙，屠龙的剑又有什么价值呢？',
     type: 'warning'
   })
 }

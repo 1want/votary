@@ -1,12 +1,3 @@
-@keyframes closeMsg {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    margin-top: -65px;
-  }
-}
 @keyframes showMsg {
   from {
     opacity: 0;
@@ -16,12 +7,13 @@
     margin-top: 20px;
   }
 }
-@keyframes moves {
+@keyframes closeMsg {
   from {
-    background: red;
+    opacity: 1;
   }
   to {
-    margin-top: -49px;
+    opacity: 0;
+    margin-top: -20px;
   }
 }
 .v-message {
@@ -32,16 +24,13 @@
   top: 0;
   transform: translateX(-50%);
   padding: 0 20px;
-  font-weight: 300;
   line-height: 44px;
-  border-radius: 5px;
-  box-shadow: 0 0 7px rgba(235, 233, 233, 0.653);
-  display: flex;
+  border-radius: 6px;
 }
 .v-message--info {
-  background: #e5e5e5;
-  color: #5b5858;
-  border: 1px solid #e6e5e5;
+  background: #fafafa;
+  color: #636363;
+  border: 1px solid #e3e3e3;
 }
 .v-message--success {
   background: #ebfff5;
@@ -49,12 +38,12 @@
   border: 1px solid #ddffe2;
 }
 .v-message--warning {
-  background: #fff5df;
-  color: #b0841b;
-  border: 1px solid #fef2d8;
+  background: #fdf6ec;
+  color: #e6a23c;
+  border: 1px solid #faecd8;
 }
 .v-message--error {
-  background: #ffe1e1;
+  background: #fde7e7;
   color: #ff3e3ee3;
-  border: 1px solid #ffdcdc;
+  border: 1px solid #f9d9d9;
 }

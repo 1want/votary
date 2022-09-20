@@ -7,44 +7,43 @@
 
 .v-button {
   box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: 40px;
-  line-height: 40px;
   width: 94px;
-  font-family: cursive;
-  background: #fff;
-  border: 1px solid #cfcfcf;
-  cursor: pointer;
+  height: 40px;
+  padding: 0;
   font-size: 16px;
-
+  font-family: cursive;
+  line-height: 38px;
+  background: #fff;
+  border-radius: 2px;
+  cursor: pointer;
   .iconfont {
     margin-right: 4px;
     font-size: 15px;
   }
 
   &--default {
+    color: @button-default-color;
     background: @button-default;
     border: 1px solid #cfcfcf;
-    color: @button-default-color;
+
     &:hover {
       background: rgb(252, 251, 251);
     }
   }
 
   &--primary {
+    color: @button-primary-color;
     background: @button-primary;
     border: 1px solid @button-primary;
-    color: @button-primary-color;
     &:hover {
       background: #4247d6;
     }
   }
 
   &--danger {
+    color: @button-danger-color;
     background: @button-danger;
     border: 1px solid @button-danger;
-    color: @button-danger-color;
     &:hover {
       background: #e21c1c;
     }
@@ -67,15 +66,15 @@
   &--small {
     width: 60px;
     height: 28px;
-    line-height: 26px;
     font-size: 12px;
+    line-height: 24px;
   }
 
   &--large {
     width: 250px;
     height: 50px;
-    line-height: 50px;
     font-size: 24px;
+    line-height: 48px;
   }
 
   &--hairline {

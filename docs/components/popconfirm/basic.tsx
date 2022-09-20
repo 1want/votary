@@ -1,15 +1,11 @@
 import { Popconfirm } from '../../../packages/components/popconfirm'
 
 export default () => {
-  const onCancel = () => {
-    alert('取消')
-  }
-  const onConfirm = () => {
-    alert('确认')
-  }
+  const onCancel = () => {}
+  const onConfirm = () => {}
   return (
     <Popconfirm
-      title='你确定要关闭吗?'
+      title='你选择关闭吗?'
       confirm-text='关闭'
       cancel-text='取消'
       onCancel={onCancel}

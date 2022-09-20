@@ -27,6 +27,10 @@ export default defineConfig({
       {
         title: '安装',
         path: '/guide/install'
+      },
+      {
+        title: '设计资源',
+        path: '/guide/design'
       }
     ],
     '/components': [

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Dialog } from 'votary'
+// import { Dialog } from 'votary'
+import { Dialog } from '../../../packages/components/dialog'
 
 export default () => {
   const [dialogVisible, setDialogVisible] = useState(false)

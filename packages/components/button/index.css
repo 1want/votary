@@ -1,40 +1,39 @@
 .v-button {
   box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: 40px;
-  line-height: 40px;
   width: 94px;
-  font-family: cursive;
-  background: #fff;
-  border: 1px solid #cfcfcf;
-  cursor: pointer;
+  height: 40px;
+  padding: 0;
   font-size: 16px;
+  font-family: cursive;
+  line-height: 38px;
+  background: #fff;
+  border-radius: 2px;
+  cursor: pointer;
 }
 .v-button .iconfont {
   margin-right: 4px;
   font-size: 15px;
 }
 .v-button--default {
+  color: #000;
   background: #fff;
   border: 1px solid #cfcfcf;
-  color: #000;
 }
 .v-button--default:hover {
   background: #fcfbfb;
 }
 .v-button--primary {
+  color: #fff;
   background: #4b50d5;
   border: 1px solid #4b50d5;
-  color: #fff;
 }
 .v-button--primary:hover {
   background: #4247d6;
 }
 .v-button--danger {
+  color: #fff;
   background: #e82b2b;
   border: 1px solid #e82b2b;
-  color: #fff;
 }
 .v-button--danger:hover {
   background: #e21c1c;
@@ -54,14 +53,14 @@
 .v-button--small {
   width: 60px;
   height: 28px;
-  line-height: 26px;
   font-size: 12px;
+  line-height: 24px;
 }
 .v-button--large {
   width: 250px;
   height: 50px;
-  line-height: 50px;
   font-size: 24px;
+  line-height: 48px;
 }
 .v-button--hairline {
   border-width: 0.5px;

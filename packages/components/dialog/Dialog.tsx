@@ -37,12 +37,20 @@ const Dialog = (props: Props) => {
   }
 
   const dialogDom = (
-    <CSSTransition
-      classNames='v-dialog'
-      unmountOnExit
-      timeout={300}
-      in={visible}>
-      <div className='v-dialog' onClick={onClose}>
+    <>
+      <CSSTransition
+        classNames='v-dialog-mask'
+        unmountOnExit
+        timeout={400}
+        in={visible}>
+        <div className='v-dialog-wrapper' onClick={onClose}></div>
+      </CSSTransition>
+
+      <CSSTransition
+        classNames='v-dialog'
+        unmountOnExit
+        timeout={400}
+        in={visible}>
         <div
           className='v-dialog-content'
           style={{ width: `${width}` }}
@@ -65,8 +73,8 @@ const Dialog = (props: Props) => {
             </div>
           )}
         </div>
-      </div>
-    </CSSTransition>
+      </CSSTransition>
+    </>
   )
 
   return ReactDOM.createPortal(dialogDom, body)

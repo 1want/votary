@@ -1,4 +1,5 @@
-import { Radio } from 'votary'
+// import { Radio } from 'votary'
+import { Radio } from '../../../packages/components/radio'
 
 export default () => {
   return (
