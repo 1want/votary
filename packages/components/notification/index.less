@@ -1,39 +1,40 @@
-@keyframes showNtf {
-  from {
-    transform: translate(100%);
-  }
-
-  to {
-    transform: translate(-100px);
-  }
+.v-notification-enter {
+  transform: translate(100%);
 }
 
-@keyframes closeNtf {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    margin-top: -20px;
-    opacity: 0;
-  }
+.v-notification-enter-active {
+  transform: translate(0px);
+  transition: all 400ms;
 }
 
-.v-notification {
+.v-notification-exit {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.v-notification-exit-active {
+  transform: translate(0, -20px);
+  opacity: 0.01;
+  transition: all 400ms;
+}
+
+.v-notification-wrapper {
   position: fixed;
   top: 20px;
-  right: 0;
+  right: 30px;
   z-index: 999999;
+  display: flex;
+  flex-direction: column;
+}
+.v-notification-content {
   width: 360px;
-  // line-height: 44px;
-  // height: 70px;
+  margin-bottom: 20px;
   padding: 20px;
   font-family: cursive;
   white-space: wrap;
   background: #fff;
   border-radius: 6px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
-
   .header {
     display: flex;
     align-items: center;

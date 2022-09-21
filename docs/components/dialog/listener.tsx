@@ -1,6 +1,5 @@
 import { useState } from 'react'
-// import { Dialog } from 'votary'
-import { Dialog } from '../../../packages/components/dialog'
+import { Dialog } from 'votary'
 
 export default () => {
   const [dialogVisible, setDialogVisible] = useState(false)
@@ -8,12 +7,8 @@ export default () => {
     <>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
-        onConfirm={() => {
-          alert('确认')
-        }}
-        onCancel={() => {
-          alert('取消')
-        }}
+        onConfirm={() => {}}
+        onCancel={() => {}}
         showButton
         title='把酒问月'
         visible={dialogVisible}

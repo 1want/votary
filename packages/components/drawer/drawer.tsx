@@ -30,10 +30,14 @@ const Drawer = (props: Props) => {
 
   const dialogDom = (
     <>
-      <div
-        className='v-drawer-mask'
-        style={{ display: visible ? 'block' : 'none' }}
-        onClick={onClose}></div>
+      <CSSTransition
+        classNames='v-drawer-masks'
+        unmountOnExit
+        timeout={400}
+        in={visible}>
+        <div className='v-drawer-mask' onClick={onClose}></div>
+      </CSSTransition>
+
       <CSSTransition
         classNames={`v-drawer-${direction}`}
         unmountOnExit

@@ -1,19 +1,37 @@
+.v-drawer-masks-enter {
+  opacity: 0;
+}
+
+.v-drawer-masks-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+
+.v-drawer-masks-exit {
+  opacity: 1;
+}
+
+.v-drawer-masks-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
 .v-drawer-top-enter {
   transform: translateY(-100%);
 }
 
 .v-drawer-top-enter-active {
-  transform: translate(0);
-  transition: transform 400ms ease-out;
+  transform: translateY(0);
+  transition: all 400ms;
 }
 
 .v-drawer-top-exit {
-  transform: translate(0);
+  transform: translateY(0);
 }
 
 .v-drawer-top-exit-active {
   transform: translateY(-100%);
-  transition: all 400ms ease;
+  transition: transform 400ms;
 }
 
 .v-drawer-right-enter {
@@ -22,7 +40,7 @@
 
 .v-drawer-right-enter-active {
   transform: translate(0);
-  transition: transform 400ms ease-out;
+  transition: transform 400ms;
 }
 
 .v-drawer-right-exit {
@@ -31,7 +49,7 @@
 
 .v-drawer-right-exit-active {
   transform: translate(100%);
-  transition: all 400ms ease;
+  transition: all 400ms;
 }
 
 .v-drawer-bottom-enter {
@@ -40,7 +58,7 @@
 
 .v-drawer-bottom-enter-active {
   transform: translate(0);
-  transition: transform 400ms ease-out;
+  transition: transform 400ms;
 }
 
 .v-drawer-bottom-exit {
@@ -49,7 +67,7 @@
 
 .v-drawer-bottom-exit-active {
   transform: translateY(100%);
-  transition: all 400ms ease;
+  transition: all 400ms;
 }
 
 .v-drawer-left-enter {
@@ -58,7 +76,7 @@
 
 .v-drawer-left-enter-active {
   transform: translate(0);
-  transition: transform 400ms ease-out;
+  transition: transform 400ms;
 }
 
 .v-drawer-left-exit {
@@ -67,32 +85,35 @@
 
 .v-drawer-left-exit-active {
   transform: translate(-100%);
-  transition: all 400ms ease;
+  transition: all 400ms;
 }
 
 .v-drawer-mask {
-  width: 100vw;
-  height: 100vh;
   position: fixed;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 101;
   top: 0;
   left: 0;
+  z-index: 101;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .v-drawer-content {
-  position: fixed;
-  background: #fff;
+  position: absolute;
   z-index: 102;
+  width: 100vw;
+  height: 30vh;
+  background: #fff;
+
   .header {
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
     .icon-cross {
-      cursor: pointer;
-      font-size: 18px;
       color: #909399;
+      font-size: 18px;
+      cursor: pointer;
     }
   }
   .content {
@@ -101,30 +122,30 @@
 }
 
 .top {
-  width: 100%;
-  height: 30%;
-  right: 0;
   top: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
 }
 
 .right {
+  top: 0;
+  right: 0;
   width: 25%;
   height: 100%;
-  right: 0;
-  top: 0;
 }
 
 .bottom {
-  width: 100%;
-  height: 30%;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 30%;
 }
 
 .left {
+  top: 0;
+  left: 0;
   width: 25%;
   height: 100%;
-  left: 0;
-  top: 0;
   // bottom: 0;
 }

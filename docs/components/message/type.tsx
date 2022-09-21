@@ -1,5 +1,4 @@
-import { Button } from 'votary'
-import { Message } from 'votary'
+import { Button, Message } from 'votary'
 
 const msg1 = () => {
   Message({

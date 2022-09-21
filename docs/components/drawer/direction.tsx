@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Drawer, Radio } from 'votary'
+import { Radio, Drawer } from 'votary'
 
 export default () => {
   const [drawerVisible, setDrawerVisible] = useState(false)

@@ -42,7 +42,7 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .v-dialog-content {
-  position: absolute;
+  position: fixed;
   top: 40%;
   left: 50%;
   z-index: 102;
