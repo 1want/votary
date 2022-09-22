@@ -21,7 +21,6 @@
   top: 36px;
   left: 50%;
   z-index: 102;
-  min-width: 150px;
   padding: 10px;
   background: #fff;
   border: 1px solid #e0dedecc;
@@ -68,7 +67,7 @@
 }
 .popconfirm .btn .v-button {
   width: 45px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .popconfirm .btn .v-button:nth-child(2) {
   border: none;

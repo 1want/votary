@@ -6,7 +6,12 @@
 
 <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
 
-### 监听按钮
+### 背景模糊
+
+添加 blur 属性让背景模糊
+<code hideActions='["CSB","EXTERNAL"]' src="./blur.tsx" />
+
+### 添加按钮
 
 <code hideActions='["CSB","EXTERNAL"]' src="./listener.tsx" />
 
@@ -20,8 +25,8 @@
 | ---------- | ---------------- | ------- | ------- |
 | title      | 标题             | string  | default |
 | width      | 设置 Dialog 宽度 | string  | 30%     |
-| center     | 内容居中显示     | string  | false   |
-| showButton | 是否显示底部按钮 | boolean | true    |
+| blur       | 背景是否模糊     | boolean | false   |
+| showButton | 是否显示底部按钮 | boolean | false   |
 
 #### Events
 

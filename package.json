@@ -1,6 +1,6 @@
 {
   "name": "votarys",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "private": false,
   "keywords": [
     "ui",
@@ -34,7 +34,7 @@
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
     "swiper": "^8.3.2",
-    "votary": "^0.0.27"
+    "votary": "^0.0.28"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

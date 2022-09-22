@@ -6,7 +6,7 @@
 
 ### 图标
 
-<a href="https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=31945">引用 Vant 图标库<a/>
+<a href="https://www.iconfont.cn/collections/detail?cid=32107">引用 Element 图标库<a/>
 
 ### 站点
 

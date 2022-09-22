@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import ReactDOM from 'react-dom'
 import { CSSTransition } from 'react-transition-group'
 
@@ -5,10 +6,10 @@ import { Button } from '../button'
 
 interface Props {
   title?: string
-  center?: boolean
   width?: string
   visible: boolean
   showButton?: boolean
+  blur?: boolean
   children?: any
   onClose?: () => void
   onConfirm?: () => void
@@ -20,10 +21,10 @@ const body = document.getElementsByTagName('body')[0]
 const Dialog = (props: Props) => {
   const {
     title,
-    center,
     width = '30%',
     visible,
     showButton,
+    blur = false,
     children,
     onClose,
     onConfirm,
@@ -36,6 +37,8 @@ const Dialog = (props: Props) => {
     body.style.overflow = 'visible'
   }
 
+  const classes = classNames(['v-dialog-wrapper', blur && 'blur'])
+
   const dialogDom = (
     <>
       <CSSTransition
@@ -43,7 +46,7 @@ const Dialog = (props: Props) => {
         unmountOnExit
         timeout={400}
         in={visible}>
-        <div className='v-dialog-wrapper' onClick={onClose}></div>
+        <div className={classes} onClick={onClose}></div>
       </CSSTransition>
 
       <CSSTransition
@@ -59,15 +62,15 @@ const Dialog = (props: Props) => {
           }}>
           <div className='header'>
             <div className='title'>{title}</div>
-            <span className='iconfont icon-cross' onClick={onClose}></span>
+            <span className='iconfont icon-close' onClick={onClose}></span>
           </div>
           <div className='content'>{children}</div>
           {showButton && (
             <div className='footer'>
-              <Button type='primary' onClick={onConfirm}>
+              <Button plain onClick={onConfirm}>
                 确认
               </Button>
-              <Button type='default' onClick={onCancel}>
+              <Button plain onClick={onCancel}>
                 取消
               </Button>
             </div>

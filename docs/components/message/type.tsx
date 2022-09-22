@@ -1,28 +1,29 @@
-import { Button, Message } from 'votary'
+import { Button } from 'votary'
+import { Message } from '../../../packages/components/message'
 
 const msg1 = () => {
   Message({
-    title: '有些梦想虽然遥不可及，但不是不可能实现。'
+    message: '有些梦想虽然遥不可及，但不是不可能实现。'
   })
 }
 
 const msg2 = () => {
   Message({
-    title: '人们总是被命运安排，而我安排命运。',
+    message: '人们总是被命运安排，而我安排命运。',
     type: 'success'
   })
 }
 
 const msg3 = () => {
   Message({
-    title: '如果没有龙，屠龙的剑又有什么价值呢？',
+    message: '如果没有龙，屠龙的剑又有什么价值呢？',
     type: 'warning'
   })
 }
 
 const msg4 = () => {
   Message({
-    title: '得到了不该得到的，就会失去不该失去的。',
+    message: '得到了不该得到的，就会失去不该失去的。',
     type: 'error'
   })
 }

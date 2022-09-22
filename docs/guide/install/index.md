@@ -20,6 +20,7 @@ import 'votary/dist/style.css'
 import React from 'react'
 import 'votary/dist/style.css'
 import 'votary/dist/index.css'
+// import '../../../packages/icon/assets/iconfont.css'
 
 export default () => ''
 ```

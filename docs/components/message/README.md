@@ -10,6 +10,7 @@
 
 ### 自定义关闭时间
 
+添加 duration 定义关闭时间
 <code hideActions='["CSB","EXTERNAL"]' src="./duration.tsx" />
 
 <br/>
@@ -20,6 +21,6 @@
 
 | 参数     | 说明                                       | 类型   | 默认值 |
 | -------- | ------------------------------------------ | ------ | ------ |
-| title    | 提示语                                     | string |        |
+| message  | 提示文本                                   | string |        |
 | type     | 类型，可选值为 info success warning danger | string | info   |
 | duration | 自动关闭时间 ，单位毫秒                    | number | 3000   |

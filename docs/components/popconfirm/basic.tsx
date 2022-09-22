@@ -5,8 +5,8 @@ export default () => {
   const onConfirm = () => {}
   return (
     <Popconfirm
-      title='你选择关闭吗?'
-      confirm-text='关闭'
+      title='去码头整点薯条!'
+      confirm-text='确认'
       cancel-text='取消'
       onCancel={onCancel}
       onConfirm={onConfirm}>

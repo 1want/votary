@@ -1,3 +1,3 @@
 import { Input } from 'votary'
 
-export default () => <Input placeholder='我很特殊' leftIcon='search' />
+export default () => <Input placeholder='请输入内容' leftIcon='search' />

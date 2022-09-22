@@ -1,49 +1,57 @@
-@keyframes showMsg {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    margin-top: 20px;
-  }
+.v-message-enter {
+  transform: translate(0, -50px);
+  opacity: 0;
 }
-@keyframes closeMsg {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    margin-top: -20px;
-  }
+.v-message-enter-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 400ms;
 }
-.v-message {
-  font-family: cursive;
+.v-message-exit {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.v-message-exit-active {
+  transform: translate(0, -50px);
+  opacity: 0.01;
+  transition: all 400ms;
+}
+.v-message-wrapper {
   position: fixed;
-  z-index: 999999;
-  left: 50%;
   top: 0;
+  left: 50%;
+  z-index: 999999;
   transform: translateX(-50%);
+}
+.v-message-wrapper .v-message {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
   padding: 0 20px;
+  font-family: cursive;
   line-height: 44px;
   border-radius: 6px;
 }
-.v-message--info {
-  background: #fafafa;
+.v-message-wrapper .v-message-title {
+  margin-left: 10px;
+}
+.v-message-wrapper .v-message--info {
   color: #636363;
-  border: 1px solid #e3e3e3;
+  background: #fff;
+  border: 1px solid #e0e0e0;
 }
-.v-message--success {
-  background: #ebfff5;
+.v-message-wrapper .v-message--success {
   color: #1cb94ed4;
-  border: 1px solid #ddffe2;
+  background: #ebfff5;
+  border: 1px solid #cefbe4;
 }
-.v-message--warning {
-  background: #fdf6ec;
+.v-message-wrapper .v-message--warning {
   color: #e6a23c;
+  background: #fdf6ec;
   border: 1px solid #faecd8;
 }
-.v-message--error {
-  background: #fde7e7;
+.v-message-wrapper .v-message--error {
   color: #ff3e3ee3;
+  background: #fde7e7;
   border: 1px solid #f9d9d9;
 }

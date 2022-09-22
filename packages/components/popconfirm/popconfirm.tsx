@@ -26,7 +26,9 @@ const Popconfirm = (props: PopconfirmProps) => {
     <div
       className='v-popconfirm-content'
       tabIndex={1}
-      onBlur={() => setVisible(false)}>
+      onBlur={() => {
+        setVisible(false)
+      }}>
       <div onClick={() => setVisible(true)}>{children}</div>
       <CSSTransition
         classNames='v-popconfirm'
@@ -43,7 +45,6 @@ const Popconfirm = (props: PopconfirmProps) => {
           <div className='btn'>
             <Button
               size='small'
-              type='primary'
               plain
               onClick={() => {
                 onConfirm?.()
@@ -53,6 +54,7 @@ const Popconfirm = (props: PopconfirmProps) => {
             </Button>
             <Button
               size='small'
+              plain
               onClick={() => {
                 onCancel?.()
                 setVisible(false)
