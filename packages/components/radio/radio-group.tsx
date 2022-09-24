@@ -1,13 +1,9 @@
 import { useState } from 'react'
 import RadioContext from './radio-context'
 
-interface RadioProps {
-  value?: string
-  onChange?: (e: string) => void
-  children?: any
-}
+import { RadioGroupProps } from './types'
 
-const RadioGroup = (props: RadioProps) => {
+const RadioGroup = (props: RadioGroupProps) => {
   const { onChange, value, children } = props
 
   const [checked, setChecked] = useState(value)

@@ -19,10 +19,11 @@ export default defineConfig({
         }
       }
     },
+    outDir: 'lib',
     lib: {
       entry: './script/index.ts',
-      name: 'votarys',
-      fileName: 'votary'
+      formats: ['es'],
+      fileName: format => `index.${format}.js`
     }
   }
 })

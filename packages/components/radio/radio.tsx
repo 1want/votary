@@ -2,14 +2,7 @@ import { useContext } from 'react'
 import classNames from 'classnames'
 
 import RadioContext from './radio-context'
-
-interface RadioProps {
-  defaultValue?: string
-  checked?: boolean
-  disabled?: boolean
-  children?: any
-  value?: string
-}
+import { RadioProps } from './types'
 
 const Radio = (props: RadioProps) => {
   const { ...context } = useContext(RadioContext)

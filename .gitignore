@@ -3,4 +3,4 @@ node_modules
 .umi
 .umi-production
 docs-dist
-dist
+lib

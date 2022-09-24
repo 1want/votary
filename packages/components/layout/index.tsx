@@ -1,7 +1,4 @@
-import _Layout from './layout'
-import Header from './header'
-import Main from './main'
-import Aside from './aside'
+import _Layout, { Header, Main, Aside } from './layout'
 
 import './index.css'
 

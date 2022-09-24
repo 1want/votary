@@ -1,6 +1,6 @@
 {
   "name": "votarys",
-  "version": "0.1.28",
+  "version": "0.1.30",
   "private": false,
   "keywords": [
     "ui",
@@ -13,16 +13,17 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/votary.js",
-      "require": "./dist/votary.umd.cjs"
+      "import": "./lib/index.es.js"
     }
   },
-  "main": "./dist/votary.js",
+  "main": "./lib/index.es.js",
+  "module": "./lib/index.es.js",
+  "types": "./lib/script/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && tsc -p tsconfig.build.json",
     "build:docs": "dumi build",
     "dev": "dumi dev",
     "preview": "vite preview",
@@ -30,15 +31,16 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "react": "^18.2.0",
+    "react": ">= 18.0.0",
     "react-dom": "^18.2.0",
     "react-transition-group": "^4.4.5",
     "swiper": "^8.3.2",
-    "votary": "^0.1.28"
+    "votary": "^0.1.30"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@types/react-transition-group": "^4.4.5",
     "@umijs/fabric": "^2.8.1",
     "@vitejs/plugin-react": "^2.0.0",
     "dumi": "^1.1.0",
@@ -46,6 +48,9 @@
     "gh-pages": "^3.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": ">= 18.0.0"
   },
   "engines": {
     "node": ">= 14"

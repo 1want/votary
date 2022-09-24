@@ -18,8 +18,8 @@ import 'votary/dist/style.css'
  */
 
 import React from 'react'
-import 'votary/dist/style.css'
-import 'votary/dist/index.css'
+import 'votary/lib/style.css'
+import 'votary/lib/index.css'
 // import '../../../packages/icon/assets/iconfont.css'
 
 export default () => ''

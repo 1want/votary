@@ -16,7 +16,7 @@ const NotificationContainer = () => {
 
     if (notice.duration) {
       setTimeout(() => {
-        remove(notice.id)
+        remove(notice.id || 0)
       }, notice.duration)
     }
   }

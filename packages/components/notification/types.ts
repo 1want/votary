@@ -4,5 +4,5 @@ export interface NoticeProps {
   duration?: number
   id?: number
   blur?: boolean
-  remove?: (id) => void
+  remove?: (id: any) => void
 }
