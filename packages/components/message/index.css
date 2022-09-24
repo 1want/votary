@@ -1,35 +1,21 @@
-.v-message-enter {
-  transform: translate(0, -50px);
-  opacity: 0;
-}
-.v-message-enter-active {
-  transform: translate(0, 0);
-  opacity: 1;
-  transition: all 400ms;
-}
-.v-message-exit {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-.v-message-exit-active {
-  transform: translate(0, -50px);
-  opacity: 0.01;
-  transition: all 400ms;
-}
 .v-message-wrapper {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
   z-index: 999999;
-  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  pointer-events: none;
 }
 .v-message-wrapper .v-message {
-  display: flex;
-  align-items: center;
+  width: inline-block;
   margin-top: 20px;
   padding: 0 20px;
   font-family: cursive;
   line-height: 44px;
+  text-align: center;
   border-radius: 6px;
 }
 .v-message-wrapper .v-message-title {

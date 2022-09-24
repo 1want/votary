@@ -7,7 +7,7 @@ export default () => {
   const confirm = () => {
     setDialogVisible(false)
     Message({
-      title: '经验 + 3 !'
+      message: '捕获玉兔一只!'
     })
   }
 

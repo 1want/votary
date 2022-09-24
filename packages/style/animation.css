@@ -1,0 +1,48 @@
+.v-mask-enter {
+  opacity: 0;
+}
+.v-mask-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+.v-mask-exit {
+  opacity: 1;
+}
+.v-mask-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.v-fade-enter {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.v-fade-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 400ms;
+}
+.v-fade-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.v-fade-exit-active {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 400ms;
+}
+.v-notification-enter {
+  transform: translateX(100%);
+}
+.v-notification-enter-active {
+  transform: translateX(0px);
+  transition: all 400ms;
+}
+.v-notification-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.v-notification-exit-active {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 400ms;
+}

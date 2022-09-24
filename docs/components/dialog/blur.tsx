@@ -12,7 +12,7 @@ export default () => {
         title='英雄志'
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>
-        昆仑剑出血汪洋，千里直驱黄河黄。
+        断处便是起处，绝处方能逢生。
       </Dialog>
     </>
   )

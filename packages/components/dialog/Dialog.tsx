@@ -1,24 +1,14 @@
 import classNames from 'classnames'
 import ReactDOM from 'react-dom'
 import { CSSTransition } from 'react-transition-group'
+import { DialogProps } from './types'
 
+import { Mask } from '../mask'
 import { Button } from '../button'
-
-interface Props {
-  title?: string
-  width?: string
-  visible: boolean
-  showButton?: boolean
-  blur?: boolean
-  children?: any
-  onClose?: () => void
-  onConfirm?: () => void
-  onCancel?: () => void
-}
 
 const body = document.getElementsByTagName('body')[0]
 
-const Dialog = (props: Props) => {
+const Dialog = (props: DialogProps) => {
   const {
     title,
     width = '30%',
@@ -37,20 +27,11 @@ const Dialog = (props: Props) => {
     body.style.overflow = 'visible'
   }
 
-  const classes = classNames(['v-dialog-wrapper', blur && 'blur'])
-
   const dialogDom = (
     <>
+      <Mask onClick={onClose} visible={visible} blur={blur}></Mask>
       <CSSTransition
-        classNames='v-dialog-mask'
-        unmountOnExit
-        timeout={400}
-        in={visible}>
-        <div className={classes} onClick={onClose}></div>
-      </CSSTransition>
-
-      <CSSTransition
-        classNames='v-dialog'
+        classNames='v-fade'
         unmountOnExit
         timeout={400}
         in={visible}>

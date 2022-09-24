@@ -1,28 +1,28 @@
 import { createNamespace } from '../../utils/createNamespace'
 import classNames from 'classnames'
 import { MessageProps } from './types'
+import { forwardRef } from 'react'
 
 const bem = createNamespace('message')
 
 const Message = (props: MessageProps) => {
   const { message, type = 'info' } = props
-  let icon = 'iconfont '
+  let icon = ''
 
   switch (type) {
     case 'info':
-      icon += 'icon-info'
+      icon = 'iconfont icon-info'
       break
     case 'success':
-      icon += 'icon-success'
+      icon = 'iconfont icon-success'
       break
     case 'warning':
-      icon += 'icon-warning'
+      icon = 'iconfont icon-warning'
       break
     case 'error':
-      icon += 'icon-error'
+      icon = 'iconfont icon-error'
       break
   }
-  console.log(icon)
   const classes = bem(classNames([type]))
 
   return (

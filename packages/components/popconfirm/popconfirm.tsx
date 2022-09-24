@@ -1,15 +1,7 @@
 import { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import { PopconfirmProps } from './types'
 import { Button } from '../button'
-
-interface PopconfirmProps {
-  title?: string
-  confirmText?: string
-  cancelText?: string
-  onCancel?: () => void
-  onConfirm?: () => void
-  children?: any
-}
 
 const Popconfirm = (props: PopconfirmProps) => {
   const {

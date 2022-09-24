@@ -1,21 +1,3 @@
-.v-drawer-masks-enter {
-  opacity: 0;
-}
-
-.v-drawer-masks-enter-active {
-  opacity: 1;
-  transition: opacity 400ms;
-}
-
-.v-drawer-masks-exit {
-  opacity: 1;
-}
-
-.v-drawer-masks-exit-active {
-  opacity: 0;
-  transition: opacity 400ms;
-}
-
 .v-drawer-top-enter {
   transform: translateY(-100%);
 }
@@ -88,18 +70,8 @@
   transition: all 400ms;
 }
 
-.v-drawer-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 101;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-}
-
 .v-drawer-content {
-  position: absolute;
+  position: fixed;
   z-index: 102;
   width: 100vw;
   height: 30vh;
@@ -110,10 +82,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    .icon-cross {
+    .icon-close {
       color: #909399;
       font-size: 18px;
       cursor: pointer;
+      &:hover {
+        color: #5c5c5c;
+      }
     }
   }
   .content {

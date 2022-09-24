@@ -1,20 +1,8 @@
-import { ButtonType, ButtonSize } from './types'
+import { ButtonProps } from './types'
 import classnames from 'classnames'
 import { createNamespace } from '../../utils/createNamespace'
 
 const bem = createNamespace('button')
-
-interface ButtonProps {
-  type?: ButtonType
-  size?: ButtonSize
-  icon?: string
-  hairline?: boolean
-  plain?: boolean
-  disabled?: boolean
-  children?: any
-  className?: string
-  onClick?: () => any
-}
 
 const Button = (props: ButtonProps) => {
   const {

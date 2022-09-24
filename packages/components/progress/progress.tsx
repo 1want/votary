@@ -1,8 +1,4 @@
-interface ProgressProps {
-  percentage?: number
-  color?: string
-  type?: string
-}
+import { ProgressProps } from './types'
 
 const Progress = (props: ProgressProps) => {
   const { percentage, color } = props
@@ -16,12 +12,6 @@ const Progress = (props: ProgressProps) => {
         <span className='percentage'>{percentage}%</span>
       </div>
     </div>
-
-    // <div className='c-wrapper'>
-    //   <div className='c-progress'>
-    //     <div className='c-content'></div>
-    //   </div>
-    // </div>
   )
 }
 

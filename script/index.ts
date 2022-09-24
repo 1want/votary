@@ -1,4 +1,6 @@
-import '@/icon/assets/iconfont.css'
+import '../packages/icon/assets/iconfont.css'
+import '../packages/style/index.css'
+
 export { Button } from '../packages/components/button'
 export { Icon } from '../packages/icon'
 export { Layout } from '../packages/components/layout'

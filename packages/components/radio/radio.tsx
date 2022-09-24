@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react'
+import { useContext } from 'react'
 import classNames from 'classnames'
 
 import RadioContext from './radio-context'

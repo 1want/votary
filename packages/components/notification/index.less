@@ -1,23 +1,3 @@
-.v-notification-enter {
-  transform: translate(100%);
-}
-
-.v-notification-enter-active {
-  transform: translate(0px);
-  transition: all 400ms;
-}
-
-.v-notification-exit {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-.v-notification-exit-active {
-  transform: translate(0, -20px);
-  opacity: 0.01;
-  transition: all 400ms;
-}
-
 .v-notification-wrapper {
   position: fixed;
   top: 20px;
@@ -25,6 +5,11 @@
   z-index: 999999;
   display: flex;
   flex-direction: column;
+}
+
+.v-notification-blur {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(12px);
 }
 .v-notification-content {
   width: 360px;
@@ -34,7 +19,8 @@
   white-space: wrap;
   background: #fff;
   border-radius: 6px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+
   .header {
     display: flex;
     align-items: center;
@@ -43,11 +29,14 @@
       font-weight: 600;
       font-size: 18px;
     }
-    .icon-cross {
+    .icon-close {
       margin-left: 20px;
       color: #bcb4b4;
       font-size: 18px;
       cursor: pointer;
+      &:hover {
+        color: #8d8989;
+      }
     }
   }
   .content {
