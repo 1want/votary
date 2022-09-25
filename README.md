@@ -6,3 +6,5 @@ hero:
     - text: 开始
       link: /components
 ---
+
+<h1 align="center">Framer Motion</h1>

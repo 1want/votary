@@ -9,6 +9,7 @@ let id = 0
 
 const NotificationContainer = () => {
   const [notice, setNotice] = useState<Array<NoticeProps>>([])
+
   add = notice => {
     id++
     notice.id = id
@@ -16,25 +17,20 @@ const NotificationContainer = () => {
 
     if (notice.duration) {
       setTimeout(() => {
-        remove(notice.id || 0)
+        remove(notice)
       }, notice.duration)
     }
   }
 
-  const remove = (id: number) => {
-    setNotice(prevNotices => prevNotices.filter(item => item.id !== id))
+  const remove = (notice: NoticeProps) => {
+    setNotice(prevNotices => prevNotices.filter(item => item.id !== notice.id))
   }
 
   return (
     <TransitionGroup className='v-notification-wrapper'>
-      {notice.map(({ title, message, blur = true, id }) => (
-        <CSSTransition classNames='v-notification' timeout={400} key={id}>
-          <Notification
-            title={title}
-            message={message}
-            id={id}
-            blur={blur}
-            remove={remove}></Notification>
+      {notice.map(item => (
+        <CSSTransition classNames='v-notification' timeout={400} key={item.id}>
+          <Notification {...item} remove={remove}></Notification>
         </CSSTransition>
       ))}
     </TransitionGroup>

@@ -7,6 +7,5 @@
     "emitDeclarationOnly": true,
     "declarationDir": "lib"
   },
-  "include": ["script"],
-  "exclude": ["packages/components/**/*.tsx"]
+  "include": ["script"]
 }

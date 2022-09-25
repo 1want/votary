@@ -10,5 +10,5 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .v-blur {
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
 }
