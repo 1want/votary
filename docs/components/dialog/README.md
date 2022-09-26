@@ -11,7 +11,7 @@
 添加 blur 属性让背景模糊
 <code hideActions='["CSB","EXTERNAL"]' src="./blur.tsx" />
 
-### 添加按钮
+### 按钮监听
 
 <code hideActions='["CSB","EXTERNAL"]' src="./listener.tsx" />
 

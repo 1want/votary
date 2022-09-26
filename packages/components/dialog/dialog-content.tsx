@@ -31,4 +31,4 @@ const DialogContent = (props: DialogProps) => {
   )
 }
 
-export default DialogContent
+export { DialogContent }

@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import classNames from 'classnames'
-import DrawerContent from './drawer-content'
+import { DrawerContent } from './drawer-content'
 import { Mask } from '../mask'
 
 import { DrawerProps } from './types'

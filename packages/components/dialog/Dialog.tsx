@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import DialogContent from './dialog-content'
+import { DialogContent } from './dialog-content'
 import { Mask } from '../mask'
 
 import { DialogProps } from './types'
