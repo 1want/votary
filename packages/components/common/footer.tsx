@@ -2,7 +2,7 @@ import { Button } from '../button'
 import { FooterProps } from './types'
 
 const Footer = (props: FooterProps) => {
-  const { showButton, onConfirm, onCancel } = props
+  const { showButton = true, onConfirm, onCancel } = props
 
   return (
     <>

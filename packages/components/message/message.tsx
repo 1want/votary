@@ -1,36 +1,47 @@
-import { createNamespace } from '../../utils/createNamespace'
-import classNames from 'classnames'
+import { useState } from 'react'
+import * as ReactDOMClient from 'react-dom/client'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
+import { MessageContent } from './message-content'
 import { MessageProps } from './types'
 
-const bem = createNamespace('message')
+export let add: (message: MessageProps) => void
+let id = 0
 
-const Message = (props: MessageProps) => {
-  const { message, type = 'info' } = props
-  let icon = ''
+const MessageContainer = () => {
+  const [notice, setNotice] = useState<Array<MessageProps>>([])
 
-  switch (type) {
-    case 'info':
-      icon = 'iconfont icon-info'
-      break
-    case 'success':
-      icon = 'iconfont icon-success'
-      break
-    case 'warning':
-      icon = 'iconfont icon-warning'
-      break
-    case 'error':
-      icon = 'iconfont icon-error'
-      break
+  add = notice => {
+    id++
+    notice.id = id
+
+    setNotice(prevNotices => [...prevNotices, notice])
+
+    setTimeout(() => {
+      remove(notice)
+    }, notice.duration || 3000)
   }
 
-  const classes = bem(classNames([type]))
+  const remove = (notice: MessageProps) => {
+    setNotice(prevNotices => prevNotices.filter(item => item.id !== notice.id))
+  }
 
   return (
-    <div className={classes}>
-      <span className={icon}></span>
-      <span className='v-message-title'>{message}</span>
-    </div>
+    <TransitionGroup className='v-message-wrapper'>
+      {notice.map(item => (
+        <CSSTransition classNames='v-fade' timeout={400} key={item.id}>
+          <MessageContent {...item} />
+        </CSSTransition>
+      ))}
+    </TransitionGroup>
   )
 }
 
-export { Message }
+let el = document.querySelector('#message-wrapper')
+if (!el) {
+  el = document.createElement('div')
+  el.className = 'message-wrapper'
+  document.body.append(el)
+}
+
+ReactDOMClient.createRoot(el).render(<MessageContainer />)

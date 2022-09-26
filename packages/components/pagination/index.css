@@ -1,0 +1,29 @@
+.v-pagination {
+  display: flex;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+.v-pagination .v-pagination-content {
+  display: flex;
+  align-items: center;
+}
+.v-pagination .v-pagination-content .v-pagination-item {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  padding: 6px;
+  border: 1px solid #cecdcd;
+}
+.v-pagination .v-pagination-content .current {
+  color: #4b50d5;
+  border: 1px solid #4b50d5;
+}
+.v-pagination .icon-arrow-left,
+.v-pagination .icon-arrow-right {
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  border: 1px solid #cecdcd;
+}

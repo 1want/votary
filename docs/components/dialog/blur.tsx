@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Dialog } from 'votary'
+import { Dialog } from '../../../packages/components/dialog'
 
 export default () => {
   const [dialogVisible, setDialogVisible] = useState(false)
@@ -8,6 +8,7 @@ export default () => {
     <>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
+        showButton={false}
         blur
         width='25'
         title='英雄志'

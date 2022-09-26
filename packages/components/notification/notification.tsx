@@ -1,25 +1,47 @@
-import classNames from 'classnames'
-import { createNamespace } from '../../utils/createNamespace'
+import { useState } from 'react'
+import * as ReactDOMClient from 'react-dom/client'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { NotificationContent } from './notification-content'
 import { NoticeProps } from './types'
 
-const bem = createNamespace('notification')
+export let add: (notice: NoticeProps) => void
+let id = 0
 
-const Notification = (props: NoticeProps) => {
-  const { title, message, blur = true, remove } = props
+const NotificationContainer = () => {
+  const [notice, setNotice] = useState<Array<NoticeProps>>([])
 
-  const classes = bem(classNames([blur && 'blur']))
+  add = notice => {
+    id++
+    notice.id = id
+    setNotice(prevNotices => [...prevNotices, notice])
+
+    if (notice.duration) {
+      setTimeout(() => {
+        remove(notice)
+      }, notice.duration)
+    }
+  }
+
+  const remove = (notice: NoticeProps) => {
+    setNotice(prevNotices => prevNotices.filter(item => item.id !== notice.id))
+  }
 
   return (
-    <div className={classes}>
-      <div className='header'>
-        <span className='title'>{title}</span>
-        <span
-          className='iconfont icon-close'
-          onClick={() => remove?.(props)}></span>
-      </div>
-      <div className='content'>{message}</div>
-    </div>
+    <TransitionGroup className='v-notification-wrapper'>
+      {notice.map(item => (
+        <CSSTransition classNames='v-notification' timeout={400} key={item.id}>
+          <NotificationContent {...item} remove={remove} />
+        </CSSTransition>
+      ))}
+    </TransitionGroup>
   )
 }
 
-export { Notification }
+let el = document.querySelector('#message-wrapper')
+if (!el) {
+  el = document.createElement('div')
+  el.className = 'message-wrapper'
+  document.body.append(el)
+}
+
+ReactDOMClient.createRoot(el).render(<NotificationContainer />)

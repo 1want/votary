@@ -1,4 +1,4 @@
-import { add as Message } from './message-container'
+import { add as Message } from './message'
 
 import './index.css'
 

@@ -8,6 +8,7 @@ export default () => {
     <>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
+        showButton={false}
         title='英雄志'
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>
