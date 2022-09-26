@@ -1,47 +1,23 @@
 import ReactDOM from 'react-dom'
-import { CSSTransition } from 'react-transition-group'
-import { DrawerProps } from './types'
+import classNames from 'classnames'
+import DrawerContent from './drawer-content'
 import { Mask } from '../mask'
+
+import { DrawerProps } from './types'
 
 const body = document.getElementsByTagName('body')[0]
 
 const Drawer = (props: DrawerProps) => {
-  const {
-    direction = 'right',
-    blur,
-    visible = false,
-    title,
-    showClose = true,
-    onClose,
-    children
-  } = props
+  const { direction = 'right', blur, visible, onClose } = props
+  const classes = classNames(['v-drawer-' + direction])
 
-  const dialogDom = (
-    <>
-      <Mask onClick={onClose} visible={visible} blur={blur}></Mask>
-      <CSSTransition
-        classNames={`v-drawer-${direction}`}
-        unmountOnExit
-        timeout={400}
-        in={visible}>
-        <div
-          className={`v-drawer-content ${direction}`}
-          onClick={e => {
-            e.stopPropagation()
-          }}>
-          <div className='header'>
-            <div className='title'>{title}</div>
-            {showClose && (
-              <span className='iconfont icon-close' onClick={onClose}></span>
-            )}
-          </div>
-          <div className='content'>{children}</div>
-        </div>
-      </CSSTransition>
-    </>
+  const DialogDom = (
+    <Mask onClick={onClose} visible={visible} blur={blur} className={classes}>
+      <DrawerContent {...props} />
+    </Mask>
   )
 
-  return ReactDOM.createPortal(dialogDom, body)
+  return ReactDOM.createPortal(DialogDom, body)
 }
 
 export default Drawer

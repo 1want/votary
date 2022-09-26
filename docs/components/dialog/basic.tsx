@@ -3,6 +3,7 @@ import { Dialog } from 'votary'
 
 export default () => {
   const [dialogVisible, setDialogVisible] = useState(false)
+
   return (
     <>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>

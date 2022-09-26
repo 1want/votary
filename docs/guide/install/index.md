@@ -22,6 +22,7 @@ import 'votary/lib/style.css'
 import 'votary/lib/index.css'
 
 // import '../../../packages/style/index.css'
+// import '../../../packages/icon/assets/iconfont.css'
 
 export default () => ''
 ```

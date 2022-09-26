@@ -3,12 +3,13 @@ import { Dialog } from 'votary'
 
 export default () => {
   const [dialogVisible, setDialogVisible] = useState(false)
+
   return (
     <>
       <span onClick={() => setDialogVisible(true)}>点击打开Dialog</span>
       <Dialog
         blur
-        width='25%'
+        width='25'
         title='英雄志'
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>

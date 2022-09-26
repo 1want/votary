@@ -1,6 +1,6 @@
 import { Button, Notification } from 'votary'
 
-const msg2 = () => {
+const msg = () => {
   Notification({
     title: '这里是标题',
     message: '三秒后自动关闭',
@@ -9,4 +9,4 @@ const msg2 = () => {
   })
 }
 
-export default () => <Button onClick={msg2}>通知</Button>
+export default () => <Button onClick={msg}>通知</Button>

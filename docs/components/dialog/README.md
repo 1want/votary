@@ -24,7 +24,7 @@
 | 参数       | 说明             | 类型    | 默认值  |
 | ---------- | ---------------- | ------- | ------- |
 | title      | 标题             | string  | default |
-| width      | 设置 Dialog 宽度 | string  | 30%     |
+| width      | 设置 Dialog 宽度 | string  | 30      |
 | blur       | 背景是否模糊     | boolean | false   |
 | showButton | 是否显示底部按钮 | boolean | false   |
 

@@ -70,57 +70,38 @@
   transition: all 400ms;
 }
 
-.v-drawer-content {
+.v-drawer {
   position: fixed;
   z-index: 102;
-  width: 100vw;
-  height: 30vh;
+  box-sizing: border-box;
+  padding: 10px;
   background: #fff;
 
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    .icon-close {
-      color: #909399;
-      font-size: 18px;
-      cursor: pointer;
-      &:hover {
-        color: #5c5c5c;
-      }
-    }
+  &--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
   }
-  .content {
-    padding: 10px;
+
+  &--right {
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
   }
-}
 
-.top {
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 30vh;
-}
+  &--bottom {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+  }
 
-.right {
-  top: 0;
-  right: 0;
-  width: 25%;
-  height: 100%;
-}
-
-.bottom {
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 30%;
-}
-
-.left {
-  top: 0;
-  left: 0;
-  width: 25%;
-  height: 100%;
-  // bottom: 0;
+  &--left {
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+  }
 }

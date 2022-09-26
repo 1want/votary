@@ -17,8 +17,8 @@ export default () => {
       <p onClick={() => setDrawerVisible(!drawerVisible)}>点击打开抽屉</p>
 
       <Drawer
-        direction={direction}
         title='我是标题'
+        direction={direction}
         visible={drawerVisible}
         onClose={() => setDrawerVisible(false)}>
         {direction.toUpperCase()}

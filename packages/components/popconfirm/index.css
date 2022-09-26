@@ -1,17 +1,3 @@
-.v-popconfirm-enter {
-  opacity: 0;
-}
-.v-popconfirm-enter-active {
-  opacity: 1;
-  transition: all 400ms;
-}
-.v-popconfirm-exit {
-  opacity: 1;
-}
-.v-popconfirm-exit-active {
-  opacity: 0;
-  transition: all 400ms;
-}
 .v-popconfirm-content {
   position: relative;
   display: inline-block;
