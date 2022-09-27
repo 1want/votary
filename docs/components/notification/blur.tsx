@@ -1,5 +1,4 @@
-import { Button } from 'votary'
-import { Notification } from '../../../packages/components/notification'
+import { Button, Notification } from 'votary'
 
 const msg = () => {
   Notification({

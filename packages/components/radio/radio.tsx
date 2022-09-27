@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
-
 import RadioContext from './radio-context'
+
 import { RadioProps } from './types'
 
 const Radio = (props: RadioProps) => {

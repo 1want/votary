@@ -21,22 +21,22 @@
 .v-message-wrapper .v-message-title {
   margin-left: 10px;
 }
-.v-message-wrapper .v-message--info {
+.v-message-wrapper .v-message-info {
   color: #636363;
   background: #fff;
   border: 1px solid #e0e0e0;
 }
-.v-message-wrapper .v-message--success {
+.v-message-wrapper .v-message-success {
   color: #1cb94ed4;
   background: #ebfff5;
   border: 1px solid #cefbe4;
 }
-.v-message-wrapper .v-message--warning {
+.v-message-wrapper .v-message-warning {
   color: #e6a23c;
   background: #fdf6ec;
   border: 1px solid #faecd8;
 }
-.v-message-wrapper .v-message--error {
+.v-message-wrapper .v-message-error {
   color: #ff3e3ee3;
   background: #fde7e7;
   border: 1px solid #f9d9d9;

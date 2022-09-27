@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import * as ReactDOMClient from 'react-dom/client'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-
 import { MessageContent } from './message-content'
+
 import { MessageProps } from './types'
 
 export let add: (message: MessageProps) => void

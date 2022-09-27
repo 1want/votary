@@ -1,0 +1,29 @@
+.v-image {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  cursor: pointer;
+  &:hover > .cover {
+    visibility: visible;
+  }
+  .cover {
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    height: 160px;
+    background: rgba(11, 11, 11, 0.2);
+    visibility: hidden;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    &:hover {
+      background: #000;
+    }
+  }
+}

@@ -17,11 +17,14 @@
   border-radius: 2px;
   cursor: pointer;
   .iconfont {
-    margin-right: 4px;
     font-size: 15px;
+    // vertical-align: middle;
+  }
+  .icon-text {
+    margin-left: 10px;
   }
 
-  &--default {
+  &-default {
     color: @button-default-color;
     background: @button-default;
     border: 1px solid #cfcfcf;
@@ -31,7 +34,7 @@
     }
   }
 
-  &--primary {
+  &-primary {
     color: @button-primary-color;
     background: @button-primary;
     border: 1px solid @button-primary;
@@ -40,7 +43,7 @@
     }
   }
 
-  &--danger {
+  &-danger {
     color: @button-danger-color;
     background: @button-danger;
     border: 1px solid @button-danger;
@@ -49,44 +52,45 @@
     }
   }
 
-  &--plain {
+  &-plain {
     background: #fff;
     &:hover {
       background: rgba(250, 250, 250, 0.6);
     }
-    &.v-button--default {
+    &.v-button-default {
       border-color: rgba(229, 229, 229, 0.8);
     }
-    &.v-button--primary {
+    &.v-button-primary {
       color: @button-primary;
     }
 
-    &.v-button--danger {
+    &.v-button-danger {
       color: @button-danger;
     }
   }
 
-  &--small {
+  &-small {
     width: 60px;
     height: 28px;
     font-size: 12px;
     line-height: 24px;
   }
 
-  &--large {
+  &-large {
     width: 250px;
     height: 50px;
     font-size: 24px;
     line-height: 48px;
   }
 
-  &--hairline {
+  &-hairline {
     border-width: 0.5px;
   }
 
-  &--disabled {
-    background: #eee;
+  &-disabled {
+    background: rgb(245, 245, 245);
     border: 1px solid rgb(211, 210, 210);
+    cursor: not-allowed;
     &:hover {
       background: #eee;
     }

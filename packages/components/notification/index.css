@@ -16,28 +16,11 @@
   border-radius: 6px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
 }
-.v-notification--blur {
+.v-notification-blur {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
 }
-.v-notification .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.v-notification .header .title {
-  font-weight: 600;
-  font-size: 18px;
-}
-.v-notification .header .icon-close {
-  margin-left: 20px;
-  color: #bcb4b4;
-  font-size: 18px;
-  cursor: pointer;
-}
-.v-notification .header .icon-close:hover {
-  color: #8d8989;
-}
-.v-notification .content {
-  margin-top: 20px;
+.v-notification .v-header .title {
+  font-weight: 700;
+  font-size: 19px;
 }

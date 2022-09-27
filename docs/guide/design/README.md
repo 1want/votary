@@ -11,4 +11,4 @@
 ### 站点
 
 <a href="https://d.umijs.org/zh-CN">
-使用 dumi 搭建<a/>
+使用 Dumi 搭建<a/>

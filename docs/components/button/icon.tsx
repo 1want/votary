@@ -2,9 +2,7 @@ import { Button } from 'votary'
 
 export default () => (
   <>
-    <Button icon='loading'>加载</Button>
-    <Button type='primary' icon='refresh'>
-      刷新
-    </Button>
+    <Button icon='refresh'>刷新</Button>
+    <Button icon='search'>搜索</Button>
   </>
 )

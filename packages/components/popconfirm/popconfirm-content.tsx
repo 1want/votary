@@ -1,5 +1,4 @@
 import { Button } from '../button'
-import { Footer } from '../common'
 
 import { PopconfirmProps } from './types'
 

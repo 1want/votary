@@ -2,6 +2,7 @@ import { useState } from 'react'
 import * as ReactDOMClient from 'react-dom/client'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import { NotificationContent } from './notification-content'
+
 import { NoticeProps } from './types'
 
 export let add: (notice: NoticeProps) => void

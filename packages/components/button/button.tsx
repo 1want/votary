@@ -30,8 +30,8 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button disabled={disabled} onClick={onClick} className={classes}>
-      <span className={`iconfont icon-${icon}`}></span>
-      {children}
+      {icon && <span className={`iconfont icon-${icon}`}></span>}
+      {children && <span className='icon-text'>{children}</span>}
     </button>
   )
 }

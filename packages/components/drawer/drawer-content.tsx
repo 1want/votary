@@ -6,7 +6,7 @@ import { DrawerProps } from './types'
 
 const bem = createNamespace('drawer')
 
-const Drawer = (props: DrawerProps) => {
+const DrawerContent = (props: DrawerProps) => {
   const { direction = 'right', title, onClose, children } = props
 
   const classes = bem(classNames([direction]))
@@ -23,4 +23,4 @@ const Drawer = (props: DrawerProps) => {
   )
 }
 
-export { Drawer }
+export { DrawerContent }

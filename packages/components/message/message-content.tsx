@@ -1,5 +1,6 @@
-import { createNamespace } from '../../utils/createNamespace'
 import classNames from 'classnames'
+import { createNamespace } from '../../utils/createNamespace'
+
 import { MessageProps } from './types'
 
 const bem = createNamespace('message')

@@ -1,14 +1,17 @@
-type Props = {
-  children?: any
-  dashed?: boolean
-}
+import classnames from 'classnames'
+import { createNamespace } from '../../utils/createNamespace'
 
-const divider = (props: Props) => {
+import { DividerProps } from './types'
+
+const bem = createNamespace('divider')
+
+const divider = (props: DividerProps) => {
   const { children, dashed } = props
-  const className = `${children ? 'line-content ' : ''}${
-    dashed ? 'dashed' : 'line'
-  }`
-  return <div className={className}>{children}</div>
+  const classes = bem(
+    classnames([children && 'content', dashed ? 'dashed' : 'line'])
+  )
+
+  return <div className={classes}>{children}</div>
 }
 
 export default divider
