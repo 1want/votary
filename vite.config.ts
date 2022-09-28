@@ -9,6 +9,7 @@ export default defineConfig({
     }
   },
   build: {
+    // cssCodeSplit: true,
     rollupOptions: {
       // 请确保外部化那些你的库中不需要的依赖
       external: ['react'],
@@ -21,7 +22,7 @@ export default defineConfig({
     },
     outDir: 'lib',
     lib: {
-      entry: './script/index.ts',
+      entry: './script/index.tsx',
       formats: ['es'],
       fileName: format => `index.${format}.js`
     }

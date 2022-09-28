@@ -5,7 +5,9 @@
     "noEmit": false,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "lib"
+    "declarationDir": "./lib",
+    "composite": true
   },
-  "include": ["script"]
+  "include": ["script", "packages/**/*"],
+  "exclude": ["packages/components/form/"]
 }

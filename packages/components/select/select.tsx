@@ -2,12 +2,7 @@ import { useState } from 'react'
 import SelectContext from './select-context'
 import classNames from 'classnames'
 
-interface SelectProps {
-  defaultValue?: string
-  placeholder?: string
-  onChange?: (value: string) => void
-  children?: any
-}
+import { SelectProps } from './types'
 
 const Select = (props: SelectProps) => {
   const { defaultValue, placeholder = '请选择', onChange, children } = props

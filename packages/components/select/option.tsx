@@ -1,10 +1,8 @@
 import { useContext } from 'react'
 import SelectContext from './select-context'
 
-interface OptionProps {
-  value?: string
-  children?: any
-}
+import { OptionProps } from './types'
+
 const Option = (props: OptionProps) => {
   const { value: v, onChange, setShow, setValue } = useContext(SelectContext)
   const { value = '', children } = props
