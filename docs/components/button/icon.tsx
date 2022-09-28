@@ -1,4 +1,4 @@
-import { Button } from '../../../lib/index.es'
+import { Button } from 'votary'
 
 export default () => (
   <>

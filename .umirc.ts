@@ -41,7 +41,8 @@ export default defineConfig({
           'components/icon',
           'components/layout',
           'components/divider',
-          'components/image'
+          'components/image',
+          'components/mask'
         ]
       },
       {
