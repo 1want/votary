@@ -1,4 +1,3 @@
-import '../packages/icon/assets/iconfont.css'
 import '../packages/style/index.css'
 
 export { Button } from '../packages/components/button'

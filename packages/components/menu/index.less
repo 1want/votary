@@ -1,0 +1,54 @@
+.menu-enter {
+  height: 0px;
+}
+
+.menu-enter-active {
+  // height: 200px;
+  transition: all 400ms;
+}
+
+.menu-exit {
+  height: 100px;
+}
+
+.menu-exit-active {
+  height: 0px;
+  transition: all 400ms;
+}
+
+.menu {
+  width: 200px;
+  color: #999999;
+  font-size: 15px;
+  background: #2c2a2e;
+  .sub-menu {
+    .sub-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+      &:hover {
+        background: rgb(118, 116, 116);
+      }
+      .sub-menu-title {
+        margin-left: 10px;
+      }
+    }
+    .sub-content {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      list-style: none;
+      li {
+        padding: 10px;
+        color: red;
+        cursor: pointer;
+        &:hover {
+          background: #000;
+        }
+      }
+    }
+  }
+}

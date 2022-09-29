@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import './assets/iconfont.css'
 
 interface IconProps {
-  name: string
+  name?: string
   onClick?: () => void
   className?: string
 }
