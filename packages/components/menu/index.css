@@ -2,6 +2,7 @@
   height: 0px;
 }
 .menu-enter-active {
+  height: 60px;
   transition: all 400ms;
 }
 .menu-exit {
@@ -38,8 +39,10 @@
   list-style: none;
 }
 .menu .sub-menu .sub-content li {
+  height: 30px;
   padding: 10px;
-  color: red;
+  color: #999999;
+  text-indent: 20px;
   cursor: pointer;
 }
 .menu .sub-menu .sub-content li:hover {
