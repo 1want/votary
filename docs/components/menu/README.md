@@ -4,4 +4,4 @@
 
 ### 基础用法
 
-<code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
+<!-- <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" /> -->
