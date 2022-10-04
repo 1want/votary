@@ -1,6 +1,7 @@
-import Form from './form'
+import _Form from './form'
 import FormItem from './form-item'
+import './index.css'
 
-Form.Item = FormItem
+const Form = Object.assign(_Form, { Item: FormItem })
 
 export { Form }

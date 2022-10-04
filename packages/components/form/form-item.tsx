@@ -1,23 +1,17 @@
-import React, { cloneElement, useContext } from 'react'
-import { Context } from './formContext'
-import './index.css'
+import { cloneElement, useContext } from 'react'
+import FormContext from './formContext'
+import { FormItemProps } from './types'
 
-type MyProps = {
-  label?: string
-  name: string
-  rules?: Array<object>
-  children?: React.ReactNode
-}
-
-const FormItem = (props: MyProps) => {
+const FormItem = (props: FormItemProps) => {
   const { children, name, rules, label } = props
-  const { setValue, setRules } = useContext(Context)
+  const { setValue, setRules } = useContext(FormContext)
   // 初始化表单，收集表单里面包含的formItem的名称
   setValue(name, '')
   // 添加表单校验规则
   if (rules) {
     setRules(name, rules)
   }
+
   const setProperty = children => {
     return {
       ...children,

@@ -1,15 +1,8 @@
-import React from 'react'
-import { Context } from './formContext'
+import FormContext from './formContext'
 import useForm from '../../hooks/useForm'
+import { FormProps } from './types'
 
-import './index.css'
-
-type Props = {
-  children?: React.ReactNode
-  onFinish?: () => {}
-}
-
-const Form = (props: Props) => {
+const Form = (props: FormProps) => {
   const { children, onFinish } = props
   const formInstance = useForm()
   const { submit } = formInstance
@@ -20,7 +13,9 @@ const Form = (props: Props) => {
         e.preventDefault()
         submit(onFinish)
       }}>
-      <Context.Provider value={formInstance}>{children}</Context.Provider>
+      <FormContext.Provider value={formInstance}>
+        {children}
+      </FormContext.Provider>
     </form>
   )
 }

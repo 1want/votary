@@ -1,19 +1,22 @@
 .my-input {
   display: flex;
-  border: 1px solid #3a3a3a42;
-  border-radius: 2px;
   width: 220px;
   height: 32px;
   line-height: 32px;
+  border: 1px solid #3a3a3a42;
+  border-radius: 2px;
 }
-.my-input .input {
-  border: none;
+.my-input .v-input {
   flex: 1;
+  border: none;
 }
-.my-input .input:focus {
+.my-input .v-input:focus {
   outline: none;
 }
-.my-input .textIndent {
+.my-input .v-input::placeholder {
+  color: #b0adad;
+}
+.my-input .v-input-textIndent {
   text-indent: 10px;
 }
 .my-input:focus-within {
@@ -21,7 +24,7 @@
 }
 .my-input .iconfont {
   width: 30px;
-  font-size: 18px;
   color: #afafaf;
+  font-size: 18px;
   text-align: center;
 }

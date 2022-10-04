@@ -4,6 +4,9 @@
   font-size: 15px;
   background: #2c2a2e;
 }
+.menu .sub-menu li {
+  text-indent: 26px;
+}
 .menu .sub-menu .sub-menu-header {
   display: flex;
   align-items: center;
@@ -15,21 +18,18 @@
 .menu .sub-menu .sub-menu-header:hover {
   background: #767474;
 }
-.menu .sub-menu .sub-menu-header .sub-menu-title {
-  margin-left: 10px;
+.menu .sub-menu .sub-menu-header .menu-icon {
+  margin-right: 10px;
 }
-.menu .sub-menu .sub-content {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.menu .sub-menu .sub-content li {
-  padding: 10px;
+.menu .sub-menu .sub-content .item-li {
+  padding: 10px 20px;
   color: #999999;
   line-height: 30px;
-  text-indent: 20px;
   cursor: pointer;
 }
-.menu .sub-menu .sub-content li:hover {
+.menu .sub-menu .sub-content .item-li:hover {
   background: #000;
+}
+.menu .sub-menu .sub-content .sub-menu li {
+  text-indent: 40px;
 }

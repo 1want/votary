@@ -7,8 +7,3 @@
 ### 图标
 
 <a href="https://www.iconfont.cn/collections/detail?cid=32107">引用 Element 图标库<a/>
-
-### 站点
-
-<a href="https://d.umijs.org/zh-CN">
-使用 Dumi 搭建<a/>

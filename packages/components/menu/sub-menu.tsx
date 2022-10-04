@@ -17,14 +17,16 @@ const Menu = (props: SubMenuProps) => {
     }
   })
   return (
-    <div className='sub-menu'>
-      <div className='sub-menu-header' onClick={() => setOpen(prev => !prev)}>
+    <li className='sub-menu'>
+      <header
+        className='sub-menu-header'
+        onClick={() => setOpen(prev => !prev)}>
         <div className='left'>
-          <Icon name={icon}></Icon>
+          {icon && <Icon name={icon} className='menu-icon'></Icon>}
           <span className='sub-menu-title'>{title}</span>
         </div>
         <span className='iconfont icon-arrow-down'></span>
-      </div>
+      </header>
 
       <animated.div
         style={{
@@ -35,7 +37,7 @@ const Menu = (props: SubMenuProps) => {
           {children}
         </ul>
       </animated.div>
-    </div>
+    </li>
   )
 }
 

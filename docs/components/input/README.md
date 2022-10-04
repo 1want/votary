@@ -2,7 +2,6 @@
 
 ---
 
-<!--
 ### 基础用法
 
 <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
@@ -16,4 +15,4 @@
 | 参数     | 说明               | 类型     | 默认值 |
 | -------- | ------------------ | -------- | ------ |
 | value    | 输入框内容         | string   |        |
-| onChange | 输入内容改变的回调 | function |        | -->
+| onChange | 输入内容改变的回调 | function |        |

@@ -1,4 +1,5 @@
-import { Button, Message } from 'votary'
+import { Button } from 'votary'
+import { Message } from '../../../packages/components/message'
 
 const msg1 = () => {
   Message({
