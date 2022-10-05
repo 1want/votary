@@ -41,7 +41,6 @@ export default defineConfig({
           'components/icon',
           'components/layout',
           'components/divider',
-          'components/image',
           'components/mask'
         ]
       },
@@ -69,12 +68,16 @@ export default defineConfig({
         ]
       },
       {
-        title: '导航组件',
+        title: '展示组件',
         children: [
-          'components/swiper',
-          'components/pagination',
-          'components/menu'
+          'components/collapse',
+          'components/image',
+          'components/swiper'
         ]
+      },
+      {
+        title: '导航组件',
+        children: ['components/pagination', 'components/menu']
       }
     ]
   },

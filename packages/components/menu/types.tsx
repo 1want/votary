@@ -1,5 +1,7 @@
 export interface MenuProps {
   children?: any
+  uniqueOpened?: boolean
+  mode?: string
 }
 
 export interface MenuItemProps {

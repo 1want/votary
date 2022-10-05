@@ -23,7 +23,7 @@ const SubMenu = (props: SubMenuProps) => {
   return (
     <li className='sub-menu'>
       <header
-        style={{ textIndent: level > 1 ? 10 * (level - 1) + 'px' : '' }}
+        style={{ textIndent: level > 1 ? 13 * (level - 1) + 'px' : '' }}
         className='sub-menu-header'
         onClick={() => setOpen(prev => !prev)}>
         <div className='left'>
