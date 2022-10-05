@@ -22,6 +22,7 @@ const FormItem = (props: FormItemProps) => {
   }
 
   const newElement = cloneElement(children, setProperty(children.props))
+  console.log(newElement)
   return (
     <div className='form-item'>
       <span className={`label ${rules && 'rules'}`}>{label}:</span>

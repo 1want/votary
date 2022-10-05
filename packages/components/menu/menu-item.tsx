@@ -1,14 +1,13 @@
 import { MenuItemProps } from './types'
 
-const Menu = (props: MenuItemProps) => {
-  const { children } = props
+const MenuItem = (props: MenuItemProps) => {
+  const { children, level } = props
 
   return (
-    <li className='item-li'>
-      {/* <span className='item-icon'>icon</span> */}
+    <li className={`item-li`} style={{ textIndent: 10 * level + 'px' }}>
       <span>{children}</span>
     </li>
   )
 }
 
-export default Menu
+export default MenuItem

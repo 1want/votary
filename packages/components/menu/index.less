@@ -5,7 +5,7 @@
   background: #2c2a2e;
   .sub-menu {
     li {
-      text-indent: 26px;
+      // text-indent: 26px;
     }
     .sub-menu-header {
       display: flex;
@@ -13,6 +13,7 @@
       justify-content: space-between;
       height: 30px;
       padding: 10px 20px;
+      white-space: nowrap;
       cursor: pointer;
       &:hover {
         background: rgb(118, 116, 116);
@@ -32,11 +33,11 @@
           background: #000;
         }
       }
-      & .sub-menu {
-        li {
-          text-indent: 40px;
-        }
-      }
+      // & .sub-menu {
+      //   li {
+      //     text-indent: 40px;
+      //   }
+      // }
     }
   }
 }

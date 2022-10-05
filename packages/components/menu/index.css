@@ -4,15 +4,13 @@
   font-size: 15px;
   background: #2c2a2e;
 }
-.menu .sub-menu li {
-  text-indent: 26px;
-}
 .menu .sub-menu .sub-menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 30px;
   padding: 10px 20px;
+  white-space: nowrap;
   cursor: pointer;
 }
 .menu .sub-menu .sub-menu-header:hover {
@@ -29,7 +27,4 @@
 }
 .menu .sub-menu .sub-content .item-li:hover {
   background: #000;
-}
-.menu .sub-menu .sub-content .sub-menu li {
-  text-indent: 40px;
 }
