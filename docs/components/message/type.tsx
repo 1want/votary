@@ -30,9 +30,9 @@ const msg4 = () => {
 
 export default () => (
   <>
-    <Button onClick={msg1}>消息</Button>
-    <Button onClick={msg2}>成功</Button>
-    <Button onClick={msg3}>警告</Button>
-    <Button onClick={msg4}>失败</Button>
+    <Button onClick={msg1}>提示</Button>
+    <Button onClick={msg2}>提示</Button>
+    <Button onClick={msg3}>提示</Button>
+    <Button onClick={msg4}>提示</Button>
   </>
 )

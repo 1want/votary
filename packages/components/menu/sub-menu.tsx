@@ -41,11 +41,12 @@ const SubMenu = (props: SubMenuProps) => {
         <ul ref={ref} className='sub-content'>
           {/* {children} */}
           {React.Children.map(children, child => {
+            const { props } = child
             if (!React.isValidElement(child)) {
               return null
             }
             const childProps = {
-              ...child.props,
+              ...props,
               level
             }
             return React.cloneElement(child, childProps)

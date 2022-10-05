@@ -5,5 +5,5 @@ export interface InputProps {
   placeholder?: string
   click?: () => void
   value?: any
-  onChange?: (e: HTMLInputElement) => void
+  onChange?: (e: string) => void
 }

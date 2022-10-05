@@ -15,7 +15,7 @@ const Input = (props: InputProps) => {
       <input
         className={classes}
         onChange={e => {
-          onChange?.(e)
+          onChange?.(e.target.value)
         }}
         type={type}
         placeholder={placeholder}

@@ -5,7 +5,7 @@ export default () => {
   const [username, setUsername] = useState('')
   return (
     <Input
-      placeholder='想写点什么吗?'
+      placeholder='咸鱼就是咸鱼'
       value={username}
       onChange={text => setUsername(text)}
     />

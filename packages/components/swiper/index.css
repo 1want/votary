@@ -1,10 +1,12 @@
-.swiper {
-  width: 300px;
-}
-.swiper .swiper-wrapper {
+.v-swiper {
   display: flex;
-  white-space: nowrap;
+  width: 200px;
+  overflow: hidden;
 }
-.swiper .swiper-wrapper .swiper-slide {
-  width: 1000px !important;
+.v-swiper .v-swiper-item {
+  width: 200px;
+  min-width: 200px;
+  height: 120px;
+  object-fit: cover;
+  overflow: hidden;
 }

@@ -9,5 +9,5 @@
     "composite": true
   },
   "include": ["script", "packages/**/*"],
-  "exclude": ["packages/components/form/"]
+  "exclude": ["packages/components/form/", "packages/components/swiper/"]
 }

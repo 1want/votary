@@ -6,7 +6,7 @@
 
 <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
 
-### 默认选中
+<!-- ### 默认选中 -->
 
 <!-- <code hideActions='["CSB","EXTERNAL"]' src="./checked.tsx" /> -->
 

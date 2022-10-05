@@ -1,1 +1,1 @@
-<p align="center">votary</p>
+<p align="center">React Components</p>
