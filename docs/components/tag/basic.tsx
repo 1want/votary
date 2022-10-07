@@ -1,4 +1,4 @@
-import { Tag } from '../../../packages/components/tag'
+import { Tag } from 'votary'
 
 export default () => (
   <>

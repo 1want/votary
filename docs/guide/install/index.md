@@ -18,7 +18,7 @@ import 'votary/dist/style.css'
  */
 
 import React from 'react'
-// import 'votary/lib/style.css'
+import 'votary/lib/style.css'
 
 // import '../../../packages/style/index.css'
 // import '../../../packages/icon/assets/iconfont.css'

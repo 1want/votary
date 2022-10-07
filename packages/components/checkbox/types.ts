@@ -1,4 +1,4 @@
-export interface RadioProps {
+export interface CheckboxProps {
   defaultValue?: string
   checked?: boolean
   disabled?: boolean
@@ -6,8 +6,8 @@ export interface RadioProps {
   value?: string
 }
 
-export interface RadioGroupProps {
-  value?: string
-  onChange?: (e: string) => void
+export interface CheckboxGroupProps {
+  value?: Array<string>
+  onChange?: (e: Array<string>) => void
   children?: any
 }

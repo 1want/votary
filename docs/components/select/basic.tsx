@@ -1,4 +1,4 @@
-import { Select } from '../../../packages/components/select'
+import { Select } from 'votary'
 
 const { Option } = Select
 

@@ -1,17 +1,15 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
 import RadioContext from './checkbox-context'
-import { RadioProps } from './types'
+import { CheckboxProps } from './types'
 
-const Radio = (props: RadioProps) => {
+const Radio = (props: CheckboxProps) => {
   const { ...context } = useContext(RadioContext)
   const classes = classNames([props.disabled && 'is-disabled'])
-  const checked = context.checked
-    ? context.checked === props.value
-    : props.checked || false
+  const checked = context.checked?.includes(props.value || '')
 
   const onChange = () => {
-    context.toggle?.(props.value || '')
+    context.choose?.(props.value || '')
   }
 
   return (

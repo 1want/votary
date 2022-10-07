@@ -1,4 +1,4 @@
-import { Menu } from '../../../packages/components/menu'
+import { Menu } from 'votary'
 
 export default () => {
   return (

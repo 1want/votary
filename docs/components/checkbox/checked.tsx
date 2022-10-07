@@ -2,6 +2,7 @@ import { Checkbox } from 'votary'
 
 export default () => (
   <Checkbox.Group
+    value={['apple', 'banner']}
     onChange={e => {
       console.log(e)
     }}>

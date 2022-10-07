@@ -7,7 +7,7 @@ export default () => {
   const confirm = () => {
     setDialogVisible(false)
     Message({
-      message: '捕获玉兔一只!'
+      message: '😴'
     })
   }
 
@@ -24,7 +24,6 @@ export default () => {
         title='把酒问月'
         visible={dialogVisible}
         onClose={() => setDialogVisible(false)}>
-        <p>白兔捣药秋复春，嫦娥孤栖与谁邻。</p>
         <p>今人不见古时月，今月曾经照古人。</p>
       </Dialog>
     </>
