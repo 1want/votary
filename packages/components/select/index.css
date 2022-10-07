@@ -16,65 +16,65 @@
     opacity: 1;
   }
 }
-.select {
+.v-select {
+  position: relative;
   width: 220px;
   height: 32px;
   line-height: 32px;
   border: 1px solid #afafaf;
   border-radius: 2px;
-  position: relative;
   cursor: pointer;
 }
-.select .placeholder,
-.select .value {
+.v-select .placeholder,
+.v-select .value {
   position: absolute;
   top: 0;
-  font-size: 14px;
   color: #a7a5a5;
+  font-size: 14px;
   text-indent: 10px;
 }
-.select .value {
+.v-select .value {
   color: #000;
 }
-.select .option-box {
+.v-select .v-option {
   margin-top: 42px;
-  background: #fff;
-  box-shadow: 0 0 1px #9a9a9a;
-  border-radius: 2px;
-  overflow: hidden;
   padding: 10px 0;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #e6e6e6;
 }
-.select .option-box .option {
+.v-select .v-option-item {
   padding: 2px 10px;
   font-size: 14px;
   cursor: pointer;
 }
-.select .option-box .option:hover {
+.v-select .v-option-item:hover {
   background: #c1cffb1a;
 }
-.select .option-box .is-select {
+.v-select .v-option-item-is-select {
   color: #5d5cdc;
 }
-.select .iconfont {
+.v-select .iconfont {
   position: absolute;
   top: 0;
   right: 10px;
   color: #afafaf;
 }
-.select .icon-arrow-down {
+.v-select .icon-arrow-down {
   transform: rotate(0);
   transition: transform 0.4s;
 }
-.select .hidden {
+.v-select .hidden {
   visibility: hidden;
 }
-.select .show {
+.v-select .show {
   animation: myOpen 0.3s;
 }
 .is-focus {
   border-color: #7f96ff;
 }
 .is-focus .icon-arrow-down {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
   transition: transform 0.4s;
 }

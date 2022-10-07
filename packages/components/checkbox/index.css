@@ -1,0 +1,24 @@
+.v-radio {
+  display: flex;
+  align-items: center;
+}
+.v-radio .radio-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.v-radio .radio-item .is-check {
+  background: #4045f5;
+  border-color: #4045f5;
+}
+.v-radio .radio-item .is-disabled {
+  background: #eee;
+  cursor: not-allowed;
+}
+.v-radio .radio-item .is-disabled.radio-name {
+  color: red;
+}
+.v-radio .radio-item .radio-name {
+  margin-left: 5px;
+  user-select: none;
+}

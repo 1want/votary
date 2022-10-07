@@ -4,3 +4,5 @@ node_modules
 .umi-production
 docs-dist
 lib
+
+tsconfig.build.tsbuildinfo

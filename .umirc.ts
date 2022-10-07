@@ -63,8 +63,7 @@ export default defineConfig({
           'components/popconfirm',
           'components/drawer',
           'components/dialog',
-          'components/loading',
-          'components/progress'
+          'components/loading'
         ]
       },
       {
@@ -72,7 +71,10 @@ export default defineConfig({
         children: [
           'components/collapse',
           'components/image',
-          'components/swiper'
+          'components/swiper',
+          'components/table',
+          'components/tag',
+          'components/progress'
         ]
       },
       {

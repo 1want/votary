@@ -1,4 +1,4 @@
-import { Collapse } from 'votary'
+import { Collapse } from '../../../packages/components/collapse'
 
 export default () => (
   <Collapse>

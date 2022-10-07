@@ -1,13 +1,20 @@
 .v-swiper {
-  display: flex;
-  width: 200px;
+  position: relative;
+  width: 320px;
+  height: 200px;
   overflow: hidden;
-
-  .v-swiper-item {
-    width: 200px;
-    min-width: 200px;
-    height: 120px;
-    object-fit: cover;
-    overflow: hidden;
+  .v-swiper-container {
+    position: absolute;
+    left: 0;
+    display: flex;
+    white-space: nowrap;
+    .v-swiper-item {
+      min-width: 320px;
+      height: 200px;
+      object-fit: cover;
+      overflow: hidden;
+      color: #fff;
+      background: #93bffa;
+    }
   }
 }

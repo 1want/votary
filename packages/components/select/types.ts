@@ -1,5 +1,5 @@
 export interface SelectProps {
-  defaultValue?: string
+  value?: string
   placeholder?: string
   onChange?: (value: string) => void
   children?: any

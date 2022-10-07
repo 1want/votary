@@ -1,4 +1,4 @@
-# Select 列表
+# Select 选择器
 
 ---
 
@@ -6,9 +6,9 @@
 
 <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
 
-<!-- ### 默认选中 -->
+### 默认选中
 
-<!-- <code hideActions='["CSB","EXTERNAL"]' src="./checked.tsx" /> -->
+<code hideActions='["CSB","EXTERNAL"]' src="./checked.tsx" />
 
 <br/>
 
@@ -16,10 +16,10 @@
 
 #### Props
 
-| 参数         | 说明     | 类型   | 默认值 |
-| ------------ | -------- | ------ | ------ |
-| defaultValue | 默认选中 | string |        |
-| placeholder  | 占位符   | string |        |
+| 参数        | 说明     | 类型   | 默认值 |
+| ----------- | -------- | ------ | ------ |
+| value       | 默认选中 | string |        |
+| placeholder | 占位符   | string |        |
 
 #### Events
 

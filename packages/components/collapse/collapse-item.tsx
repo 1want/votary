@@ -21,7 +21,10 @@ const CollapseItem = (props: CollapseItemProps) => {
         onClick={() => setOpen(prev => !prev)}
         className='v-collapse-item'>
         <span className='sub-menu-title'>{title}</span>
-        <span className='iconfont icon-arrow-right'></span>
+        <span
+          className={`iconfont icon-arrow-right${
+            open ? ' v-collapse-show' : ''
+          }`}></span>
       </header>
 
       <animated.div
