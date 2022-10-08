@@ -1,0 +1,11 @@
+.v-breadcrumb {
+  display: flex;
+  align-items: center;
+}
+.v-breadcrumb .item .separator {
+  margin: 0 10px;
+  font-size: 14px;
+}
+.v-breadcrumb .item:last-child .separator {
+  display: none;
+}

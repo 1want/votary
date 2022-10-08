@@ -79,7 +79,11 @@ export default defineConfig({
       },
       {
         title: '导航组件',
-        children: ['components/pagination', 'components/menu']
+        children: [
+          'components/pagination',
+          'components/menu',
+          'components/breadcrumb'
+        ]
       }
     ]
   },
