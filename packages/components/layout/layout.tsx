@@ -17,7 +17,7 @@ const Main = (props: LayoutProps) => {
 
 const Layout = (props: LayoutProps) => {
   const { children } = props
-  return <div className='layout'>{children}</div>
+  return <div className='v-layout'>{children}</div>
 }
 
 export default Layout

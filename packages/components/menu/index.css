@@ -1,10 +1,10 @@
-.menu {
+.v-menu {
   width: 200px;
   color: #999999;
   font-size: 15px;
   background: #2c2a2e;
 }
-.menu .sub-menu .sub-menu-header {
+.v-menu .sub-menu .sub-menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,18 +13,18 @@
   white-space: nowrap;
   cursor: pointer;
 }
-.menu .sub-menu .sub-menu-header:hover {
+.v-menu .sub-menu .sub-menu-header:hover {
   background: #767474;
 }
-.menu .sub-menu .sub-menu-header .menu-icon {
+.v-menu .sub-menu .sub-menu-header .menu-icon {
   margin-right: 10px;
 }
-.menu .sub-menu .sub-content .item-li {
+.v-menu .sub-menu .sub-content .item-li {
   padding: 10px 20px;
   color: #999999;
   line-height: 30px;
   cursor: pointer;
 }
-.menu .sub-menu .sub-content .item-li:hover {
+.v-menu .sub-menu .sub-content .item-li:hover {
   background: #000;
 }

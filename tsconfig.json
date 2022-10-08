@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
     // "forceConsistentCasingInFileNames": true,
     "forceConsistentCasingInFileNames": false,
     "module": "ESNext",

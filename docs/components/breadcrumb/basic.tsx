@@ -1,4 +1,4 @@
-import { Breadcrumb } from '../../../packages/components/breadcrumb'
+import { Breadcrumb } from 'votary'
 
 export default () => (
   <Breadcrumb>
