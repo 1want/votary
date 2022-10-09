@@ -3,16 +3,16 @@ import { Button } from 'votary'
 export default () => (
   <>
     <Button plain type='primary'>
-      镂空
+      plain
     </Button>
     <Button hairline plain type='primary'>
-      细边框
+      hairline
     </Button>
     <Button plain type='danger'>
-      镂空
+      plain
     </Button>
     <Button hairline plain type='danger'>
-      细边框
+      hairline
     </Button>
   </>
 )

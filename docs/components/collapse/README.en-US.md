@@ -1,4 +1,6 @@
-# Layout 布局
+# Collapse
+
+---
 
 ### 基础用法
 
