@@ -23,32 +23,16 @@ export default defineConfig({
         path: '/'
       }
     ],
-    '/en-US/guide': [
-      {
-        title: 'Introduction',
-        path: '/guide/introduction'
-      },
-      {
-        title: 'Installation',
-        path: '/guide/install'
-      },
-      {
-        title: 'Design Resource',
-        path: '/guide/design'
-      }
-    ],
     '/guide': [
       {
-        title: '简介',
-        path: '/guide/introduction'
-      },
+        title: '指南',
+        children: ['guide/introduction', 'guide/install', 'guide/design']
+      }
+    ],
+    '/en-US/guide': [
       {
-        title: '安装',
-        path: '/guide/install'
-      },
-      {
-        title: '设计资源',
-        path: '/guide/design'
+        title: 'guide',
+        children: ['guide/introduction', 'guide/install', 'guide/design']
       }
     ],
     '/en-US/components': [
@@ -159,21 +143,6 @@ export default defineConfig({
     ]
   },
   navs: {
-    'en-US': [
-      // null,
-      {
-        path: '/en-US/guide',
-        title: 'guide'
-      },
-      {
-        path: '/en-US/components',
-        title: 'component'
-      },
-      {
-        title: 'GitHub',
-        path: 'https://github.com/1want/votary'
-      }
-    ],
     'zh-CN': [
       // null,
       {
@@ -183,6 +152,21 @@ export default defineConfig({
       {
         path: '/components',
         title: '组件'
+      },
+      {
+        title: 'GitHub',
+        path: 'https://github.com/1want/votary'
+      }
+    ],
+    'en-US': [
+      // null,
+      {
+        path: '/en-US/guide',
+        title: 'guide'
+      },
+      {
+        path: '/en-US/components',
+        title: 'component'
       },
       {
         title: 'GitHub',
