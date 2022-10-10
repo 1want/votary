@@ -1,6 +1,6 @@
 {
   "name": "votarys",
-  "version": "0.2.03",
+  "version": "0.2.4",
   "private": false,
   "keywords": [
     "ui",
@@ -38,7 +38,7 @@
     "react-spring": "^9.5.5",
     "react-transition-group": "^4.4.5",
     "react-use-measure": "^2.1.1",
-    "votary": "^0.2.2"
+    "votary": "^0.2.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.21",

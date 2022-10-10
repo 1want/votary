@@ -16,7 +16,7 @@
 
 ### 按钮尺寸
 
-尺寸支持 mini、normal、large 默认为 normal
+尺寸支持 small、normal、large 默认为 normal
 
 <code hideActions='["CSB","EXTERNAL"]' src="./size.tsx" />
 
@@ -33,7 +33,7 @@
 | 参数     | 说明                                  | 类型    | 默认值  |
 | -------- | ------------------------------------- | ------- | ------- |
 | type     | 类型，可选值为 default primary danger | string  | default |
-| size     | 尺寸，可选值为 large small mini       | string  | normal  |
+| size     | 尺寸，可选值为 small normal large     | string  | normal  |
 | icon     | 添加按钮图标                          | string  |         |
 | plain    | 是否为朴素按钮                        | boolean | false   |
 | hairline | 是否使用细边框                        | boolean | false   |
