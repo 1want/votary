@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
 }
-.popconfirm {
+.v-popconfirm {
   position: absolute;
   top: 36px;
   left: 50%;
@@ -14,7 +14,7 @@
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
   transform: translateX(-50%);
 }
-.popconfirm .arrow {
+.v-popconfirm .arrow {
   position: absolute;
   top: -16px;
   left: 50%;
@@ -24,7 +24,7 @@
   border-color: transparent transparent #e0dedecc transparent;
   transform: translateX(-50%);
 }
-.popconfirm .arrow::after {
+.v-popconfirm .arrow::after {
   position: absolute;
   top: -7px;
   left: 50%;
@@ -35,26 +35,26 @@
   transform: translateX(-50%);
   content: '';
 }
-.popconfirm .header {
+.v-popconfirm .header {
   display: flex;
   align-items: center;
 }
-.popconfirm .header .icon-info {
+.v-popconfirm .header .icon-info {
   color: #4c69bd;
 }
-.popconfirm .header .title {
+.v-popconfirm .header .title {
   margin-left: 10px;
   font-size: 14px;
 }
-.popconfirm .btn {
+.v-popconfirm .btn {
   display: flex;
   margin-top: 20px;
   padding-left: 20px;
 }
-.popconfirm .btn .v-button {
+.v-popconfirm .btn .v-button {
   width: 45px;
   margin-right: 10px;
 }
-.popconfirm .btn .v-button:nth-child(2) {
+.v-popconfirm .btn .v-button:nth-child(2) {
   border: none;
 }

@@ -9,4 +9,4 @@ const msg = () => {
   })
 }
 
-export default () => <Button onClick={msg}>通知</Button>
+export default () => <Button onClick={msg}>click me</Button>

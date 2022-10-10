@@ -6,8 +6,8 @@ export default () => (
     onChange={e => {
       console.log(e)
     }}>
-    <Checkbox value='apple'>苹果</Checkbox>
-    <Checkbox value='banner'>香蕉</Checkbox>
-    <Checkbox value='orange'>橘子</Checkbox>
+    <Checkbox value='apple'>Apple</Checkbox>
+    <Checkbox value='banner'>Banner</Checkbox>
+    <Checkbox value='orange'>Orange</Checkbox>
   </Checkbox.Group>
 )

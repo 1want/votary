@@ -7,4 +7,4 @@ const msg = () => {
   })
 }
 
-export default () => <Button onClick={msg}>提示</Button>
+export default () => <Button onClick={msg}>click me</Button>

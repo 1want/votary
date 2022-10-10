@@ -13,7 +13,7 @@ const PopconfirmContent = (props: PopconfirmProps) => {
   } = props
 
   return (
-    <div className='popconfirm'>
+    <div className='v-popconfirm'>
       <div className='arrow'></div>
       <div className='header'>
         <span className='iconfont icon-info'></span>

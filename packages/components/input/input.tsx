@@ -5,7 +5,13 @@ import { InputProps } from './types'
 const bem = createNamespace('input')
 
 const Input = (props: InputProps) => {
-  const { leftIcon, rightIcon, placeholder, onChange, type = 'text' } = props
+  const {
+    leftIcon,
+    rightIcon,
+    placeholder = 'input ...',
+    onChange,
+    type = 'text'
+  } = props
 
   const classes = bem(classNames([!leftIcon && 'textIndent']))
 
