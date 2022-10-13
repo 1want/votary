@@ -8,7 +8,7 @@
 
 ### 带 icon 的输入框
 
-<code hideActions='["CSB","EXTERNAL"]' src="./input-icon.tsx" />
+<code hideActions='["CSB","EXTERNAL"]' src="./icon.tsx" />
 
 ### API
 

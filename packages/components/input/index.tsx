@@ -1,4 +1,4 @@
 import Input from './input'
-import './index.css'
+import './style/index.css'
 
 export { Input }

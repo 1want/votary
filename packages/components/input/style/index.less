@@ -1,11 +1,11 @@
-.my-input {
+.v-input {
   display: flex;
   width: 220px;
   height: 32px;
   line-height: 32px;
   border: 1px solid #3a3a3a42;
   border-radius: 2px;
-  .v-input {
+  .input {
     flex: 1;
     border: none;
     &:focus {
@@ -14,9 +14,10 @@
     &::placeholder {
       color: rgb(176, 173, 173);
     }
-    &-textIndent {
-      text-indent: 10px;
-    }
+  }
+
+  .textIndent {
+    text-indent: 10px;
   }
 
   &:focus-within {
@@ -28,5 +29,8 @@
     color: #afafaf;
     font-size: 16px;
     text-align: center;
+  }
+  .icon-view {
+    cursor: pointer;
   }
 }

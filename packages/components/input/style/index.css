@@ -1,4 +1,4 @@
-.my-input {
+.v-input {
   display: flex;
   width: 220px;
   height: 32px;
@@ -6,25 +6,28 @@
   border: 1px solid #3a3a3a42;
   border-radius: 2px;
 }
-.my-input .v-input {
+.v-input .input {
   flex: 1;
   border: none;
 }
-.my-input .v-input:focus {
+.v-input .input:focus {
   outline: none;
 }
-.my-input .v-input::placeholder {
+.v-input .input::placeholder {
   color: #b0adad;
 }
-.my-input .v-input-textIndent {
+.v-input .textIndent {
   text-indent: 10px;
 }
-.my-input:focus-within {
+.v-input:focus-within {
   border: 1px solid #8c8ce8;
 }
-.my-input .iconfont {
+.v-input .iconfont {
   width: 30px;
   color: #afafaf;
   font-size: 16px;
   text-align: center;
+}
+.v-input .icon-view {
+  cursor: pointer;
 }

@@ -3,7 +3,8 @@ export interface InputProps {
   leftIcon?: string
   rightIcon?: string
   placeholder?: string
+  showPassword?: boolean
   click?: () => void
   value?: any
-  onChange?: (e: string) => void
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
