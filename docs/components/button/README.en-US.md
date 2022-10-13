@@ -16,7 +16,7 @@ Use plain、hairline to Define style
 
 ### Button Size
 
-Use mini、normal、large to Define Size
+Use small、normal to Define Size
 
 <code hideActions='["CSB","EXTERNAL"]' src="./size.tsx" />
 
@@ -33,11 +33,11 @@ Use mini、normal、large to Define Size
 | 参数     | 说明                                  | 类型    | 默认值  |
 | -------- | ------------------------------------- | ------- | ------- |
 | type     | 类型，可选值为 default primary danger | string  | default |
-| size     | 尺寸，可选值为 large small mini       | string  | normal  |
+| size     | 尺寸，可选值为 small normal           | string  | normal  |
 | icon     | 添加按钮图标                          | string  |         |
 | plain    | 是否为朴素按钮                        | boolean | false   |
 | hairline | 是否使用细边框                        | boolean | false   |
-| disabled | 是否禁用按钮                          | boolean | false   |
+| disabled | 禁止按钮点击                          | boolean | false   |
 
 #### Events
 

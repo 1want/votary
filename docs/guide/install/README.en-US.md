@@ -21,7 +21,7 @@ import React from 'react'
 // import 'votary/lib/style.css'
 
 // import '../../../packages/style/index.css'
-import '../../../packages/icon/assets/iconfont.css'
+// import '../../../packages/icon/assets/iconfont.css'
 
 export default () => ''
 ```

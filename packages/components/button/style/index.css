@@ -1,8 +1,7 @@
 .v-button {
   box-sizing: border-box;
-  width: 94px;
-  height: 40px;
-  padding: 0;
+  height: 38px;
+  padding: 0 8px;
   font-size: 16px;
   text-align: center;
   background: #fff;
@@ -53,16 +52,13 @@
   color: #e82b2b;
 }
 .v-button-small {
-  width: 60px;
+  width: 50px;
   height: 28px;
   font-size: 12px;
   line-height: 24px;
 }
-.v-button-large {
-  width: 250px;
-  height: 50px;
-  font-size: 24px;
-  line-height: 48px;
+.v-button-normal {
+  min-width: 90px;
 }
 .v-button-hairline {
   border-width: 0.5px;

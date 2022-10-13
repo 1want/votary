@@ -1,6 +1,6 @@
-import { ButtonProps } from './types'
 import classnames from 'classnames'
 import { createNamespace } from '../../utils/createNamespace'
+import { ButtonProps } from './types'
 
 const bem = createNamespace('button')
 
