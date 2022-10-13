@@ -1,4 +1,4 @@
 import Popconfirm from './popconfirm'
-import './index.css'
+import './style/index.css'
 
 export { Popconfirm }

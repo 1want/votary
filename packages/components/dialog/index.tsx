@@ -1,4 +1,4 @@
 import Dialog from './dialog'
-import './index.css'
+import './style/index.css'
 
 export { Dialog }

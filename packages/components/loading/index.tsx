@@ -1,4 +1,4 @@
 import Loading from './loading'
-import './index.css'
+import './style/index.css'
 
 export { Loading }

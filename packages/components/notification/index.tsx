@@ -1,4 +1,4 @@
 import { add as Notification } from './notification'
-import './index.css'
+import './style/index.css'
 
 export { Notification }

@@ -1,4 +1,4 @@
-import './index.css'
+import './style/index.css'
 
 export { Header } from './header'
 export { Content } from './content'

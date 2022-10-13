@@ -1,4 +1,4 @@
 import Tag from './tag'
-import './index.css'
+import './style/index.css'
 
 export { Tag }

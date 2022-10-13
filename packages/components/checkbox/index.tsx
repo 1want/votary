@@ -1,6 +1,6 @@
 import _Checkbox from './checkbox'
 import CheckboxGroup from './checkbox-group'
-import './index.css'
+import './style/index.css'
 
 const Checkbox = Object.assign(_Checkbox, { Group: CheckboxGroup })
 

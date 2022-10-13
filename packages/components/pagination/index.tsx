@@ -1,4 +1,4 @@
 import Pagination from './pagination'
-import './index.css'
+import './style/index.css'
 
 export { Pagination }

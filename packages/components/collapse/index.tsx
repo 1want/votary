@@ -1,6 +1,6 @@
 import _Collapse from './collapse'
 import CollapseItem from './collapse-item'
-import './index.css'
+import './style/index.css'
 
 const Collapse = Object.assign(_Collapse, { Item: CollapseItem })
 

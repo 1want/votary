@@ -1,4 +1,4 @@
 import Button from './button'
-import './index.css'
+import './style/index.css'
 
 export { Button }

@@ -1,5 +1,5 @@
 import Divider from './divider'
 
-import './index.css'
+import './style/index.css'
 
 export { Divider }

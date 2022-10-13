@@ -1,4 +1,4 @@
 import Image from './image'
-import './index.css'
+import './style/index.css'
 
 export { Image }
