@@ -3,7 +3,7 @@ import FormContext from './formContext'
 import { FormItemProps } from './types'
 
 const FormItem = (props: FormItemProps) => {
-  const { children, name, rules, label } = props
+  const { children, name = '', rules, label } = props
   const { setValue, setRules } = useContext(FormContext)
   // 初始化表单，收集表单里面包含的formItem的名称
   setValue(name, '')
@@ -14,18 +14,17 @@ const FormItem = (props: FormItemProps) => {
 
   const setProperty = children => {
     return {
-      ...children,
+      ...children.props,
       onChange: e => {
         setValue(name, e.target.value)
       }
     }
   }
 
-  const newElement = cloneElement(children, setProperty(children.props))
-  console.log(newElement)
+  const newElement = cloneElement(children, setProperty(children))
   return (
     <div className='form-item'>
-      <span className={`label ${rules && 'rules'}`}>{label}:</span>
+      {label && <span className={`label ${rules && 'rules'}`}>{label}:</span>}
       {newElement}
     </div>
   )

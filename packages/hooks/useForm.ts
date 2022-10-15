@@ -53,7 +53,8 @@ function useForm() {
     setValue,
     setValues,
     setRules,
-    submit
+    submit,
+    ValidateRules
   }
 }
 

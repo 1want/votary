@@ -1,11 +1,13 @@
+import { forwardRef } from 'react'
 import FormContext from './formContext'
 import useForm from '../../hooks/useForm'
 import { FormProps } from './types'
 
-const Form = (props: FormProps) => {
+const Form = forwardRef((props: FormProps, ref) => {
   const { children, onFinish } = props
   const formInstance = useForm()
   const { submit } = formInstance
+  ref.current = formInstance
 
   return (
     <form
@@ -18,6 +20,8 @@ const Form = (props: FormProps) => {
       </FormContext.Provider>
     </form>
   )
-}
+})
+
+// Form.ref = 3
 
 export default Form
