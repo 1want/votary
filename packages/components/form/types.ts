@@ -15,4 +15,5 @@ export interface FormContextType {
   setRules: (name: string, rules: Array<object>) => void
   setValue: (name: string, value: string) => void
   value?: any
+  errorInfo?: object
 }

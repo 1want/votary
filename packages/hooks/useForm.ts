@@ -1,7 +1,7 @@
 function useForm() {
   let state: any = {}
   let formRules: any = []
-  let errorInfo: any = []
+  let errorInfo: object = {}
 
   const getValue = (name: string) => {
     return state[name]
@@ -15,23 +15,25 @@ function useForm() {
     state = { ...state, ...value }
   }
 
-  const ValidateRules = () => {
-    errorInfo = []
+  const ValidateRules = fn => {
+    errorInfo = {}
     return new Promise((resolve, reject) => {
-      for (var i of formRules) {
-        for (var r of i.rules) {
+      for (let i of formRules) {
+        for (let r of i.rules) {
           if (r.required) {
-            !state[i.name] && errorInfo.push(r.message)
+            !state[i.name] && (errorInfo[i.name] = r.message)
           }
           if (r.max) {
-            state[i.name].length > r.max && errorInfo.push(r.message)
+            state[i.name].length > r.max && (errorInfo[i.name] = r.message)
           }
         }
       }
-      if (errorInfo.length) {
-        reject(errorInfo)
+      if (Object.keys(errorInfo).length) {
+        fn(false, errorInfo)
+        // reject()
       } else {
-        resolve(state)
+        fn(true)
+        // resolve(state)
       }
     })
   }
@@ -41,7 +43,7 @@ function useForm() {
   }
 
   const submit = (callback: any) => {
-    ValidateRules()
+    // ValidateRules()
     if (!errorInfo.length) {
       callback(state)
     }

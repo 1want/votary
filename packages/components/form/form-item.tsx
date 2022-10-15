@@ -4,7 +4,7 @@ import { FormItemProps } from './types'
 
 const FormItem = (props: FormItemProps) => {
   const { children, name = '', rules, label } = props
-  const { setValue, setRules } = useContext(FormContext)
+  const { setValue, setRules, errorInfo } = useContext(FormContext)
   // 初始化表单，收集表单里面包含的formItem的名称
   setValue(name, '')
   // 添加表单校验规则
@@ -25,6 +25,7 @@ const FormItem = (props: FormItemProps) => {
   return (
     <div className='form-item'>
       {label && <span className={`label ${rules && 'rules'}`}>{label}:</span>}
+      {errorInfo?.name}
       {newElement}
     </div>
   )
