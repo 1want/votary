@@ -10,6 +10,9 @@ const Input = (props: InputProps) => {
     placeholder = 'input ...',
     showPassword,
     onChange,
+    onBlur,
+    onFocus,
+    value,
     type = 'text'
   } = props
 
@@ -27,6 +30,9 @@ const Input = (props: InputProps) => {
       onChange={onChange}
       type={pwdIcon}
       placeholder={placeholder}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      value={value}
     />
   )
 

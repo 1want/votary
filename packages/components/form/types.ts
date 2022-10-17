@@ -1,5 +1,5 @@
 export interface FormProps {
-  children?: React.ReactNode
+  children?: any
   onFinish?: () => {}
   ref?: any
 }
@@ -16,4 +16,5 @@ export interface FormContextType {
   setValue: (name: string, value: string) => void
   value?: any
   errorInfo?: object
+  state?: any
 }
