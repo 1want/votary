@@ -30,7 +30,7 @@ const FormItem = (props: FormItemProps) => {
     <div className='form-item'>
       {label && <span className={`label ${rules && 'rules'}`}>{label}:</span>}
       {newElement}
-      {errorInfo?.[name]}
+      {/* {errorInfo?.[0].username} */}
     </div>
   )
 }

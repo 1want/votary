@@ -1,11 +1,11 @@
 import { useRef, useState } from 'react'
 
-function FormStore() {
-  let state: any = {}
-  let formRules: any = []
-  this.errorInfo = []
-  let instance: Array<any> = []
+let state: any = {}
+let formRules: any = []
+let errorInfo: any = []
+let instance: Array<any> = []
 
+function FormStore() {
   const getValue = (name: string) => {
     return state[name]
   }
@@ -35,21 +35,22 @@ function FormStore() {
       for (let i of formRules) {
         for (let r of i.rules) {
           if (r.required) {
-            !state[i.name] && this.errorInfo.push(r.message)
+            !state[i.name] && errorInfo.push({ username: r.message })
           }
           if (r.max) {
             // state[i.name].length > r.max && setError(r.message)
           }
         }
       }
-      if (Object.keys(this.errorInfo).length) {
-        fn(false, this.errorInfo)
+      if (Object.keys(errorInfo).length) {
+        fn(false, errorInfo)
+        setValue('name', 'jack')
         // reject()
       } else {
         fn(true)
         // resolve(state)
       }
-      notifi()
+      // notifi()
     })
   }
 
@@ -59,7 +60,7 @@ function FormStore() {
 
   const submit = (callback: any) => {
     // ValidateRules()
-    if (!this.errorInfo.length) {
+    if (!errorInfo.length) {
       callback(state)
     }
   }
@@ -71,18 +72,20 @@ function FormStore() {
     setValues,
     setRules,
     submit,
+    errorInfo,
     ValidateRules
   }
 }
 
 function useForm() {
-  const formRef = useRef()
+  // const formRef = useRef()
 
-  if (!formRef.current) {
-    const formStore = new FormStore()
-    formRef.current = formStore
-  }
-  return formRef.current
+  // if (!formRef.current) {
+  //   const formStore = FormStore()
+  //   formRef.current = formStore
+  // }
+  // return formRef.current
+  return FormStore()
 }
 
 export default useForm

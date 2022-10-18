@@ -8,14 +8,9 @@ const tableData = [
     hobby: 'eat'
   },
   {
-    name: 'lisi',
-    age: '22',
-    hobby: 'sleep'
-  },
-  {
     name: 'tony',
     age: '27',
-    hobby: 'cos'
+    hobby: 'sleep'
   }
 ]
 

@@ -72,7 +72,7 @@
   }
 
   &-normal {
-    min-width: 90px;
+    width: 90px;
   }
 
   &-hairline {
@@ -80,11 +80,14 @@
   }
 
   &-disabled {
-    background: rgb(245, 245, 245);
-    border: 1px solid rgb(211, 210, 210);
+    color: rgb(173, 167, 167);
+    background: rgba(242, 241, 241, 0.793);
+    border: 1px solid rgb(211, 209, 209);
     cursor: not-allowed;
     &:hover {
-      background: #eee;
+      color: rgb(173, 167, 167) !important;
+      background: rgba(242, 241, 241, 0.793);
+      border-color: rgb(211, 209, 209) !important;
     }
   }
 }

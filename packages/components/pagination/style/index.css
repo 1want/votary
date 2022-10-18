@@ -16,38 +16,18 @@
   margin: 0 10px;
   padding: 6px;
   border: 1px solid #cecdcd;
+  border-radius: 4px;
 }
 .v-pagination .v-page .number:hover {
   color: #4b50d5;
   border: 1px solid #4b50d5;
 }
+.v-pagination .v-page .omit {
+  margin: 0 4px;
+}
 .v-pagination .v-page .current {
   color: #4b50d5;
   border: 1px solid #4b50d5;
-}
-.v-pagination .disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-.v-pagination button {
-  width: 34px;
-  height: 34px;
-  margin: 0;
-  line-height: 34px;
-  text-align: center;
-}
-.v-pagination button:hover {
-  color: #4b50d5;
-  border: 1px solid #4b50d5;
-}
-.v-pagination .v-button-disabled {
-  color: #ada7a7;
-  border: 1px solid #d3d1d1;
-}
-.v-pagination .v-button-disabled:hover {
-  color: #ada7a7;
-  background: rgba(242, 241, 241, 0.793);
-  border: 1px solid #d3d1d1;
 }
 .v-pagination .small {
   margin: 0 !important;
@@ -56,4 +36,15 @@
 }
 .v-pagination .small:hover {
   background: transparent;
+}
+.v-pagination .v-button-normal {
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  line-height: 34px;
+  text-align: center;
+}
+.v-pagination .v-button-normal:hover {
+  color: #4b50d5;
+  border: 1px solid #4b50d5;
 }

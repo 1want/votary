@@ -5,22 +5,22 @@ import { FormProps } from './types'
 
 const Form = forwardRef((props: FormProps, ref) => {
   const { children, onFinish } = props
-  const formInstance = useForm()
+  const { setValue, setRules, ValidateRules, errorInfo } = useForm()
   // const { submit } = formInstance
 
   useImperativeHandle(ref, () => ({
-    Validate: formInstance.ValidateRules
+    Validate: ValidateRules
   }))
 
   return (
-    <FormContext.Provider value={formInstance}>
-      <form
-        onSubmit={e => {
-          e.preventDefault()
-        }}>
+    <form
+      onSubmit={e => {
+        e.preventDefault()
+      }}>
+      <FormContext.Provider value={{ setValue, setRules, errorInfo }}>
         {children}
-      </form>
-    </FormContext.Provider>
+      </FormContext.Provider>
+    </form>
   )
 })
 

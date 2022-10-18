@@ -14,41 +14,18 @@
       margin: 0 10px;
       padding: 6px;
       border: 1px solid rgb(206, 205, 205);
-
+      border-radius: 4px;
       &:hover {
         color: #4b50d5;
         border: 1px solid #4b50d5;
       }
     }
+    .omit {
+      margin: 0 4px;
+    }
     .current {
       color: #4b50d5;
       border: 1px solid #4b50d5;
-    }
-  }
-
-  .disabled {
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  button {
-    width: 34px;
-    height: 34px;
-    margin: 0;
-    line-height: 34px;
-    text-align: center;
-    &:hover {
-      color: #4b50d5;
-      border: 1px solid #4b50d5;
-    }
-  }
-  .v-button-disabled {
-    color: rgb(173, 167, 167);
-    border: 1px solid rgb(211, 209, 209);
-    &:hover {
-      color: rgb(173, 167, 167);
-      background: rgba(242, 241, 241, 0.793);
-      border: 1px solid rgb(211, 209, 209);
     }
   }
 
@@ -58,6 +35,17 @@
     border: none !important;
     &:hover {
       background: transparent;
+    }
+  }
+  .v-button-normal {
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    line-height: 34px;
+    text-align: center;
+    &:hover {
+      color: #4b50d5;
+      border: 1px solid #4b50d5;
     }
   }
 }

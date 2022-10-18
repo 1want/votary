@@ -4,8 +4,6 @@ import classnames from 'classnames'
 import { Button } from '../button'
 import { PaginationProps } from './types'
 
-const bem = createNamespace('pagination')
-
 const Pagination = (props: PaginationProps) => {
   const {
     small = false,
@@ -15,28 +13,31 @@ const Pagination = (props: PaginationProps) => {
     sizeChange,
     pageChange
   } = props
-  const classes = bem(classnames([small && 'small']))
-
-  console.log(classes)
 
   const [currentPage, setCurrentPage] = useState(current)
 
   const previous = () => {
     setCurrentPage(currentPage - 1)
+    pageChange?.(currentPage - 1)
   }
 
   const next = () => {
     setCurrentPage(currentPage + 1)
+    pageChange?.(currentPage + 1)
   }
 
-  const PagItem = () => {
-    const pages = Math.ceil(total / size)
-    const number = Array.from(Array(pages).keys(), x => x + 1)
+  const renderPagItem = () => {
+    const allPages = Math.ceil(total / size)
+    const space = 5
+    const number = Array.from(Array(allPages).keys(), x => x + 2).slice(
+      0,
+      space
+    )
     const Item = number.map(item => (
       <div
         onClick={() => {
           setCurrentPage(item)
-          pageChange?.(currentPage)
+          pageChange?.(item)
         }}
         className={`number${currentPage === item ? ' current' : ''}${
           small ? ' small' : ''
@@ -45,7 +46,46 @@ const Pagination = (props: PaginationProps) => {
         {item}
       </div>
     ))
-    return <div className='v-page'>{Item}</div>
+
+    const first = () => {
+      return (
+        <div
+          onClick={() => {
+            setCurrentPage(1)
+            pageChange?.(1)
+          }}
+          className={`number${small ? ' small' : ''}`}>
+          1
+        </div>
+      )
+    }
+    const end = () => {
+      return (
+        <div
+          onClick={() => {
+            setCurrentPage(allPages)
+            pageChange?.(allPages)
+          }}
+          className={`number${small ? ' small' : ''}`}>
+          {allPages}
+        </div>
+      )
+    }
+    const l = () => {
+      return currentPage >= allPages - space && <div className='omit'>...</div>
+    }
+    const r = () => {
+      return allPages - currentPage >= space && <div className='omit'>...</div>
+    }
+    return (
+      <div className='v-page'>
+        {first()}
+        {l()}
+        {Item}
+        {r()}
+        {end()}
+      </div>
+    )
   }
 
   return (
@@ -54,14 +94,15 @@ const Pagination = (props: PaginationProps) => {
         icon='arrow-left'
         onClick={previous}
         disabled={currentPage === 1}
-        className={`${small ? ' small' : ''}`}></Button>
-      <PagItem />
-
+        className={`${small ? ' small' : 'normal'}`}
+      />
+      {renderPagItem()}
       <Button
         icon='arrow-right'
         onClick={next}
         disabled={currentPage === Math.ceil(total / size)}
-        className={`${small ? ' small' : ''}`}></Button>
+        className={`${small ? ' small' : 'normal'}`}
+      />
     </div>
   )
 }
