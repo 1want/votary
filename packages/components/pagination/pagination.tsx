@@ -16,6 +16,12 @@ const Pagination = (props: PaginationProps) => {
 
   const [currentPage, setCurrentPage] = useState(current)
 
+  const min = Math.max(0, currentPage - 3)
+  const max = Math.max(5, currentPage + 2)
+  const allPages = Math.ceil(total / size)
+  const space = 5
+  const number = Array.from(Array(allPages).keys(), x => x + 1).slice(min, max)
+
   const previous = () => {
     setCurrentPage(currentPage - 1)
     pageChange?.(currentPage - 1)
@@ -27,14 +33,8 @@ const Pagination = (props: PaginationProps) => {
   }
 
   const renderPagItem = () => {
-    const allPages = Math.ceil(total / size)
-    const space = 5
-    const number = Array.from(Array(allPages).keys(), x => x + 2).slice(
-      0,
-      space
-    )
     const Item = number.map(item => (
-      <div
+      <li
         onClick={() => {
           setCurrentPage(item)
           pageChange?.(item)
@@ -44,47 +44,47 @@ const Pagination = (props: PaginationProps) => {
         }`}
         key={item}>
         {item}
-      </div>
+      </li>
     ))
 
     const first = () => {
       return (
-        <div
+        <li
           onClick={() => {
             setCurrentPage(1)
             pageChange?.(1)
           }}
           className={`number${small ? ' small' : ''}`}>
           1
-        </div>
+        </li>
       )
     }
     const end = () => {
       return (
-        <div
+        <li
           onClick={() => {
             setCurrentPage(allPages)
             pageChange?.(allPages)
           }}
           className={`number${small ? ' small' : ''}`}>
           {allPages}
-        </div>
+        </li>
       )
     }
     const l = () => {
-      return currentPage >= allPages - space && <div className='omit'>...</div>
+      return currentPage >= space && <li className='omit'>...</li>
     }
     const r = () => {
-      return allPages - currentPage >= space && <div className='omit'>...</div>
+      return allPages - space >= currentPage && <li className='omit'>...</li>
     }
     return (
-      <div className='v-page'>
+      <ul className='v-page'>
         {first()}
         {l()}
         {Item}
         {r()}
-        {end()}
-      </div>
+        {allPages - 2 > space && end()}
+      </ul>
     )
   }
 
