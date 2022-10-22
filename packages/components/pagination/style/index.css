@@ -6,11 +6,7 @@
   list-style: none;
   cursor: pointer;
 }
-.v-pagination .v-page {
-  display: flex;
-  align-items: center;
-}
-.v-pagination .v-page .number {
+.v-pagination .number {
   width: 20px;
   height: 20px;
   margin: 0 10px;
@@ -18,14 +14,14 @@
   border: 1px solid #cecdcd;
   border-radius: 4px;
 }
-.v-pagination .v-page .number:hover {
+.v-pagination .number:hover {
   color: #4b50d5;
   border: 1px solid #4b50d5;
 }
-.v-pagination .v-page .omit {
+.v-pagination .omit {
   margin: 0 6px;
 }
-.v-pagination .v-page .current {
+.v-pagination .current {
   color: #4b50d5;
   border: 1px solid #4b50d5;
 }
