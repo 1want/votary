@@ -7,10 +7,11 @@
   cursor: pointer;
 }
 .v-pagination .number {
-  width: 20px;
+  min-width: 20px;
   height: 20px;
-  margin: 0 10px;
+  margin: 0 6px;
   padding: 6px;
+  font-size: 15px;
   border: 1px solid #cecdcd;
   border-radius: 4px;
 }
@@ -19,7 +20,23 @@
   border: 1px solid #4b50d5;
 }
 .v-pagination .omit {
+  width: 20px;
+  height: 20px;
   margin: 0 6px;
+  padding: 6px;
+}
+.v-pagination .omit:hover .arrow {
+  display: block;
+  color: #4b50d5;
+}
+.v-pagination .omit:hover .more {
+  display: none;
+}
+.v-pagination .omit .arrow {
+  display: none;
+}
+.v-pagination .omit .more {
+  display: block;
 }
 .v-pagination .current {
   color: #4b50d5;

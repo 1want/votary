@@ -11,7 +11,7 @@
   "include": ["script", "packages/**/*"],
   "exclude": [
     "packages/components/form/*",
-    "packages/hooks/*",
+    "packages/hooks/useForm.ts",
     "packages/components/swiper/"
   ]
 }

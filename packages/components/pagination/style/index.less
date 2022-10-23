@@ -9,10 +9,11 @@
   //   display: flex;
   //   align-items: center;
   .number {
-    width: 20px;
+    min-width: 20px;
     height: 20px;
-    margin: 0 10px;
+    margin: 0 6px;
     padding: 6px;
+    font-size: 15px;
     border: 1px solid rgb(206, 205, 205);
     border-radius: 4px;
     &:hover {
@@ -21,7 +22,23 @@
     }
   }
   .omit {
+    width: 20px;
+    height: 20px;
     margin: 0 6px;
+    padding: 6px;
+    &:hover .arrow {
+      display: block;
+      color: #4b50d5;
+    }
+    &:hover .more {
+      display: none;
+    }
+    .arrow {
+      display: none;
+    }
+    .more {
+      display: block;
+    }
   }
   .current {
     color: #4b50d5;

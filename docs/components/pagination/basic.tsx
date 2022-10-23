@@ -1,3 +1,9 @@
-import { Pagination } from '../../../packages/components/pagination'
+import { Pagination } from 'votary'
 
-export default () => <Pagination total={78}></Pagination>
+export default () => (
+  <Pagination
+    pageChange={e => {
+      console.log(e)
+    }}
+    total={300}></Pagination>
+)

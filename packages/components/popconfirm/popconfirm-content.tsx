@@ -14,12 +14,11 @@ const PopconfirmContent = (props: PopconfirmProps) => {
 
   return (
     <div className='v-popconfirm'>
-      <div className='arrow'></div>
       <div className='header'>
         <span className='iconfont icon-info'></span>
         <div className='title'>{title}</div>
       </div>
-
+      <div className='arrow'></div>
       <div className='btn'>
         <Button
           size='small'

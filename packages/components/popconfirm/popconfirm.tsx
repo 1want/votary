@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import PopconfirmContent from './popconfirm-content'
+import { Button } from '../button'
 
 import { PopconfirmProps } from './types'
 
