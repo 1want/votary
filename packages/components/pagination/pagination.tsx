@@ -15,7 +15,7 @@ const Pagination = (props: PaginationProps) => {
     size = 10,
     pageSize,
     sizeChange,
-    pageChange
+    onPageChange
   } = props
   const [currentPage, setCurrentPage] = useState(current)
 
@@ -27,12 +27,12 @@ const Pagination = (props: PaginationProps) => {
 
   const previous = () => {
     setCurrentPage(currentPage - 1)
-    pageChange?.(currentPage - 1)
+    onPageChange?.(currentPage - 1)
   }
 
   const next = () => {
     setCurrentPage(currentPage + 1)
-    pageChange?.(currentPage + 1)
+    onPageChange?.(currentPage + 1)
   }
 
   const skip = (index: number, currentPage: number) => {
@@ -40,18 +40,18 @@ const Pagination = (props: PaginationProps) => {
     if (index >= currentPage) {
       if (currentPage + 5 > last) {
         setCurrentPage(last)
-        pageChange?.(last)
+        onPageChange?.(last)
       } else {
         setCurrentPage(currentPage + 5)
-        pageChange?.(currentPage + 5)
+        onPageChange?.(currentPage + 5)
       }
     } else {
       if (currentPage - 5 <= 0) {
         setCurrentPage(1)
-        pageChange?.(1)
+        onPageChange?.(1)
       } else {
         setCurrentPage(currentPage - 5)
-        pageChange?.(currentPage - 5)
+        onPageChange?.(currentPage - 5)
       }
     }
   }
@@ -79,7 +79,7 @@ const Pagination = (props: PaginationProps) => {
       return (
         <li
           onClick={() => {
-            pageChange?.(item as number)
+            onPageChange?.(item as number)
             setCurrentPage(item as number)
           }}
           className={classes}

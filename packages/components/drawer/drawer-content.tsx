@@ -17,7 +17,7 @@ const DrawerContent = (props: DrawerProps) => {
       onClick={e => {
         e.stopPropagation()
       }}>
-      <Header title={title} onClose={onClose} />
+      {title && <Header title={title} onClose={onClose} />}
       <Content children={children} />
     </div>
   )

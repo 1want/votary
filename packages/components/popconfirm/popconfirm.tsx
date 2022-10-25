@@ -1,30 +1,26 @@
-import { useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
+import { useState, useRef, useEffect } from 'react'
 import PopconfirmContent from './popconfirm-content'
-import { Button } from '../button'
-
 import { PopconfirmProps } from './types'
 
 const Popconfirm = (props: PopconfirmProps) => {
   const { children } = props
   const [visible, setVisible] = useState(false)
+  const currentRef = useRef()
+  let left = '200px',
+    top = '100px'
+  useEffect(() => {
+    let d = currentRef.current
+    // left = d?.offsetLeft + 'px'
+    // top = d?.offsetTop + d?.clientHeight + 'px'
+  }, [currentRef])
 
   return (
-    <div
-      className='v-popconfirm-content'
-      tabIndex={1}
-      onBlur={() => {
-        setVisible(false)
-      }}>
-      <div onClick={() => setVisible(true)}>{children}</div>
-      <CSSTransition
-        classNames='v-mask'
-        unmountOnExit
-        timeout={400}
-        in={visible}>
-        <PopconfirmContent {...props} setVisible={setVisible} />
-      </CSSTransition>
-    </div>
+    <>
+      <div onClick={() => setVisible(true)} ref={currentRef}>
+        {children}
+      </div>
+      <PopconfirmContent {...props} visible={visible} setVisible={setVisible} />
+    </>
   )
 }
 

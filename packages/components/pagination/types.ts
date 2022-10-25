@@ -5,5 +5,5 @@ export interface PaginationProps {
   pageSize?: number
   small?: boolean
   sizeChange?: (size: number) => void
-  pageChange?: (page: number) => void
+  onPageChange?: (page: number) => void
 }

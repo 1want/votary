@@ -22,3 +22,9 @@
 | current | 当前选中页数 | number  | 1      |
 | total   | 总条目数     | number  |        |
 | small   | 小型分页     | boolean | false  |
+
+#### Events
+
+| 参数         | 说明           | 类型    | 默认值 |
+| ------------ | -------------- | ------- | ------ |
+| onPageChange | 页码改变的回调 | (e)=>{} |        |

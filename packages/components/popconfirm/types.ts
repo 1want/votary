@@ -5,5 +5,6 @@ export interface PopconfirmProps {
   onCancel?: () => void
   onConfirm?: () => void
   setVisible?: (bool: boolean) => void
+  visible?: boolean
   children?: any
 }
