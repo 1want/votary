@@ -1,4 +1,4 @@
-import { Pagination } from 'votary'
+import { Pagination } from '../../../packages/components/pagination'
 
 export default () => (
   <Pagination

@@ -4,10 +4,6 @@
   color: #000;
   text-align: center;
   list-style: none;
-  cursor: pointer;
-  // .v-page {
-  //   display: flex;
-  //   align-items: center;
   .number {
     min-width: 20px;
     height: 20px;
@@ -16,6 +12,7 @@
     font-size: 15px;
     border: 1px solid rgb(206, 205, 205);
     border-radius: 4px;
+    cursor: pointer;
     &:hover {
       color: #4b50d5;
       border: 1px solid #4b50d5;
@@ -26,6 +23,7 @@
     height: 20px;
     margin: 0 6px;
     padding: 6px;
+    cursor: pointer;
     &:hover .arrow {
       display: block;
       color: #4b50d5;
@@ -44,7 +42,6 @@
     color: #4b50d5;
     border: 1px solid #4b50d5;
   }
-  // }
 
   .small {
     margin: 0 !important;
@@ -64,5 +61,9 @@
       color: #4b50d5;
       border: 1px solid #4b50d5;
     }
+  }
+  .v-select {
+    width: 100px;
+    margin-left: 20px;
   }
 }

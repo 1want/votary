@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import SelectContext from './select-context'
 import classNames from 'classnames'
-import { SelectProps } from './types'
+import SelectContext from './select-context'
 import { createNamespace } from '../../utils/createNamespace'
+import { SelectProps } from './types'
 
 const bem = createNamespace('select')
 

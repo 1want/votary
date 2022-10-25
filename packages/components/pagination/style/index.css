@@ -4,7 +4,6 @@
   color: #000;
   text-align: center;
   list-style: none;
-  cursor: pointer;
 }
 .v-pagination .number {
   min-width: 20px;
@@ -14,6 +13,7 @@
   font-size: 15px;
   border: 1px solid #cecdcd;
   border-radius: 4px;
+  cursor: pointer;
 }
 .v-pagination .number:hover {
   color: #4b50d5;
@@ -24,6 +24,7 @@
   height: 20px;
   margin: 0 6px;
   padding: 6px;
+  cursor: pointer;
 }
 .v-pagination .omit:hover .arrow {
   display: block;
@@ -60,4 +61,8 @@
 .v-pagination .v-button-normal:hover {
   color: #4b50d5;
   border: 1px solid #4b50d5;
+}
+.v-pagination .v-select {
+  width: 100px;
+  margin-left: 20px;
 }

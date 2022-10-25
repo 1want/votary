@@ -1,10 +1,10 @@
-import { Select } from 'votary'
+import { Select } from '../../../packages/components/select'
 
 const { Option } = Select
 
 export default () => (
   <Select
-    value='orange'
+    value='banner'
     onChange={v => {
       console.log(v)
     }}>

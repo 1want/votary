@@ -2,10 +2,13 @@ import { useState } from 'react'
 import { createNamespace } from '../../utils/createNamespace'
 import classnames from 'classnames'
 import { Button } from '../button'
-import usePagination from '../../hooks/usePagination'
+import { Select } from '../select'
 import { Icon } from '../../icon'
+import usePagination from '../../hooks/usePagination'
 import { arrayLast } from '../../utils/array'
 import { PaginationProps } from './types'
+
+const { Option } = Select
 
 const Pagination = (props: PaginationProps) => {
   const {
@@ -105,6 +108,12 @@ const Pagination = (props: PaginationProps) => {
         disabled={currentPage === Math.ceil(total / size)}
         className={`${small ? ' small' : 'normal'}`}
       />
+      <Select value='2'>
+        <Option value='1'>10/page</Option>
+        <Option value='2'>20/page</Option>
+        <Option value='3'>30/page</Option>
+      </Select>
+      {/* <div className='size'>size</div> */}
     </div>
   )
 }
