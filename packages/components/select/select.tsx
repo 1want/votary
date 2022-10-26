@@ -2,12 +2,13 @@ import { useState } from 'react'
 import classNames from 'classnames'
 import SelectContext from './select-context'
 import { createNamespace } from '../../utils/createNamespace'
+import { Input } from '../input'
 import { SelectProps } from './types'
 
 const bem = createNamespace('select')
 
 const Select = (props: SelectProps) => {
-  const { value, placeholder = '请选择', onChange, children } = props
+  const { value, placeholder = 'select...', onChange, children } = props
 
   const [show, setShow] = useState(false)
   const [checked, setChecked] = useState(value)
@@ -25,14 +26,12 @@ const Select = (props: SelectProps) => {
         onBlur={() => {
           setShow(false)
         }}>
+        <Input
+          placeholder={placeholder}
+          defaultValue={checked}
+          rightIcon='arrow-down'
+        />
         <div className={`v-option ${show ? 'show' : 'hidden'}`}>{children}</div>
-        {checked ? (
-          <div className='value'>{checked}</div>
-        ) : (
-          <div className='placeholder'>{placeholder}</div>
-        )}
-
-        <span className='iconfont icon-arrow-down'></span>
       </div>
     </SelectContext.Provider>
   )

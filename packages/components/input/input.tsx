@@ -9,11 +9,8 @@ const Input = (props: InputProps) => {
     rightIcon,
     placeholder = 'input ...',
     showPassword,
-    onChange,
-    onBlur,
-    onFocus,
-    value,
-    type = 'text'
+    type = 'text',
+    ...other
   } = props
 
   const classes = classNames(['input', !leftIcon && 'textIndent'])
@@ -25,15 +22,7 @@ const Input = (props: InputProps) => {
   }
 
   const renderInput = () => (
-    <input
-      className={classes}
-      onChange={onChange}
-      type={pwdIcon}
-      placeholder={placeholder}
-      onBlur={onBlur}
-      onFocus={onFocus}
-      value={value}
-    />
+    <input className={classes} type={pwdIcon} {...other} />
   )
 
   return (

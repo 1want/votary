@@ -13,7 +13,7 @@ const Option = (props: OptionProps) => {
   const classes = bem(classNames([checked === children && 'is-select']))
 
   useEffect(() => {
-    if (checked) {
+    if (checked === value) {
       setChecked?.(children)
     }
   }, [])

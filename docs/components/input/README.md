@@ -18,12 +18,15 @@
 
 #### Props
 
-| 参数      | 说明     | 类型   | 默认值 |
-| --------- | -------- | ------ | ------ |
-| type      | 类型     | string | text   |
-| value     | 默认值   | string |        |
-| leftIcon  | 左侧图标 | string |        |
-| rightIcon | 右侧图标 | string |        |
+| 参数      | 说明         | 类型    | 默认值 |
+| --------- | ------------ | ------- | ------ |
+| type      | 类型         | string  | text   |
+| value     | 默认值       | string  |        |
+| leftIcon  | 左侧图标     | string  |        |
+| rightIcon | 右侧图标     | string  |        |
+| maxlength | 最大输入长度 | number  |        |
+| minlength | 最小输入长度 | number  |        |
+| readOnly  | 是否只读     | boolean | false  |
 
 #### Events
 
