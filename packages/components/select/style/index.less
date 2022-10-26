@@ -1,46 +1,10 @@
-@keyframes myClose {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes myOpen {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
 .v-select {
   position: relative;
   width: 220px;
   height: 32px;
   line-height: 32px;
-  // border: 1px solid #afafaf;
   border-radius: 4px;
-  cursor: pointer;
-  .v-input {
-  }
-  // .placeholder,
-  // .value {
-  //   position: absolute;
-  //   top: 0;
-  //   color: #a7a5a5;
-  //   font-size: 14px;
-  //   text-indent: 10px;
-  // }
-  // .value {
-  //   color: #000;
-  // }
+  cursor: pointer !important;
   .v-option {
     margin-top: 12px;
     padding: 10px 0;
@@ -77,12 +41,11 @@
   .show {
     animation: myOpen 0.3s;
   }
-}
 
-.is-focus {
-  border-color: #7f96ff;
-  & .icon-arrow-down {
-    transform: rotate(-180deg);
-    transition: transform 0.4s;
+  &-is-focus {
+    .icon-arrow-down {
+      transform: rotate(-180deg);
+      transition: transform 0.4s;
+    }
   }
 }

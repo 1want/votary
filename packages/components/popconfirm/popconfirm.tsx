@@ -16,9 +16,7 @@ const Popconfirm = (props: PopconfirmProps) => {
 
   return (
     <>
-      <div onClick={() => setVisible(true)} ref={currentRef}>
-        {children}
-      </div>
+      <div onClick={() => setVisible(true)}>{children}</div>
       <PopconfirmContent {...props} visible={visible} setVisible={setVisible} />
     </>
   )
