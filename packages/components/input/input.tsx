@@ -4,14 +4,7 @@ import { Icon } from '../../icon/index'
 import { InputProps } from './types'
 
 const Input = (props: InputProps) => {
-  const {
-    leftIcon,
-    rightIcon,
-    placeholder = 'input ...',
-    showPassword,
-    type = 'text',
-    ...other
-  } = props
+  const { leftIcon, rightIcon, showPassword, type = 'text', ...other } = props
 
   const classes = classNames(['input', !leftIcon && 'textIndent'])
 

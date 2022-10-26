@@ -18,15 +18,17 @@ const Option = (props: OptionProps) => {
     }
   }, [])
 
-  const onClick = (e: any) => {
-    e.stopPropagation()
+  const onMouseDown = (e: any) => {
+    e.preventDefault()
+  }
+  const onMouseUp = () => {
     onChange?.(value)
-    setShow?.(false)
     setChecked?.(children)
+    setShow?.(false)
   }
 
   return (
-    <div className={classes} onClick={onClick}>
+    <div className={classes} onMouseDown={onMouseDown} onMouseUp={onMouseUp}>
       {children}
     </div>
   )
