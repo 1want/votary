@@ -8,7 +8,7 @@ const bem = createNamespace('option-item')
 
 const Option = (props: OptionProps) => {
   const { checked, onChange, setShow, setChecked } = useContext(SelectContext)
-  const { value = '', children } = props
+  const { value, children } = props
 
   const classes = bem(classNames([checked === children && 'is-select']))
 

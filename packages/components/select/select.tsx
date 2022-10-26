@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { CSSTransition } from 'react-transition-group'
 import SelectContext from './select-context'
@@ -9,21 +9,33 @@ import { SelectProps } from './types'
 const bem = createNamespace('select')
 
 const Select = (props: SelectProps) => {
-  const { value = '', placeholder, onChange, children } = props
+  const { value, placeholder, onChange, children } = props
 
   const [show, setShow] = useState(false)
   const [checked, setChecked] = useState(value)
   const classes = bem(classNames([show && 'is-focus']))
+
+  useEffect(() => {
+    if (value) {
+      children.forEach(item => {
+        if (item.props.value === value) {
+          setChecked(item.props.children)
+        }
+      })
+    }
+  }, [])
+
   return (
     <SelectContext.Provider value={{ checked, onChange, setShow, setChecked }}>
-      <div className={classes}>
+      <div
+        className={classes}
+        onClick={() => {
+          setShow(!show)
+        }}>
         <Input
           readOnly
           placeholder={placeholder}
-          value={checked}
-          onClick={() => {
-            setShow(!show)
-          }}
+          value={checked || ''}
           onChange={e => {
             setChecked(e.target.value)
           }}

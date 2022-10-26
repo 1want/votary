@@ -4,7 +4,10 @@
   height: 32px;
   line-height: 32px;
   border-radius: 4px;
-  cursor: pointer !important;
+  cursor: pointer;
+}
+.v-select input {
+  cursor: pointer;
 }
 .v-select .v-option {
   margin-top: 12px;

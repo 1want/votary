@@ -14,14 +14,10 @@ const Input = (props: InputProps) => {
     setPwdIcon(pwdIcon === 'text' ? 'password' : 'text')
   }
 
-  const renderInput = () => (
-    <input className={classes} type={pwdIcon} {...other} />
-  )
-
   return (
     <div className='v-input'>
       {leftIcon && <Icon name={leftIcon} />}
-      {renderInput()}
+      <input className={classes} type={pwdIcon} {...other} />
       {rightIcon && <Icon name={rightIcon} />}
       {showPassword && <Icon name='view' onClick={toggleType} />}
     </div>

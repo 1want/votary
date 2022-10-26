@@ -109,11 +109,10 @@ const Pagination = (props: PaginationProps) => {
         className={`${small ? ' small' : 'normal'}`}
       />
       <Select value='2'>
-        <Option value='1'>10/page</Option>
-        <Option value='2'>20/page</Option>
-        <Option value='3'>30/page</Option>
+        {pageSize?.map(item => {
+          return <Option value='1'>{item}/page</Option>
+        })}
       </Select>
-      {/* <div className='size'>size</div> */}
     </div>
   )
 }

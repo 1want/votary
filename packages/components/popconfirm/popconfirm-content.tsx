@@ -47,13 +47,13 @@ const PopconfirmContent = (props: PopconfirmProps) => {
   )
 }
 
-let el = document.getElementsByClassName('message-wrapper')[0]
-if (!el) {
-  el = document.createElement('div')
-  el.className = 'message-wrapper'
-  document.body.append(el)
-}
+// let el = document.getElementsByClassName('message-wrapper')[0]
+// if (!el) {
+//   el = document.createElement('div')
+//   el.className = 'message-wrapper'
+//   document.body.append(el)
+// }
 
-ReactDOMClient.createRoot(el).render(<PopconfirmContent />)
+// ReactDOMClient.createRoot(el).render(<PopconfirmContent />)
 
 export default PopconfirmContent

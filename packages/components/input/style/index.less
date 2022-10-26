@@ -1,12 +1,13 @@
 .v-input {
   display: flex;
-  width: 220px;
   height: 32px;
+  overflow: hidden;
   line-height: 32px;
   border: 1px solid #3a3a3a42;
-  border-radius: 2px;
+  border-radius: 4px;
   .input {
-    flex: 1;
+    width: 100%;
+    // flex: 1;
     border: none;
     &:focus {
       outline: none;
@@ -17,7 +18,7 @@
   }
 
   .textIndent {
-    text-indent: 10px;
+    text-indent: 8px;
   }
 
   &:focus-within {
