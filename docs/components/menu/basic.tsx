@@ -1,4 +1,4 @@
-import { Menu } from 'votary'
+import { Menu } from '../../../packages/components/menu'
 
 export default () => {
   return (
@@ -8,9 +8,9 @@ export default () => {
         <Menu.Item>option ...</Menu.Item>
         <Menu.Item>option ...</Menu.Item>
       </Menu.SubMenu>
-      <Menu.SubMenu title='navigator' index='2' icon='s-operation'>
+      {/* <Menu.SubMenu title='navigator' index='2' icon='s-operation'>
         <Menu.Item>option ...</Menu.Item>
-      </Menu.SubMenu>
+      </Menu.SubMenu> */}
     </Menu>
   )
 }

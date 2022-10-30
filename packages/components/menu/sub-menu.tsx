@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import useMeasure from 'react-use-measure'
+import usePosition from '../../hooks/usePosition'
 import { Icon } from '../../icon'
 import { SubMenuProps } from './types'
 
@@ -9,14 +10,19 @@ const SubMenu = (props: SubMenuProps) => {
 
   level++
 
+  const ref = useRef()
+
   const { children, title, icon } = props
-  const [ref, { height: viewHeight }] = useMeasure()
+  // const [ref, { height: viewHeight }] = useMeasure()
+  useEffect(() => {
+    usePosition(ref)
+  }, [])
 
   const [open, setOpen] = useState(false)
   const propss = useSpring({
     from: { height: 0 },
     to: {
-      height: open ? viewHeight : 0
+      height: open ? 'viewHeight' : 0
     }
   })
 
@@ -38,8 +44,7 @@ const SubMenu = (props: SubMenuProps) => {
           ...propss,
           overflow: 'hidden'
         }}>
-        <ul ref={ref} className='sub-content'>
-          {/* {children} */}
+        <ul className='sub-content'>
           {React.Children.map(children, child => {
             const { props } = child
             if (!React.isValidElement(child)) {

@@ -1,5 +1,6 @@
 import classnames from 'classnames'
 import { createNamespace } from '../../utils/createNamespace'
+import { Icon } from '../../icon'
 import { ButtonProps } from './types'
 
 const bem = createNamespace('button')
@@ -30,8 +31,10 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button disabled={disabled} onClick={onClick} className={classes}>
-      {icon && <span className={`iconfont icon-${icon}`}></span>}
-      {children && <span className='icon-text'>{children}</span>}
+      {icon && <Icon name={icon}></Icon>}
+      {children && (
+        <span className={`icon-text ${icon && 'hasicon'}`}>{children}</span>
+      )}
     </button>
   )
 }

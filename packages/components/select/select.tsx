@@ -17,7 +17,7 @@ const Select = (props: SelectProps) => {
 
   useEffect(() => {
     if (value) {
-      children.forEach(item => {
+      children.forEach((item: any) => {
         if (item.props.value === value) {
           setChecked(item.props.children)
         }
@@ -49,7 +49,9 @@ const Select = (props: SelectProps) => {
           unmountOnExit
           timeout={400}
           in={show}>
-          <div className='v-option'>{children}</div>
+          <div className='v-option' onClick={e => e.stopPropagation()}>
+            {children}
+          </div>
         </CSSTransition>
       </div>
     </SelectContext.Provider>

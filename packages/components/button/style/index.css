@@ -9,8 +9,10 @@
   cursor: pointer;
 }
 .v-button .iconfont {
-  margin-right: 10px;
   font-size: 15px;
+}
+.v-button .hasicon {
+  margin-left: 6px;
 }
 .v-button-default {
   color: #000;
@@ -36,20 +38,28 @@
 .v-button-danger:hover {
   background: #e21c1c;
 }
-.v-button-plain {
-  background: #fff;
-}
-.v-button-plain:hover {
-  background: rgba(250, 250, 250, 0.6);
-}
 .v-button-plain.v-button-default {
+  background: #fff;
   border-color: rgba(229, 229, 229, 0.8);
 }
+.v-button-plain.v-button-default:hover {
+  background: #fcfbfb;
+}
 .v-button-plain.v-button-primary {
-  color: #4b50d5;
+  color: #409eff;
+  background: #ecf5ff;
+  border-color: #a0cfff;
+}
+.v-button-plain.v-button-primary:hover {
+  background: #e7f0fb;
 }
 .v-button-plain.v-button-danger {
-  color: #e82b2b;
+  color: #f94141;
+  background: #fdeaea;
+  border-color: #ffc3c3;
+}
+.v-button-plain.v-button-danger:hover {
+  background: #fce6e6;
 }
 .v-button-small {
   width: 50px;
@@ -58,7 +68,7 @@
   line-height: 24px;
 }
 .v-button-normal {
-  width: 90px;
+  width: 94px;
 }
 .v-button-hairline {
   border-width: 0.5px;
