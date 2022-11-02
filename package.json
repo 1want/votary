@@ -1,6 +1,6 @@
 {
   "name": "votarys",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "private": false,
   "keywords": [
     "react-components",
@@ -33,10 +33,8 @@
     "classnames": "^2.3.1",
     "react": ">= 18.0.0",
     "react-dom": "^18.2.0",
-    "react-spring": "^9.5.5",
     "react-transition-group": "^4.4.5",
-    "react-use-measure": "^2.1.1",
-    "votary": "^0.2.9"
+    "votary": "^0.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.21",
@@ -47,7 +45,7 @@
     "dumi": "^1.1.0",
     "father": "^4.0.0-rc.2",
     "gh-pages": "^3.0.0",
-    "typescript": "^4.6.4",
+    "typescript": "^4.7.4",
     "vite": "^3.0.0"
   },
   "peerDependencies": {

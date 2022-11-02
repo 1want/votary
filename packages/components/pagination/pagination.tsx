@@ -93,6 +93,24 @@ const Pagination = (props: PaginationProps) => {
     })
   }
 
+  const renderSizeSelect = () => {
+    return (
+      <>
+        {pageSize && (
+          <Select value={1}>
+            {pageSize?.map((item, index) => {
+              return (
+                <Option value={index + 1} key={index}>
+                  {item}/page
+                </Option>
+              )
+            })}
+          </Select>
+        )}
+      </>
+    )
+  }
+
   return (
     <div className='v-pagination'>
       <Button
@@ -108,11 +126,7 @@ const Pagination = (props: PaginationProps) => {
         disabled={currentPage === Math.ceil(total / size)}
         className={`${small ? ' small' : 'normal'}`}
       />
-      <Select value='2'>
-        {pageSize?.map(item => {
-          return <Option value='1'>{item}/page</Option>
-        })}
-      </Select>
+      {renderSizeSelect()}
     </div>
   )
 }

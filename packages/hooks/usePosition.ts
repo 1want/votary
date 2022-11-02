@@ -1,14 +1,23 @@
-import { forwardRef, useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
-function usePosition(dom: any) {
-  console.log(dom)
-  // const [d, setD] = useState({
-  //   x: '',
-  //   y: '',
-  //   width: '',
-  //   height: ''
-  // })
-  return {}
+function usePosition() {
+  const ref = useRef<any>(null)
+
+  const [domSize, setDomSize] = useState({
+    width: '',
+    height: ''
+  })
+
+  useEffect(() => {
+    let h = ref.current.clientHeight
+    let w = ref.current.clientWidth
+    setDomSize({ width: w, height: h })
+  }, [])
+
+  return {
+    ref,
+    ...domSize
+  }
 }
 
 export default usePosition

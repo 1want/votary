@@ -1,28 +1,20 @@
-import React, { useRef, useEffect, useState } from 'react'
-import { useSpring, animated } from 'react-spring'
-import useMeasure from 'react-use-measure'
+import React, { useState } from 'react'
+import useAnimation from '../../hooks/useAnimation'
 import usePosition from '../../hooks/usePosition'
 import { Icon } from '../../icon'
 import { SubMenuProps } from './types'
 
 const SubMenu = (props: SubMenuProps) => {
   let level = props.level || 0
-
   level++
 
-  const ref = useRef()
-
   const { children, title, icon } = props
-  // const [ref, { height: viewHeight }] = useMeasure()
-  useEffect(() => {
-    usePosition(ref)
-  }, [])
-
   const [open, setOpen] = useState(false)
-  const propss = useSpring({
+  const { ref, height } = usePosition()
+  const styles = useAnimation({
     from: { height: 0 },
     to: {
-      height: open ? 'viewHeight' : 0
+      height: open ? height : 0
     }
   })
 
@@ -39,12 +31,12 @@ const SubMenu = (props: SubMenuProps) => {
         <span className='iconfont icon-arrow-down'></span>
       </header>
 
-      <animated.div
+      <div
         style={{
-          ...propss,
+          ...styles,
           overflow: 'hidden'
         }}>
-        <ul className='sub-content'>
+        <ul ref={ref} className='sub-content'>
           {React.Children.map(children, child => {
             const { props } = child
             if (!React.isValidElement(child)) {
@@ -57,7 +49,7 @@ const SubMenu = (props: SubMenuProps) => {
             return React.cloneElement(child, childProps)
           })}
         </ul>
-      </animated.div>
+      </div>
     </li>
   )
 }

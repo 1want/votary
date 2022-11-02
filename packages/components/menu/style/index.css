@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 .v-menu .sub-menu .sub-menu-header:hover {
-  background: #767474;
+  background: #000;
 }
 .v-menu .sub-menu .sub-menu-header .menu-icon {
   margin-right: 10px;
