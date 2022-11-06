@@ -1,21 +1,29 @@
 import { useEffect, useState } from 'react'
 
-interface Props {
-  from: { height?: number | string; width?: number | string }
-  to: { height?: number | string; width?: number | string }
+interface FromProps {
+  height?: number | string
+  width?: number | string
+  opacity?: number
+  display?: string
 }
 
-function useAnimation(props: Props) {
-  const { from, to } = props
-  const [height, setHeight] = useState(from.height)
+interface ToProps {
+  height?: number | string
+  width?: number | string
+  opacity?: number
+  display?: string
+}
+
+function useAnimation({ from, to }: { from: FromProps; to: ToProps }) {
+  const [style, setStyle] = useState({ ...from })
 
   useEffect(() => {
-    setHeight(to.height)
-  }, [from, to])
+    setStyle({ ...to })
+  }, [to.height, to.width, to.opacity])
 
   return {
-    height,
-    transition: '.4s'
+    ...style,
+    transition: 'all .4s'
   }
 }
 
