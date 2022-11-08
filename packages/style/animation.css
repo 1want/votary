@@ -23,7 +23,6 @@
 }
 .v-fade-exit {
   position: relative;
-  transform: translateY(0);
   opacity: 1;
 }
 .v-fade-exit-active {

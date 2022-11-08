@@ -5,13 +5,18 @@ function usePosition() {
 
   const [domSize, setDomSize] = useState({
     width: '',
-    height: ''
+    height: '',
+    x: '',
+    y: ''
   })
 
   useEffect(() => {
     let h = ref.current.clientHeight
     let w = ref.current.clientWidth
-    setDomSize({ width: w, height: h })
+    let x = ref.current.offsetLeft
+    let y = ref.current.offsetTop
+
+    setDomSize({ width: w, height: h, x, y })
   }, [])
 
   return {

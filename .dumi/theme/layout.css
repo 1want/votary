@@ -26,7 +26,7 @@ body {
   overflow-y: scroll;
 }
 .__dumi-default-navbar {
-  z-index: 999;
+  z-index: 99;
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(20px);
 }

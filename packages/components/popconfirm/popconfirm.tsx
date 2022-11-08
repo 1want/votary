@@ -1,23 +1,64 @@
-import { useState, useRef, useEffect } from 'react'
-import PopconfirmContent from './popconfirm-content'
+import { useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
+import { Button } from '../button'
+import usePosition from '../../hooks/usePosition'
 import { PopconfirmProps } from './types'
 
 const Popconfirm = (props: PopconfirmProps) => {
-  const { children } = props
+  const {
+    children,
+    title,
+    confirmText = '确认',
+    cancelText = '取消',
+    onCancel,
+    onConfirm
+  } = props
+
   const [visible, setVisible] = useState(false)
-  const currentRef = useRef()
-  let left = '200px',
-    top = '100px'
-  useEffect(() => {
-    let d = currentRef.current
-    // left = d?.offsetLeft + 'px'
-    // top = d?.offsetTop + d?.clientHeight + 'px'
-  }, [currentRef])
+
+  const { ref, x, y } = usePosition()
 
   return (
     <>
-      <div onClick={() => setVisible(true)}>{children}</div>
-      <PopconfirmContent {...props} visible={visible} setVisible={setVisible} />
+      <div
+        onClick={() => setVisible(true)}
+        ref={ref}
+        style={{ position: 'relative' }}>
+        {children}
+      </div>
+      <CSSTransition
+        classNames='v-mask'
+        unmountOnExit
+        timeout={400}
+        in={visible}>
+        <div className='v-popconfirm'>
+          <div className='arrow'></div>
+          <div className='header'>
+            <span className='iconfont icon-info'></span>
+            <div className='title'>{title}</div>
+          </div>
+          <div className='btn'>
+            <Button
+              size='small'
+              plain
+              onClick={() => {
+                onConfirm?.()
+                setVisible?.(false)
+              }}>
+              {confirmText}
+            </Button>
+            <Button
+              size='small'
+              plain
+              onClick={() => {
+                onCancel?.()
+                setVisible?.(false)
+              }}>
+              {cancelText}
+            </Button>
+          </div>
+        </div>
+      </CSSTransition>
     </>
   )
 }

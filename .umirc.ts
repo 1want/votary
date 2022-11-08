@@ -42,8 +42,7 @@ export default defineConfig({
           'components/button',
           'components/icon',
           'components/layout',
-          'components/divider',
-          'components/mask'
+          'components/divider'
         ]
       },
       {
@@ -95,8 +94,7 @@ export default defineConfig({
           'components/button',
           'components/icon',
           'components/layout',
-          'components/divider',
-          'components/mask'
+          'components/divider'
         ]
       },
       {

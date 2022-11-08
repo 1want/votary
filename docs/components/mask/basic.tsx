@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Mask } from '../../../packages/components/mask'
-import { Button } from '../../../packages/components/button'
+import { Button } from 'votary'
+
 import './index.css'
 
 export default () => {

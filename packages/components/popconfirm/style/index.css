@@ -1,5 +1,5 @@
 .v-popconfirm {
-  position: relative;
+  position: absolute;
   z-index: 102;
   max-width: 180px;
   margin-top: 20px;
