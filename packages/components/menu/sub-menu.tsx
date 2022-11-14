@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import MenuContext from './menu-context'
 import useAnimation from '../../hooks/useAnimation'
 import usePosition from '../../hooks/usePosition'
 import { Icon } from '../../icon'
@@ -10,6 +11,7 @@ const SubMenu = (props: SubMenuProps) => {
 
   const { children, title, icon } = props
   const [open, setOpen] = useState(false)
+  const { isOpen, setIsOpen } = useContext(MenuContext)
   const { ref, height } = usePosition()
   const styles = useAnimation({
     from: { height: 0 },
@@ -17,6 +19,8 @@ const SubMenu = (props: SubMenuProps) => {
       height: open ? height : 0
     }
   })
+
+  useEffect(() => {}, [isOpen])
 
   return (
     <li className='sub-menu'>

@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
-import useMeasure from 'react-use-measure'
+import useAnimation from '../../hooks/useAnimation'
+import usePosition from '../../hooks/usePosition'
 import { CollapseItemProps } from './types'
 
 const CollapseItem = (props: CollapseItemProps) => {
   const { children, title } = props
-  const [ref, { height: viewHeight }] = useMeasure()
+  const { ref, height } = usePosition()
 
   const [open, setOpen] = useState(false)
-  const propss = useSpring({
+  const styles = useAnimation({
     from: { height: 0 },
     to: {
-      height: open ? viewHeight : 0
+      height: open ? height : 0
     }
   })
 
@@ -27,15 +27,15 @@ const CollapseItem = (props: CollapseItemProps) => {
           }`}></span>
       </header>
 
-      <animated.div
+      <div
         style={{
-          ...propss,
+          ...styles,
           overflow: 'hidden'
         }}>
         <div ref={ref} className='v-collapse-content'>
           {children}
         </div>
-      </animated.div>
+      </div>
     </li>
   )
 }

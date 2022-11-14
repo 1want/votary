@@ -17,3 +17,8 @@ export interface SubMenuProps {
   icon?: string
   level?: number
 }
+
+export interface MenuContextProps {
+  isOpen?: string
+  setIsOpen?: () => void
+}

@@ -52,8 +52,8 @@ export default defineConfig({
           'components/input',
           'components/select',
           'components/radio',
-          'components/checkbox',
-          'components/upload'
+          'components/checkbox'
+          // 'components/upload'
         ]
       },
       {
@@ -72,7 +72,7 @@ export default defineConfig({
         children: [
           'components/collapse',
           'components/image',
-          'components/swiper',
+          // 'components/swiper',
           'components/table',
           'components/tag',
           'components/progress'
@@ -104,8 +104,8 @@ export default defineConfig({
           'components/input',
           'components/select',
           'components/radio',
-          'components/checkbox',
-          'components/upload'
+          'components/checkbox'
+          // 'components/upload'
         ]
       },
       {
@@ -124,7 +124,7 @@ export default defineConfig({
         children: [
           'components/collapse',
           'components/image',
-          'components/swiper',
+          // 'components/swiper',
           'components/table',
           'components/tag',
           'components/progress'
