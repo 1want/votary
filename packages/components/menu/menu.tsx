@@ -4,10 +4,11 @@ import { MenuProps } from './types'
 
 const Menu = (props: MenuProps) => {
   const { children, uniqueOpened } = props
-  const [isOpen, setIsOpen] = useState(null)
+  const [currentSubMenu, setCurrentSubMenu] = useState()
 
   return (
-    <MenuContext.Provider value={{ uniqueOpened, setIsOpen, isOpen }}>
+    <MenuContext.Provider
+      value={{ uniqueOpened, setCurrentSubMenu, currentSubMenu }}>
       <ul className='v-menu'>{children}</ul>
     </MenuContext.Provider>
   )

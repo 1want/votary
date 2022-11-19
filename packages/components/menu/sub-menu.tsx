@@ -9,9 +9,11 @@ const SubMenu = (props: SubMenuProps) => {
   let level = props.level || 0
   level++
 
-  const { children, title, icon } = props
+  const { children, title, icon, index } = props
   const [open, setOpen] = useState(false)
-  const { isOpen, setIsOpen } = useContext(MenuContext)
+  const { currentSubMenu, setCurrentSubMenu, uniqueOpened } =
+    useContext(MenuContext)
+
   const { ref, height } = usePosition()
   const styles = useAnimation({
     from: { height: 0 },
@@ -19,15 +21,23 @@ const SubMenu = (props: SubMenuProps) => {
       height: open ? height : 0
     }
   })
+  const changeMenu = () => {
+    setOpen(prev => !prev)
+    setCurrentSubMenu?.(index)
+  }
 
-  useEffect(() => {}, [isOpen])
+  useEffect(() => {
+    if (open && currentSubMenu !== index) {
+      setOpen(prev => !prev)
+    }
+  }, [currentSubMenu])
 
   return (
     <li className='sub-menu'>
       <header
         style={{ textIndent: level > 1 ? 13 * (level - 1) + 'px' : '' }}
         className='sub-menu-header'
-        onClick={() => setOpen(prev => !prev)}>
+        onClick={changeMenu}>
         <div className='left'>
           {icon && <Icon name={icon} className='menu-icon'></Icon>}
           <span className='sub-menu-title'>{title}</span>

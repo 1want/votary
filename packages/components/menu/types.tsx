@@ -19,6 +19,7 @@ export interface SubMenuProps {
 }
 
 export interface MenuContextProps {
-  isOpen?: string
-  setIsOpen?: () => void
+  currentSubMenu?: string
+  setCurrentSubMenu?: (index: any) => void
+  uniqueOpened?: boolean
 }
