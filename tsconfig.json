@@ -23,5 +23,5 @@
     }
   },
   "include": ["script", "packages"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.build.json" }]
 }

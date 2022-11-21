@@ -1,4 +1,4 @@
-import '../packages/style/index.css'
+import '../packages/style/index.less'
 
 export { Button } from '../packages/components/button'
 export { Icon } from '../packages/icon'

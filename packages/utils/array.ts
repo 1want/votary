@@ -1,3 +1,1 @@
-export const arrayLast = (arr: Array<any>) => {
-  return arr[arr.length - 1]
-}
+export const arrayLast = (arr: Array<any>) => arr[arr.length - 1]

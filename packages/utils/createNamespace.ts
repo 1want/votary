@@ -13,6 +13,7 @@ export function createBEM(name: string) {
     return `${name} ${className}`
   }
 }
+
 export function createNamespace(name: string) {
   const prefixedName = `v-${name}`
 

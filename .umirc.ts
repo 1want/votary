@@ -7,7 +7,6 @@ export default defineConfig({
   base: '/votary',
   hash: true,
   exportStatic: {},
-  // links: [{ rel: 'stylesheet', type: 'text/css', href: './index.css' }],
   sitemap: { hostname: 'https://1want.github.io/votary' },
   publicPath: process.env.NODE_ENV === 'production' ? '/votary/' : '/',
   favicon: './logo.png',
