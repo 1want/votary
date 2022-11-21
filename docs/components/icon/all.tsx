@@ -1,7 +1,7 @@
 import { Icon } from 'votary'
 import { Icons } from '../../../packages/icon/icon'
 
-import './index.css'
+import './index.less'
 
 let items = Icons.map(item => (
   <div className='icon-content' key={item}>
