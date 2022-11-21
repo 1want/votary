@@ -1,4 +1,4 @@
 import Drawer from './drawer'
-import './style/index.css'
+import './style/index.less'
 
 export { Drawer }

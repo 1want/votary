@@ -1,4 +1,4 @@
 import Image from './image'
-import './style/index.css'
+import './style/index.less'
 
 export { Image }

@@ -1,5 +1,4 @@
 import Divider from './divider'
-
-import './style/index.css'
+import './style/index.less'
 
 export { Divider }

@@ -1,5 +1,4 @@
 import { add as Message } from './message'
-
-import './style/index.css'
+import './style/index.less'
 
 export { Message }

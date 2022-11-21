@@ -1,4 +1,4 @@
 import Progress from './progress'
-import './style/index.css'
+import './style/index.less'
 
 export { Progress }
