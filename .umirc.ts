@@ -38,12 +38,7 @@ export default defineConfig({
     '/en-US/components': [
       {
         title: 'Basic Components',
-        children: [
-          'components/button',
-          'components/icon',
-          'components/layout',
-          'components/divider'
-        ]
+        children: ['components/button', 'components/icon', 'components/divider']
       },
       {
         title: 'Form Components',
@@ -90,12 +85,7 @@ export default defineConfig({
     '/components': [
       {
         title: '基础组件',
-        children: [
-          'components/button',
-          'components/icon',
-          'components/layout',
-          'components/divider'
-        ]
+        children: ['components/button', 'components/icon', 'components/divider']
       },
       {
         title: '表单组件',

@@ -2,13 +2,13 @@ import { Menu } from '../../../packages/components/menu'
 
 export default () => (
   <Menu>
-    <Menu.SubMenu title='navigator' index='1' icon='s-operation'>
-      <Menu.Item>option ...</Menu.Item>
-      <Menu.Item>option ...</Menu.Item>
-      <Menu.Item>option ...</Menu.Item>
+    <Menu.SubMenu title='Home' index='1' icon='house'>
+      <Menu.Item>Option</Menu.Item>
+      <Menu.Item>Option</Menu.Item>
+      <Menu.Item>Option</Menu.Item>
     </Menu.SubMenu>
-    <Menu.SubMenu title='navigator' index='2' icon='s-operation'>
-      <Menu.Item>option ...</Menu.Item>
+    <Menu.SubMenu title='Navigator' index='2' icon='menu'>
+      <Menu.Item>Option</Menu.Item>
     </Menu.SubMenu>
   </Menu>
 )

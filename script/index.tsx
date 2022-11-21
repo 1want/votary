@@ -2,7 +2,6 @@ import '../packages/style/index.css'
 
 export { Button } from '../packages/components/button'
 export { Icon } from '../packages/icon'
-export { Layout } from '../packages/components/layout'
 export { Divider } from '../packages/components/divider'
 export { Mask } from '../packages/components/mask'
 // export { Form } from '../packages/components/form'
