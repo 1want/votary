@@ -9,7 +9,7 @@ const SubMenu = (props: SubMenuProps) => {
   let level = props.level || 0
   level++
 
-  const { children, title, icon, index } = props
+  const { children, title, icon } = props
   const [open, setOpen] = useState(false)
   const { currentSubMenu, setCurrentSubMenu, uniqueOpened } =
     useContext(MenuContext)
@@ -23,15 +23,15 @@ const SubMenu = (props: SubMenuProps) => {
   })
   const changeMenu = () => {
     setOpen(prev => !prev)
-    setCurrentSubMenu?.(index)
+    // setCurrentSubMenu?.(id)
   }
 
-  useEffect(() => {
-    if (!uniqueOpened) return
-    if (open && currentSubMenu !== index) {
-      setOpen(prev => !prev)
-    }
-  }, [currentSubMenu])
+  // useEffect(() => {
+  //   if (!uniqueOpened) return
+  //   if (open && currentSubMenu === id) {
+  //     setOpen(prev => !prev)
+  //   }
+  // }, [currentSubMenu])
 
   return (
     <li className='sub-menu'>

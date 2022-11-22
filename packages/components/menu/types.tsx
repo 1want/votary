@@ -13,13 +13,13 @@ export interface MenuItemProps {
 export interface SubMenuProps {
   children?: any
   title?: string
-  index?: number | string
+  index?: string | number
   icon?: string
   level?: number
 }
 
 export interface MenuContextProps {
-  currentSubMenu?: string
+  currentSubMenu?: number
   setCurrentSubMenu?: (index: any) => void
   uniqueOpened?: boolean
 }
