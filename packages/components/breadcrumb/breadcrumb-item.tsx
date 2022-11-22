@@ -1,6 +1,6 @@
 import { BreadcrumbItemProps } from './types'
 
-const Breadcrumb = (props: BreadcrumbItemProps) => {
+const BreadcrumbItem = (props: BreadcrumbItemProps) => {
   const { children, to, separator = '/', separatorIcon } = props
 
   return (
@@ -15,4 +15,4 @@ const Breadcrumb = (props: BreadcrumbItemProps) => {
   )
 }
 
-export default Breadcrumb
+export default BreadcrumbItem
