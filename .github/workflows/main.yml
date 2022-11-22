@@ -1,17 +1,24 @@
-name: Build and Deploy
-on: [push]
+name: build
+on:
+  push:
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [15]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.0.1
-
-      - name: Install and Build
-        run: |
-          pnpm install
-          pnpm run build:docs
+        with:
+          version: 6.20.3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
