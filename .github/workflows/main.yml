@@ -1,6 +1,5 @@
 name: build
-on:
-  push:
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -18,8 +17,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
-        run: pnpm build:docs
+        run: |
+          pnpm install
+          pnpm build:docs
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
