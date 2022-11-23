@@ -1,5 +1,5 @@
 {
-  "name": "votary",
+  "name": "votarys",
   "version": "0.4.51",
   "private": false,
   "keywords": [
@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "react-transition-group": "^4.4.5"
+    "react-transition-group": "^4.4.5",
+    "votary": "^0.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.21",
