@@ -6,6 +6,10 @@
 
 <code hideActions='["CSB","EXTERNAL"]' src="./basic.tsx" />
 
+### 自定义 Icon
+
+<code hideActions='["CSB","EXTERNAL"]' src="./custom-icon" />
+
 <br/>
 
 ### API

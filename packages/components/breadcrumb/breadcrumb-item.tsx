@@ -1,7 +1,7 @@
 import { BreadcrumbItemProps } from './types'
 
 const BreadcrumbItem = (props: BreadcrumbItemProps) => {
-  const { children, to, separator = '/', separatorIcon } = props
+  const { children, separator = '/', separatorIcon } = props
 
   return (
     <div className='item'>

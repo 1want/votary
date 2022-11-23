@@ -16,7 +16,7 @@ const Popconfirm = (props: PopconfirmProps) => {
 
   const [visible, setVisible] = useState(false)
 
-  const { ref, x, y } = usePosition()
+  const { ref } = usePosition()
 
   return (
     <>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { createNamespace } from '../../utils/createNamespace'
+// import { createNamespace } from '../../utils/createNamespace'
 import classnames from 'classnames'
 import { Button } from '../button'
 import { Select } from '../select'
@@ -97,7 +97,7 @@ const Pagination = (props: PaginationProps) => {
     return (
       <>
         {pageSize && (
-          <Select value={1}>
+          <Select value={1} onChange={sizeChange}>
             {pageSize?.map((item, index) => {
               return (
                 <Option value={index + 1} key={index}>

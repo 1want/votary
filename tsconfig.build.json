@@ -12,6 +12,7 @@
   "exclude": [
     "packages/components/form/*",
     "packages/hooks/useForm.ts",
-    "packages/components/swiper/"
+    "packages/components/swiper/",
+    "packages/components/upload/"
   ]
 }

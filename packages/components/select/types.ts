@@ -1,7 +1,7 @@
 export interface SelectProps {
   value?: string | number
   placeholder?: string
-  onChange?: (value: string) => void
+  onChange?: (value: any) => void
   children?: any
 }
 
