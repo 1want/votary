@@ -1,26 +1,30 @@
 .v-menu {
   width: 200px;
   color: #999999;
-  font-size: 15px;
+  font-size: 14px;
   background: #2c2a2e;
   .menu-icon {
     margin-right: 10px;
+  }
+  .menu-title {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .menu-item {
     padding: 10px 20px;
     color: #999999;
     line-height: 30px;
-
     cursor: pointer;
     &:hover {
       background: #000;
     }
   }
+
   .sub-menu {
     .sub-menu-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       height: 30px;
       padding: 10px 20px;
       white-space: nowrap;

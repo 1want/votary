@@ -1,7 +1,7 @@
 import { Menu } from 'votary'
 
 export default () => (
-  <Menu uniqueOpened>
+  <Menu>
     <Menu.SubMenu title='Home' icon='house'>
       <Menu.Item>Option</Menu.Item>
       <Menu.Item>Option</Menu.Item>

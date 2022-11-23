@@ -7,7 +7,7 @@ const MenuItem = (props: MenuItemProps) => {
   return (
     <li className='menu-item' style={{ textIndent: 13 * level + 'px' }}>
       {icon && <Icon name={icon} className='menu-icon'></Icon>}
-      <span>{children}</span>
+      <span className='menu-title'>{children}</span>
     </li>
   )
 }

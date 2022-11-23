@@ -20,6 +20,6 @@ export interface SubMenuProps {
 
 export interface MenuContextProps {
   currentSubMenu?: number
-  setCurrentSubMenu?: (index: any) => void
   uniqueOpened?: boolean
+  setCurrentSubMenu?: (index: any) => void
 }
