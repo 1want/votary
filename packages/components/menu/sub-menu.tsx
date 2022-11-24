@@ -28,7 +28,7 @@ const SubMenu = (props: SubMenuProps) => {
 
   useEffect(() => {
     if (!uniqueOpened) return
-    if (open && currentSubMenu === index) {
+    if (open && currentSubMenu !== index) {
       setOpen(prev => !prev)
     }
   }, [currentSubMenu])

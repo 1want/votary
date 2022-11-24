@@ -18,7 +18,6 @@ specifiers:
   rimraf: ^3.0.2
   typescript: ^4.7.4
   vite: ^3.0.0
-  votary: ^0.4.51
 
 dependencies:
   classnames: 2.3.2
@@ -40,7 +39,6 @@ devDependencies:
   rimraf: 3.0.2
   typescript: 4.9.3
   vite: 3.2.4_less@4.1.3
-  votary: 0.4.51_p3loaxrjznerd6utqsc5tsd45a
 
 packages:
 
@@ -4547,6 +4545,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.1
       csstype: 3.1.1
+    dev: false
 
   /dom-serializer/0.2.2:
     resolution: {integrity: sha512-2/xPb3ORsQ42nHYiSunXkDjPLBaEj/xTwUO4B7XCZQTRk7EBtTOPaygh10YAAh2OI1Qrp6NWfpAhzswj0ydt9g==}
@@ -10260,6 +10259,7 @@ packages:
       prop-types: 15.8.1
       react: 18.0.0
       react-dom: 18.2.0_react@18.0.0
+    dev: false
 
   /react/16.14.0:
     resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
@@ -12080,19 +12080,6 @@ packages:
 
   /vm-browserify/1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
-    dev: true
-
-  /votary/0.4.51_p3loaxrjznerd6utqsc5tsd45a:
-    resolution: {integrity: sha512-BL4x+JJmxIY05eV1n7LNzrmDWfGthoNNsDHKVlgKb0Y3nu0lNMH3IKqmzdLGefXqbj+E+MPXB4cHuNSX/O5r5w==}
-    engines: {node: '>= 16'}
-    peerDependencies:
-      react: '>= 18.0.0'
-      react-dom: '>= ^18.2.0'
-    dependencies:
-      classnames: 2.3.2
-      react: 18.0.0
-      react-dom: 18.2.0_react@18.0.0
-      react-transition-group: 4.4.5_p3loaxrjznerd6utqsc5tsd45a
     dev: true
 
   /w3c-hr-time/1.0.2:

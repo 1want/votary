@@ -19,6 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
+          pnpm add votary
           pnpm build:docs
 
       - name: Deploy
