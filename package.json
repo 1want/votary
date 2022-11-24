@@ -1,6 +1,6 @@
 {
   "name": "votary",
-  "version": "0.4.52",
+  "version": "0.4.53",
   "private": false,
   "keywords": [
     "react-components",
@@ -26,7 +26,9 @@
   "scripts": {
     "build": "rimraf lib && vite build && tsc -p tsconfig.build.json",
     "build:docs": "dumi build",
-    "dev": "dumi dev"
+    "dev": "dumi dev",
+    "async": "vite build && tsc -p tsconfig.build.json && yalc push",
+    "watch": "bash ./build/yalc.sh"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -51,9 +53,9 @@
   },
   "peerDependencies": {
     "react": ">= 18.0.0",
-    "react-dom": ">= ^18.2.0"
+    "react-dom": ">= 18.2.0"
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 14"
   }
 }

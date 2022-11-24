@@ -9,7 +9,7 @@ npm install votary -S
 ### 引入全局样式
 
 ```javascript
-import 'votary/dist/style.css'
+import 'votary/lib/style.css'
 ``` -->
 
 ```jsx
@@ -19,8 +19,6 @@ import 'votary/dist/style.css'
 
 import React from 'react'
 import 'votary/lib/style.css'
-
-// import '../../../packages/style/index.css'
 
 export default () => ''
 ```
