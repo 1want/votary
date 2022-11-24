@@ -18,7 +18,6 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: |
-          pnpm add votary
           pnpm install
           pnpm build:docs
 
