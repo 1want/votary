@@ -18,7 +18,7 @@ export default defineConfig({
     },
     outDir: 'lib',
     lib: {
-      entry: './script/index.tsx',
+      entry: './packages/components/index.tsx',
       formats: ['es'],
       fileName: format => `index.${format}.js`
     }

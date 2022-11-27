@@ -18,7 +18,7 @@ import 'votary/lib/style.css'
  */
 
 import React from 'react'
-import 'votary/lib/style.css'
+// import 'votary/lib/style.css'
 
 export default () => ''
 ```

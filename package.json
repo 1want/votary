@@ -1,26 +1,52 @@
 {
+  "name": "votary",
+  "version": "0.4.56",
   "private": false,
+  "keywords": [
+    "react-components",
+    "votary"
+  ],
+  "homepage": "https://1want.github.io/votary/",
+  "author": "iwant",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js"
+    },
+    "./lib/": {
+      "import": "./lib/"
+    }
+  },
+  "license": "MIT",
+  "main": "./lib/index.es.js",
+  "types": "./lib/script/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build:docs": "dumi build",
-    "dev": "dumi dev"
+    "build": "rimraf lib && vite build && tsc -p tsconfig.build.json",
+    "dev": "dumi dev",
+    "build:docs": "dumi build"
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "react-transition-group": "^4.4.5",
-    "votary": "^0.4.52"
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/react-transition-group": "^4.4.5",
+    "@vitejs/plugin-react": "^2.0.0",
     "@umijs/fabric": "^2.8.1",
     "dumi": "^1.1.0",
     "father": "^4.0.0-rc.2",
+    "rimraf": "^3.0.2",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "vite": "^3.0.0",
     "react": "18.0.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.0"
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
     "react": ">= 18.0.0",

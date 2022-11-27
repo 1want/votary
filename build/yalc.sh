@@ -1,1 +1,0 @@
-nodemon --ignore dist/ --ignore node_modules/ --watch packages/ -C -e ts,tsx,less --debug -x npm run async

@@ -7,6 +7,9 @@ export default defineConfig({
   base: '/votary',
   hash: true,
   exportStatic: {},
+  alias: {
+    votary: '/packages/components/index.tsx'
+  },
   sitemap: { hostname: 'https://1want.github.io/votary' },
   publicPath: process.env.NODE_ENV === 'production' ? '/votary/' : '/',
   favicon: './logo.png',
@@ -18,7 +21,7 @@ export default defineConfig({
   menus: {
     '*': [
       {
-        title: '别乱跑噢',
+        title: '别跑',
         path: '/'
       }
     ],
