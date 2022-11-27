@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import { Input } from '../../../packages/components/input'
+import { Input } from 'votary'
 
-export default () => {
-  return <Input placeholder='input ...' />
-}
+export default () => <Input placeholder='input ...' />

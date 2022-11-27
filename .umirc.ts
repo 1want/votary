@@ -45,7 +45,7 @@ export default defineConfig({
       {
         title: 'Form Components',
         children: [
-          'components/form',
+          // 'components/form',
           'components/input',
           'components/select',
           'components/radio',
@@ -60,7 +60,7 @@ export default defineConfig({
           'components/notification',
           'components/popconfirm',
           'components/drawer',
-          // 'components/dialog',
+          'components/dialog',
           'components/loading'
         ]
       },
@@ -92,7 +92,7 @@ export default defineConfig({
       {
         title: '表单组件',
         children: [
-          'components/form',
+          // 'components/form',
           'components/input',
           'components/select',
           'components/radio',
@@ -107,7 +107,7 @@ export default defineConfig({
           'components/notification',
           'components/popconfirm',
           'components/drawer',
-          // 'components/dialog',
+          'components/dialog',
           'components/loading'
         ]
       },

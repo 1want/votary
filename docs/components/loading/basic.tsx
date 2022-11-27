@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Loading } from '../../../packages/components/loading'
+import { Loading } from 'votary'
 
 export default () => {
   const [visible, setVisible] = useState(false)

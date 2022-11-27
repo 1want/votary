@@ -1,3 +1,3 @@
-import { Input } from '../../../packages/components/input'
+import { Input } from 'votary'
 
 export default () => <Input placeholder='input ...' leftIcon='search' />

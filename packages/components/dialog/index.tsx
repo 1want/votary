@@ -1,4 +1,4 @@
-// import Dialog from './dialog'
-// import './style/index.less'
+import Dialog from './dialog'
+import './style/index.less'
 
-// export { Dialog }
+export { Dialog }

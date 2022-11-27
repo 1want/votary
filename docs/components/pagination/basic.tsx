@@ -1,4 +1,4 @@
-import { Pagination } from '../../../packages/components/pagination'
+import { Pagination } from 'votary'
 
 const pageSize = [10, 20, 30, 40, 50]
 
