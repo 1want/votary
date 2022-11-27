@@ -60,7 +60,7 @@ export default defineConfig({
           'components/notification',
           'components/popconfirm',
           'components/drawer',
-          'components/dialog',
+          // 'components/dialog',
           'components/loading'
         ]
       },
@@ -107,7 +107,7 @@ export default defineConfig({
           'components/notification',
           'components/popconfirm',
           'components/drawer',
-          'components/dialog',
+          // 'components/dialog',
           'components/loading'
         ]
       },
